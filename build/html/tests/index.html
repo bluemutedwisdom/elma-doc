@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Performance and compression tests &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="next" title="rsyslog omfile bechmark report" href="omfile.html" />
+    <link rel="prev" title="User Guide" href="../manuals/user.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="omfile.html" title="rsyslog omfile bechmark report"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../manuals/user.html" title="User Guide"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="performance-and-compression-tests">
+<h1>Performance and compression tests<a class="headerlink" href="#performance-and-compression-tests" title="Permalink to this headline">¶</a></h1>
+<p>Feeding generic log events with a constant logging rate to local or
+remote rsyslog server to determine the <strong>maximum receiving log rate</strong>
+(MPS - Messages Per Second) considering:</p>
+<ul class="simple">
+<li>no <a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_high_database_rate.html">rsyslog on-disk
+queueing</a>
+(Indication that import and indexing into ElasticSearch is fast
+enough)</li>
+<li><a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_high_database_rate.html">prevention of message
+loss</a></li>
+<li><strong>real time compression</strong> of stored events</li>
+<li><strong>ElasticSearch</strong> near <strong>real time inserting and indexing</strong> (indexing
+delay &lt; 30s)</li>
+</ul>
+<div class="section" id="generation-of-continious-tcp-logging">
+<h2>Generation of continious tcp logging<a class="headerlink" href="#generation-of-continious-tcp-logging" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="57%" />
+<col width="15%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Server</strong></td>
+<td><a class="reference external" href="http://www.rsyslog.com">rsyslog</a></td>
+<td>7.2.5 (v7-stable)</td>
+<td>localhost</td>
+</tr>
+<tr class="row-even"><td><strong>Benchmark tool</strong></td>
+<td><a class="reference external" href="http://www.rsyslog.com/how-to-use-tcpflood/">tcpflood</a></td>
+<td>7.2.5</td>
+<td>localhost</td>
+</tr>
+<tr class="row-odd"><td>Protocol</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>tcp/13514</td>
+</tr>
+<tr class="row-even"><td>Compression</td>
+<td><a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_conf_actions.html">zlib-compression</a></td>
+<td>&nbsp;</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>Encryption</td>
+<td><a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_secure_tls.html">TLS (SSL)</a></td>
+<td>&nbsp;</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>Message lenght (Byte)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>244</td>
+</tr>
+<tr class="row-odd"><td>Logging rate (MPS)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10.000</td>
+</tr>
+<tr class="row-even"><td>Runs</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>Total messages</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>100.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rsyslog-output-modules">
+<h2>rsyslog output modules<a class="headerlink" href="#rsyslog-output-modules" title="Permalink to this headline">¶</a></h2>
+<p>rsyslog <a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_conf_modules.html/rsyslog_conf_modules.html">output
+modules</a>
+process messages. With them, message formats can be transformed and
+messages be transmitted to various different targets.</p>
+<div class="section" id="omfile-file-output-module">
+<h3>omfile - File Output Module<a class="headerlink" href="#omfile-file-output-module" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>/usr/share/elma-tests/bin/elma_imptcp_gzipwr.sh
+===========================================================================================
+Scriptname : elma_imptcp_gzipwr.sh
+-------------------------------------------------------------------------------------------
+Description: rsyslogd performance test with gzip output compression
+Author     : Joerg Heinemann
+Website    : http://code.google.com/p/enterprise-log-management-appliance
+===========================================================================================
+PASS:
+-------------------------------------------------------------------------------------------
+Raw message lenght (Byte):                              230
+Total message lenght (Byte):                            244
+Messages sent during one tcpflood test:                 10000
+Number of tcpflood tests:                               10
+Seconds to sleep between tcpflood runs:                 1
+Concurrent tcpflood connections:                        5
+tcpflood transport protocol:                            tcp
+tcpflood rsyslog target port:                           13514
+tcpflood rsyslog target address:                        127.0.0.1
+Total messages:                                         100000
+Total tcpflood runtime (milli seconds):                 10141
+Loging rate (MPS):                                      9860
+Transmission speed (MBit/s):                            18.35
+Compressed data size (MByte):                           .29
+Compressed data indexing runtime (milli seconds):
+Compression method:                                     $OMFileZipLevel 9
+Compression ratio (%):                                  98.71
+Decompression runtime (milli seconds):                  454
+Uncompressed data size (MByte):                         23.26
+Uncompressed data indexing runtime (milli seconds):
+===========================================================================================</pre>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="omfile.html">rsyslog omfile bechmark report</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="omelasticsearch-elasticsearch-output-module">
+<h3>omelasticsearch - ElasticSearch Output Module<a class="headerlink" href="#omelasticsearch-elasticsearch-output-module" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>/usr/share/elma-tests/bin/elma_elasticsearch_compression_rate.sh
+===========================================================================================
+Scriptname : elma_elasticsearch_compression_rate.sh
+-------------------------------------------------------------------------------------------
+Description: rsyslogd performance and elasticsearch compression test
+Author     : Joerg Heinemann
+Website    : http://code.google.com/p/enterprise-log-management-appliance
+===========================================================================================
+PASS:
+-------------------------------------------------------------------------------------------
+Raw message lenght (Byte):                              230
+Total message lenght (Byte):
+Messages sent during one tcpflood test:                 10000
+Number of tcpflood tests:                               10
+Seconds to sleep between tcpflood runs:                 1
+Concurrent tcpflood connections:                        5
+tcpflood transport protocol:                            tcp
+tcpflood rsyslog target port:                           13514
+tcpflood rsyslog target address:                        127.0.0.1
+Total messages:                                         100000
+Total tcpflood runtime (milli seconds):                 10190
+Loging rate (MPS):                                      9813
+Transmission speed (MBit/s):
+Compressed data size (MByte):                           23.44
+Compressed data indexing runtime (milli seconds):       11353
+Compression method:                                     index.store.compress.stored = true
+Compression ratio (%):                                  69.65
+Decompression runtime (milli seconds):
+Uncompressed data size (MByte):                         77.25
+Uncompressed data indexing runtime (milli seconds):     12113
+===========================================================================================</pre>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="omelasticsearch.html">rsyslog omelasticsearch bechmark report</a></li>
+</ul>
+</div>
+<p>JSON format:</p>
+<div class="highlight-python"><pre>{
+    _index: rsyslog-2012-03-01
+    _type: events
+    _id: Oq9TRThNRVyyEYWRtA3geA
+    _version: 1
+    _score: 1
+    _source: {
+        @timestamp: 2012-03-01T01:00:00+01:00
+        @source_host: 172.20.245.8
+        @source: syslog://127.0.0.1
+        @message: Mar 1 01:00:00 tag: msgnum:00000001:200:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        @fields: {
+            facility: 20
+            facility_label: local4
+            severity: 7
+            severity_label: debug
+            priority: 167
+            program: tag
+            processid: -
+        }
+        @customer: AIDB
+        @type: events
+    }
+}</pre>
+</div>
+</div>
+</div>
+<div class="section" id="comparison">
+<h2>Comparison<a class="headerlink" href="#comparison" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="6%" />
+<col width="9%" />
+<col width="7%" />
+<col width="48%" />
+<col width="11%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Benchmark</strong></td>
+<td><strong>Messages</strong></td>
+<td><strong>Message lenght</strong>
+(Byte)</td>
+<td><strong>Data size</strong>
+(MByte)</td>
+<td><strong>Compression method</strong></td>
+<td><strong>Compressed data size</strong>
+(MByte)</td>
+<td><strong>Compression ratio</strong>
+(%)</td>
+</tr>
+<tr class="row-even"><td><strong>omfile</strong></td>
+<td>100.000</td>
+<td>244</td>
+<td>23.26</td>
+<td><a class="reference external" href="http://www.rsyslog.com/doc/omfile.html">rsyslog gzip compression</a> - ZipLevel 9</td>
+<td>0.29</td>
+<td>98</td>
+</tr>
+<tr class="row-odd"><td><strong>omelasticsearch</strong></td>
+<td>100.000</td>
+<td>244</td>
+<td>77.25</td>
+<td>-<a class="reference external" href="http://www.elasticsearch.org/guide/reference/index-modules/store.html">Des.index.store.compress.stored</a>=true</td>
+<td>23.44</td>
+<td>69</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><pre>Compression ratio = 100 * ( Data size - Compressed data size ) / Data size</pre>
+</div>
+<p>Results of <a class="reference external" href="https://gist.github.com/2970009">comparable compression
+tests</a>.</p>
+</div>
+<div class="section" id="log-space-sizing">
+<h2>Log space sizing<a class="headerlink" href="#log-space-sizing" title="Permalink to this headline">¶</a></h2>
+<p>In real life ElasticSearch compression rates of 55% and flat file
+compression rates of over 90% are realistic.</p>
+<p>Assuming an average message lenght of 244 Byte per message and 10.000
+events per second the following projection can give you an idea of
+difficulties for suitable filesystem sizing:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="16%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="7%" />
+<col width="8%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td><strong>Benchmark</strong></td>
+<td><strong>LVM Volume</strong></td>
+<td><strong>second</strong></td>
+<td><strong>minute</strong></td>
+<td><strong>hour</strong></td>
+<td><strong>day</strong></td>
+<td><strong>week</strong></td>
+<td><strong>month</strong></td>
+<td><strong>year</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Messages</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10 k</td>
+<td>600 k</td>
+<td>36 M</td>
+<td>864 M</td>
+<td>6.048 M</td>
+<td>181.440 M</td>
+<td>2.177.280 M</td>
+</tr>
+<tr class="row-odd"><td><strong>Compressed data size</strong></td>
+<td>omfile</td>
+<td>/var/log/syslog</td>
+<td>0.03 MB</td>
+<td>1.74 MB</td>
+<td>104.40 MB</td>
+<td>2.45 GB</td>
+<td>17.13 GB</td>
+<td>68.51 GB</td>
+<td>822.15 GB</td>
+</tr>
+<tr class="row-even"><td><strong>Compressed data size</strong></td>
+<td>omelasticsearch</td>
+<td>/var/lib/elasticsearch</td>
+<td>3.50 MB</td>
+<td>210.00 MB</td>
+<td>12.30 GB</td>
+<td>295.31 GB</td>
+<td>2.02 TB</td>
+<td>8.07 TB</td>
+<td>96.90 TB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="testbed">
+<h2>Testbed<a class="headerlink" href="#testbed" title="Permalink to this headline">¶</a></h2>
+<p>Hardware for this testbed:</p>
+<ul class="simple">
+<li>Low performance desktop PC based on a ASUS mainboard with a dual core
+AMD Athlon(tm) II X2 240e Processor</li>
+<li>8 GB RAM</li>
+<li>3 older slow IDE hard disk drives, configured in a RAID-5 fashion
+using the linux (x86_64) built-in softRAID features</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Performance and compression tests</a><ul>
+<li><a class="reference internal" href="#generation-of-continious-tcp-logging">Generation of continious tcp logging</a></li>
+<li><a class="reference internal" href="#rsyslog-output-modules">rsyslog output modules</a><ul>
+<li><a class="reference internal" href="#omfile-file-output-module">omfile - File Output Module</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#omelasticsearch-elasticsearch-output-module">omelasticsearch - ElasticSearch Output Module</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparison">Comparison</a></li>
+<li><a class="reference internal" href="#log-space-sizing">Log space sizing</a></li>
+<li><a class="reference internal" href="#testbed">Testbed</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../manuals/user.html"
+                        title="previous chapter">User Guide</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="omfile.html"
+                        title="next chapter">rsyslog omfile bechmark report</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/tests/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="omfile.html" title="rsyslog omfile bechmark report"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../manuals/user.html" title="User Guide"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

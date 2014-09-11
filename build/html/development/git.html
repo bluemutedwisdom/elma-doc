@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>git &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Development" href="index.html" />
+    <link rel="next" title="curl" href="curl.html" />
+    <link rel="prev" title="Development" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="curl.html" title="curl"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Development"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Development</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="git">
+<h1>git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<p>This project&#8217;s Git repository may be accessed using many different
+client programs and plug-ins. See your <a class="reference external" href="http://git-scm.com/downloads">client&#8217;s
+documentation</a> for more information.</p>
+<p>Commit Often, Perfect Later, Publish Once: <a class="reference external" href="http://sethrobertson.github.com/GitBestPractices/">Git Best
+Practices</a></p>
+<div class="section" id="git-repository">
+<h2>git repository<a class="headerlink" href="#git-repository" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>touch ~/.netrc
+vi ~/.netrc
+machine code.google.com login your-google-code-member-UID@gmail.com password your-google-code-member-UID-password</pre>
+</div>
+<div class="highlight-python"><pre>Global setup:
+Set the right GoogleCode.com project member UID and email address:
+git config --global user.name "your-google-code-member-UID"
+git config --global user.email your-google-code-member-UID@gmail.com
+chmod 600 ~/.gitconfig
+git config --list</pre>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># ######### Init empty repository #########</span>
+<span class="c">#</span>
+<span class="c"># rm -R /opt/elma-0.0.35/.git</span>
+<span class="c"># cd /opt/elma-0.0.35; git init</span>
+<span class="c"># cd /opt/elma-0.0.35; env GIT_SSL_NO_VERIFY=true git remote add origin https://code.google.com/p/enterprise-log-management-appliance.master/</span>
+<span class="c"># cd /opt/elma-0.0.35; git add .</span>
+<span class="c"># cd /opt/elma-0.0.35; git commit -m &#39;initial commit&#39;</span>
+<span class="c"># ######### Push new revision to remote repository #########</span>
+<span class="c">#</span>
+<span class="c"># cd /opt/elma-0.0.35; git add .</span>
+<span class="c"># cd /opt/elma-0.0.35; git commit -m &#39;your revision comment&#39;</span>
+<span class="c"># cd /opt/elma-0.0.35; env GIT_SSL_NO_VERIFY=true git push origin master</span>
+<span class="c"># ######### Pull new revision from remote repository #########</span>
+<span class="c">#</span>
+<span class="c"># cd /opt/elma-0.0.35; env GIT_SSL_NO_VERIFY=true git pull origin master</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">git</a><ul>
+<li><a class="reference internal" href="#git-repository">git repository</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Development</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="curl.html"
+                        title="next chapter">curl</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/development/git.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="curl.html" title="curl"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Development"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Development</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

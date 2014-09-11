@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Administration Guide &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Manuals" href="index.html" />
+    <link rel="next" title="Operation Guide" href="operation.html" />
+    <link rel="prev" title="Configuration Files" href="configuration/configurationfiles.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="operation.html" title="Operation Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="configuration/configurationfiles.html" title="Configuration Files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Manuals</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="administration-guide">
+<h1>Administration Guide<a class="headerlink" href="#administration-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-knowledge">
+<h2>Basic Knowledge<a class="headerlink" href="#basic-knowledge" title="Permalink to this headline">¶</a></h2>
+<p>ELMA appliance comes out of the box without any Linux graphical user
+interface. Therefore it is useful to have some basic knowledge of
+working with a Linux shell because some operation and administration
+tasks only can be done with shell commands.</p>
+</div>
+<div class="section" id="supported-web-browsers">
+<h2>Supported web browsers<a class="headerlink" href="#supported-web-browsers" title="Permalink to this headline">¶</a></h2>
+<p>ELMA user and admin interfaces should work in all modern web browsers as
+long as they support SVG:</p>
+<ul class="simple">
+<li>Tested with <strong>Firefox &gt; 19.x</strong>.</li>
+<li><strong>IE8 &amp; IE9 don&#8217;t work correctly!</strong></li>
+</ul>
+</div>
+<div class="section" id="elma-admin-interfaces">
+<h2>ELMA admin interfaces<a class="headerlink" href="#elma-admin-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>Depending on integration into your corporate infrastructure you have to
+login with single sign on admin user credentials provided by your
+operation or administration team.</p>
+<p>Point your browser at your local webserver, the one with ELMA already
+installed.</p>
+<div class="highlight-python"><pre>https://syslog.elma.org/elasticsearch.html</pre>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="../_images/elasticsearch-head.png">ElasticSearch Head</a> - Browsing
+and interacting with an ElasticSearch clusters</li>
+<li><a class="reference external" href="../_images/elasticsearch-paramedic.png">ElasticSearch Paramedic</a> -
+Monitors and inspect ElasticSearch clusters</li>
+<li><a class="reference external" href="../_images/elasticsearch-bigdesk.png">ElasticSearch BigDesk</a> - Live
+charts and statistics for ElasticSearch clusters</li>
+<li>ElasticSearch Kibana - User frontend that allows search, graph,
+analyze and otherwise make sense of a mountain of logs</li>
+</ul>
+<div class="section" id="elasticsearch-head">
+<h3>ElasticSearch Head<a class="headerlink" href="#elasticsearch-head" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>https://syslog.elma.org:9443/_plugin/head/</pre>
+</div>
+<p>By default Head will immediately attempt to connect to a cluster node at
+<a class="reference external" href="http://syslog.elma.org:9443/">http://syslog.elma.org:9443/</a>. Enter a
+different node address in the connect box and click &#8216;Connect&#8217; if
+required.</p>
+<p>Head has a four major operations:</p>
+<ul class="simple">
+<li>A cluster overview, which shows the topology of your cluster and allows
+you to perform index and node level operations</li>
+<li>A couple of search interfaces that allow you to query the cluster a
+retrieve results in raw json or tabular format</li>
+<li>Several quick access tabs that show the status of the cluster</li>
+<li>An input section that allows arbitrary call to the RESTful API to be
+made. This interface includes several options that can be combined to
+produce interesting results:</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Select request method (get, put, post, delete), json query data, node, and path</li>
+<li>JSON validator</li>
+<li>Ability to repeat requests on a timer</li>
+<li>Ability to transform the result using javascript expressions</li>
+<li>Ability to collect results over time (using timer), or compare results</li>
+<li>Ability to chart the transformed results in a simple bar graph (including time series)</li>
+</ul>
+</div></blockquote>
+<p>ATTENTION: <strong>You can destroy and corrupt data</strong> from this interface if
+you are not careful.</p>
+</div>
+<div class="section" id="elasticsearch-paramedic">
+<h3>ElasticSearch Paramedic<a class="headerlink" href="#elasticsearch-paramedic" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>https://syslog.elma.org:9443/_plugin/paramedic/</pre>
+</div>
+<p>Paramedic displays real-time statistics and information about your
+ElasticSearch nodes and indices, as well as shard allocation within the
+cluster.</p>
+<p>Basic information about your cluster:</p>
+<ul class="simple">
+<li>cluster name, health</li>
+<li>number of nodes and shards</li>
+<li>etc.</li>
+</ul>
+<p>Stats displays key metrics from the Nodes Stats API, updated every
+second.</p>
+<p>Nodes displays the most important information about the cluster nodes
+(used disk space and memory, number of nodes, machine load and
+ElasticSearch CPU consumption, etc.).</p>
+<p>Indices displays basic information about the indices:</p>
+<ul class="simple">
+<li>number of primary shards</li>
+<li>number of replicas</li>
+<li>basic index statistics, using the Cluster State, Indices Status and
+Indices Stats APIs</li>
+</ul>
+<p>Primary shards are displayed in blue, allocated replicas in green,
+unassigned replicas in yellow, and unassigned (missing) primary shards
+in red.</p>
+<p>To display shard allocation across the nodes, use the “Show Details”
+button.</p>
+<p>All information is updated periodically, which allows you to see node
+and index statistics, shard initialization or relocation, etc. in real
+time.</p>
+</div>
+<div class="section" id="elasticsearch-bigdesk">
+<h3>ElasticSearch BigDesk<a class="headerlink" href="#elasticsearch-bigdesk" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>https://syslog.elma.org:9443/_plugin/bigdesk/</pre>
+</div>
+<p>With BigDesk you can connect to a particular ElasticSearch host:</p>
+<ul class="simple">
+<li>You should see cluster name and list of its nodes</li>
+<li>You can switch between nodes in the cluster</li>
+<li>New nodes are added and old nodes are removed automatically on the
+fly</li>
+<li>You can change the Bigdesk refresh interval and amount of data that
+is displayed by charts</li>
+</ul>
+</div>
+<div class="section" id="elasticsearch-kibana">
+<h3>ElasticSearch Kibana<a class="headerlink" href="#elasticsearch-kibana" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>https://syslog.elma.org</pre>
+</div>
+<p>Kibana is an open source (Apache Licensed), browser based analytics and
+search dashboard for ElasticSearch.</p>
+</div>
+<div class="section" id="nagois">
+<h3>Nagois<a class="headerlink" href="#nagois" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>https://syslog.elma.org/nagios/</pre>
+</div>
+</div>
+<div class="section" id="webyast">
+<h3>WebYast<a class="headerlink" href="#webyast" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>https://syslog.elma.org:xxxx</pre>
+</div>
+</div>
+</div>
+<div class="section" id="elma-user-management">
+<h2>ELMA user management<a class="headerlink" href="#elma-user-management" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ElasticSearch basic authentication - <a class="reference external" href="https://github.com/sonian/elasticsearch-jetty#readme">Jetty
+plugin</a></li>
+<li>Add Jetty User or change Jetty Group</li>
+<li>The passwords should be obfuscated or MD5 hashed using <a class="reference external" href="http://wiki.eclipse.org/Jetty/Howto/Secure_Passwords">Jetty
+Password
+Utility</a></li>
+<li>ElasticSearch Jetty Passwd User Interface</li>
+<li>ElasticSearch Jetty service UID and password</li>
+</ul>
+</div>
+<div class="section" id="elma-group-and-profile-management">
+<h2>ELMA group and profile management<a class="headerlink" href="#elma-group-and-profile-management" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Administration Guide</a><ul>
+<li><a class="reference internal" href="#basic-knowledge">Basic Knowledge</a></li>
+<li><a class="reference internal" href="#supported-web-browsers">Supported web browsers</a></li>
+<li><a class="reference internal" href="#elma-admin-interfaces">ELMA admin interfaces</a><ul>
+<li><a class="reference internal" href="#elasticsearch-head">ElasticSearch Head</a></li>
+<li><a class="reference internal" href="#elasticsearch-paramedic">ElasticSearch Paramedic</a></li>
+<li><a class="reference internal" href="#elasticsearch-bigdesk">ElasticSearch BigDesk</a></li>
+<li><a class="reference internal" href="#elasticsearch-kibana">ElasticSearch Kibana</a></li>
+<li><a class="reference internal" href="#nagois">Nagois</a></li>
+<li><a class="reference internal" href="#webyast">WebYast</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#elma-user-management">ELMA user management</a></li>
+<li><a class="reference internal" href="#elma-group-and-profile-management">ELMA group and profile management</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="configuration/configurationfiles.html"
+                        title="previous chapter">Configuration Files</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="operation.html"
+                        title="next chapter">Operation Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/manuals/administration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="operation.html" title="Operation Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="configuration/configurationfiles.html" title="Configuration Files"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Manuals</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

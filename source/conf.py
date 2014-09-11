@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# ELMA Doc documentation build configuration file, created by sphinx-quickstart.
+# ELMA documentation build configuration file, created by
+# sphinx-quickstart on Mon Sep  8 09:25:45 2014.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -16,7 +17,6 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('_ext'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -25,9 +25,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['edit_on_github']
-edit_on_github_project = 'enterprise-log-management-appliance/elma-doc'
-edit_on_github_branch = 'master'
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -43,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ELMA'
-copyright = u'2012-2014, Joerg Heinemann'
+copyright = u'2014, Joerg Heinemann'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -88,16 +86,12 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-# Warn about all references where the target cannot be found. Default is False.
-nitpicky = True
 
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'default'
-#html_theme = 'basic'
-#html_style = 'elma-doc.css'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -147,7 +141,7 @@ html_static_path = ['_static']
 #html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
@@ -170,7 +164,7 @@ html_show_sphinx = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'elma-doc'
+htmlhelp_basename = 'ELMAdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -189,8 +183,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'elma-doc.tex', u'ELMA Documentation',
-   u'foo bar', 'manual'),
+  ('index', 'ELMA.tex', u'ELMA Documentation',
+   u'Joerg Heinemann', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -219,8 +213,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('reconfigure', 'elma-reconfigure', u'ELMA Documentation: Reconfigure',
-     [u'Joerg Heinemann'], 1),
+    ('index', 'elma', u'ELMA Documentation',
+     [u'Joerg Heinemann'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -233,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'elma-doc', u'ELMA Documentation',
-   u'foo bar', 'elma-doc', 'One line description of project.',
+  ('index', 'ELMA', u'ELMA Documentation',
+   u'Joerg Heinemann', 'ELMA', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -245,4 +239,4 @@ texinfo_documents = [
 #texinfo_domain_indices = True
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
-# texinfo_show_urls = 'footnote'
+#texinfo_show_urls = 'footnote'

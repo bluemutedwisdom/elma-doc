@@ -1,0 +1,2603 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Changelog, current releases and notes &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="index.html" />
+    <link rel="next" title="2do" href="2do.html" />
+    <link rel="prev" title="About" href="about.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="2do.html" title="2do"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="about.html" title="About"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="changelog-current-releases-and-notes">
+<h1>Changelog, current releases and notes<a class="headerlink" href="#changelog-current-releases-and-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="current-tested-appliance">
+<h2>Current tested appliance<a class="headerlink" href="#current-tested-appliance" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>Enterprise_Log_Management_Appliance__Dev-0.1.0 (2014-03-22)
+Based on openSUSE 13.1 (Bottle) (x86_64) (2013-10-23)</pre>
+</div>
+</div>
+<div class="section" id="current-tested-releases">
+<h2>Current tested releases<a class="headerlink" href="#current-tested-releases" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>elma (master) - 0.2.6 (2014-08-30)
+rsyslog (v7-stable) - 8.2.1-193.1.x86_64 (2014-05-17)
+rsyslog-testtools (v7-stable) - 8.2.1-6.1.x86_64 (2014-05-17)
+apache (2.2-stable) - 2.4.6-6.15.1.x86_64 (2014-03-03)
+nagios core (3.x) - 4.0.6-110.1.x86_64 (2014-05-04)
+logstash (monolithic.jar) - 1.1.9 ()
+elasticsearch (stable) - 1.1.1-29.1.x86_64 (2014-05-02)
+elasticsearch-head (master)
+elasticsearch-bigdesk (master)
+elasticsearch-paramedic (master)
+elasticsearch-kibana3 (master) - 3.1.0-30.1.noarch (2014-05-16)
+kibana (kibana-ruby) - v0.2.0-129-g4f3230d (2013-09-25)</pre>
+</div>
+</div>
+<div class="section" id="changelog">
+<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Read additional <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">release notes and technical
+details</a>
+of SUSE studio appliance</p>
+</li>
+<li><p class="first">You may need to clear your browsers cache after upgrading to see all
+of the new features</p>
+</li>
+<li><p class="first">If you are running into ssl browser errors you may need to delete
+your ELMA certificate inside your browsers server certificate store</p>
+</li>
+<li><p class="first">If you are running into installation/update errors consider to reset
+ELMA configuration parameter to factory defaults</p>
+<div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --reset</pre>
+</div>
+</li>
+</ul>
+<div class="section" id="elma-master-0-2-6-2014-08-30">
+<h3>elma (master) 0.2.6 - 2014-08-30<a class="headerlink" href="#elma-master-0-2-6-2014-08-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>elma (master) 0.2.6 - 2014-08-30<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>elma (master) 0.2.6 - 2014-08-30<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>elma (master) 0.2.6 - 2014-08-30<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>elma (master) 0.2.6 - 2014-08-30<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>elma (master) 0.2.6 - 2014-08-30<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-6-2014-08-29">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#elma-master-0-2-6-2014-08-29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h3>elma (master) 0.2.6 - 2014-08-29<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-6-2014-08-28">
+<h3>elma (master) 0.2.6 - 2014-08-28<a class="headerlink" href="#elma-master-0-2-6-2014-08-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>elma (master) 0.2.6 - 2014-08-28<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-6-2014-08-24">
+<h3>elma (master) 0.2.6 - 2014-08-24<a class="headerlink" href="#elma-master-0-2-6-2014-08-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h3>elma (master) 0.2.6 - 2014-08-24<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h3>elma (master) 0.2.6 - 2014-08-24<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h3>elma (master) 0.2.6 - 2014-08-24<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h3>elma (master) 0.2.6 - 2014-08-24<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-6-2014-07-26">
+<h3>elma (master) 0.2.6 - 2014-07-26<a class="headerlink" href="#elma-master-0-2-6-2014-07-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h3>elma (master) 0.2.6 - 2014-07-26<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id29">
+<h3>elma (master) 0.2.6 - 2014-07-26<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id30">
+<h3>elma (master) 0.2.6 - 2014-07-26<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h3>elma (master) 0.2.6 - 2014-07-26<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h3>elma (master) 0.2.6 - 2014-07-26<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-5-2014-07-15">
+<h3>elma (master) 0.2.5 - 2014-07-15<a class="headerlink" href="#elma-master-0-2-5-2014-07-15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-4-2014-07-06">
+<h3>elma (master) 0.2.4 - 2014-07-06<a class="headerlink" href="#elma-master-0-2-4-2014-07-06" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-3-2014-07-02">
+<h3>elma (master) 0.2.3 - 2014-07-02<a class="headerlink" href="#elma-master-0-2-3-2014-07-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: web gui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-2-2014-06-28">
+<h3>elma (master) 0.2.2 - 2014-06-28<a class="headerlink" href="#elma-master-0-2-2-2014-06-28" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id33">
+<h3>elma (master) 0.2.2 - 2014-06-28<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id34">
+<h3>elma (master) 0.2.2 - 2014-06-28<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id35">
+<h3>elma (master) 0.2.2 - 2014-06-28<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: web gui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-1-2014-06-23">
+<h3>elma (master) 0.2.1 - 2014-06-23<a class="headerlink" href="#elma-master-0-2-1-2014-06-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-2-0-2014-06-22">
+<h3>elma (master) 0.2.0 - 2014-06-22<a class="headerlink" href="#elma-master-0-2-0-2014-06-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-23-2014-06-21">
+<h3>elma (master) 0.1.23 - 2014-06-21<a class="headerlink" href="#elma-master-0-1-23-2014-06-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-22-2014-06-20">
+<h3>elma (master) 0.1.22 - 2014-06-20<a class="headerlink" href="#elma-master-0-1-22-2014-06-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>elma (master) 0.1.22 - 2014-06-20<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-22-2014-06-19">
+<h3>elma (master) 0.1.22 - 2014-06-19<a class="headerlink" href="#elma-master-0-1-22-2014-06-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id37">
+<h3>elma (master) 0.1.22 - 2014-06-19<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-22-2014-06-18">
+<h3>elma (master) 0.1.22 - 2014-06-18<a class="headerlink" href="#elma-master-0-1-22-2014-06-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-21-2014-05-12">
+<h3>elma (master) 0.1.21 - 2014-05-12<a class="headerlink" href="#elma-master-0-1-21-2014-05-12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-20-2014-05-07">
+<h3>elma (master) 0.1.20 - 2014-05-07<a class="headerlink" href="#elma-master-0-1-20-2014-05-07" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-19-2014-05-04">
+<h3>elma (master) 0.1.19 - 2014-05-04<a class="headerlink" href="#elma-master-0-1-19-2014-05-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id38">
+<h3>elma (master) 0.1.19 - 2014-05-04<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-18-2014-05-04">
+<h3>elma (master) 0.1.18 - 2014-05-04<a class="headerlink" href="#elma-master-0-1-18-2014-05-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-17-2014-05-03">
+<h3>elma (master) 0.1.17 - 2014-05-03<a class="headerlink" href="#elma-master-0-1-17-2014-05-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-16-2014-05-02">
+<h3>elma (master) 0.1.16 - 2014-05-02<a class="headerlink" href="#elma-master-0-1-16-2014-05-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-15-2014-04-30">
+<h3>elma (master) 0.1.15 - 2014-04-30<a class="headerlink" href="#elma-master-0-1-15-2014-04-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-14-2014-04-27">
+<h3>elma (master) 0.1.14 - 2014-04-27<a class="headerlink" href="#elma-master-0-1-14-2014-04-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-13-2014-04-25">
+<h3>elma (master) 0.1.13 - 2014-04-25<a class="headerlink" href="#elma-master-0-1-13-2014-04-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-12-2014-04-25">
+<h3>elma (master) 0.1.12 - 2014-04-25<a class="headerlink" href="#elma-master-0-1-12-2014-04-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id39">
+<h3>elma (master) 0.1.12 - 2014-04-25<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h3>elma (master) 0.1.12 - 2014-04-25<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h3>elma (master) 0.1.12 - 2014-04-25<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id42">
+<h3>elma (master) 0.1.12 - 2014-04-25<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-11-2014-04-20">
+<h3>elma (master) 0.1.11 - 2014-04-20<a class="headerlink" href="#elma-master-0-1-11-2014-04-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-10-2014-04-20">
+<h3>elma (master) 0.1.10 - 2014-04-20<a class="headerlink" href="#elma-master-0-1-10-2014-04-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id43">
+<h3>elma (master) 0.1.10 - 2014-04-20<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id44">
+<h3>elma (master) 0.1.10 - 2014-04-20<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id45">
+<h3>elma (master) 0.1.10 - 2014-04-20<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-10-2014-04-18">
+<h3>elma (master) 0.1.10 - 2014-04-18<a class="headerlink" href="#elma-master-0-1-10-2014-04-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-9-2014-04-13">
+<h3>elma (master) 0.1.9 - 2014-04-13<a class="headerlink" href="#elma-master-0-1-9-2014-04-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-8-2014-04-06">
+<h3>elma (master) 0.1.8 - 2014-04-06<a class="headerlink" href="#elma-master-0-1-8-2014-04-06" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-7-2014-04-06">
+<h3>elma (master) 0.1.7 - 2014-04-06<a class="headerlink" href="#elma-master-0-1-7-2014-04-06" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-6-2014-04-05">
+<h3>elma (master) 0.1.6 - 2014-04-05<a class="headerlink" href="#elma-master-0-1-6-2014-04-05" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-5-2014-04-01">
+<h3>elma (master) 0.1.5 - 2014-04-01<a class="headerlink" href="#elma-master-0-1-5-2014-04-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-4-2014-04-01">
+<h3>elma (master) 0.1.4 - 2014-04-01<a class="headerlink" href="#elma-master-0-1-4-2014-04-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id46">
+<h3>elma (master) 0.1.4 - 2014-04-01<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-4-2014-03-26">
+<h3>elma (master) 0.1.4 - 2014-03-26<a class="headerlink" href="#elma-master-0-1-4-2014-03-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h3>elma (master) 0.1.4 - 2014-03-26<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-3-2014-03-25">
+<h3>elma (master) 0.1.3 - 2014-03-25<a class="headerlink" href="#elma-master-0-1-3-2014-03-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-1-2014-03-25">
+<h3>elma (master) ..1 - 2014-03-25<a class="headerlink" href="#elma-master-1-2014-03-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id48">
+<h3>elma (master) ..1 - 2014-03-25<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-2-2014-03-24">
+<h3>elma (master) 0.1.2 - 2014-03-24<a class="headerlink" href="#elma-master-0-1-2-2014-03-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-1-2014-03-24">
+<h3>elma (master) 0.1.1 - 2014-03-24<a class="headerlink" href="#elma-master-0-1-1-2014-03-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id49">
+<h3>elma (master) 0.1.1 - 2014-03-24<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-1-2014-03-24">
+<h3>elma (master) ..1 - 2014-03-24<a class="headerlink" href="#elma-master-1-2014-03-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-0-2014-03-24">
+<h3>elma (master) 0.1.0 - 2014-03-24<a class="headerlink" href="#elma-master-0-1-0-2014-03-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-1-0-2014-03-22">
+<h3>elma (master) 0.1.0 - 2014-03-22<a class="headerlink" href="#elma-master-0-1-0-2014-03-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="id50">
+<h3>elma (master) 0.1.0 - 2014-03-22<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced webgui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-237-2014-02-07">
+<h3>elma (master) 0.0.237 - 2014-02-07<a class="headerlink" href="#elma-master-0-0-237-2014-02-07" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: some fixes for openSUSE 13.1 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=211">&nbsp;issue
+211&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id51">
+<h3>elma (master) 0.0.237 - 2014-02-07<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: some fixes for openSUSE 13.1 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=211">&nbsp;issue
+211&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id52">
+<h3>elma (master) 0.0.237 - 2014-02-07<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: some fixes for openSUSE 13.1 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=211">&nbsp;issue
+211&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-236-2014-02-07">
+<h3>elma (master) 0.0.236 - 2014-02-07<a class="headerlink" href="#elma-master-0-0-236-2014-02-07" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: some fixes for openSUSE 13.1 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=211">&nbsp;issue
+211&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-235-2014-02-04">
+<h3>elma (master) 0.0.235 - 2014-02-04<a class="headerlink" href="#elma-master-0-0-235-2014-02-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: some fixes for openSUSE 13.1 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=211">&nbsp;issue
+211&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-234-2014-02-03">
+<h3>elma (master) 0.0.234 - 2014-02-03<a class="headerlink" href="#elma-master-0-0-234-2014-02-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-233-2014-02-02">
+<h3>elma (master) 0.0.233 - 2014-02-02<a class="headerlink" href="#elma-master-0-0-233-2014-02-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-232-2014-02-02">
+<h3>elma (master) 0.0.232 - 2014-02-02<a class="headerlink" href="#elma-master-0-0-232-2014-02-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-232-2014-02-01">
+<h3>elma (master) 0.0.232 - 2014-02-01<a class="headerlink" href="#elma-master-0-0-232-2014-02-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-231-2014-01-30">
+<h3>elma (master) 0.0.231 - 2014-01-30<a class="headerlink" href="#elma-master-0-0-231-2014-01-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-230-2014-01-30">
+<h3>elma (master) 0.0.230 - 2014-01-30<a class="headerlink" href="#elma-master-0-0-230-2014-01-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-230-2014-01-29">
+<h3>elma (master) 0.0.230 - 2014-01-29<a class="headerlink" href="#elma-master-0-0-230-2014-01-29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="id53">
+<h3>elma (master) 0.0.230 - 2014-01-29<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-229-2014-01-28">
+<h3>elma (master) 0.0.229 - 2014-01-28<a class="headerlink" href="#elma-master-0-0-229-2014-01-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-228-2014-01-26">
+<h3>elma (master) 0.0.228 - 2014-01-26<a class="headerlink" href="#elma-master-0-0-228-2014-01-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="id54">
+<h3>elma (master) 0.0.228 - 2014-01-26<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-227-2014-01-26">
+<h3>elma (master) 0.0.227 - 2014-01-26<a class="headerlink" href="#elma-master-0-0-227-2014-01-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-226-2014-01-26">
+<h3>elma (master) 0.0.226 - 2014-01-26<a class="headerlink" href="#elma-master-0-0-226-2014-01-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-225-2014-01-25">
+<h3>elma (master) 0.0.225 - 2014-01-25<a class="headerlink" href="#elma-master-0-0-225-2014-01-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-224-2014-01-25">
+<h3>elma (master) 0.0.224 - 2014-01-25<a class="headerlink" href="#elma-master-0-0-224-2014-01-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: installation without internet access (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=204">&nbsp;issue
+204&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-223-2014-01-24">
+<h3>elma (master) 0.0.223 - 2014-01-24<a class="headerlink" href="#elma-master-0-0-223-2014-01-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: installation without internet access (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=204">&nbsp;issue
+204&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-222-2014-01-24">
+<h3>elma (master) 0.0.222 - 2014-01-24<a class="headerlink" href="#elma-master-0-0-222-2014-01-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: installation without internet access (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=204">&nbsp;issue
+204&nbsp;</a>)</li>
+<li>bugbix: conflicts on elasticsearch and apache listening sockets
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=209">&nbsp;issue
+209&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-221-2014-01-22">
+<h3>elma (master) 0.0.221 - 2014-01-22<a class="headerlink" href="#elma-master-0-0-221-2014-01-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: installation without internet access (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=204">&nbsp;issue
+204&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE packages form install script
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=205">&nbsp;issue
+205&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE nagios-plugin from elma-nagios
+package (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=206">&nbsp;issue
+206&nbsp;</a>)</li>
+<li>bugbix: conflicts on elasticsearch and apache listening sockets
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=209">&nbsp;issue
+209&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-220-2014-01-21">
+<h3>elma (master) 0.0.220 - 2014-01-21<a class="headerlink" href="#elma-master-0-0-220-2014-01-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: remove unrequired openSUSE packages form install script
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=205">&nbsp;issue
+205&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE nagios-plugin from elma-nagios
+package (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=206">&nbsp;issue
+206&nbsp;</a>)</li>
+<li>update: replace ES cluster name from elasticsearch to elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=207">&nbsp;issue
+207&nbsp;</a>)</li>
+<li>update: new ElasticSearch settings for data directory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=208">&nbsp;issue
+208&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id55">
+<h3>elma (master) 0.0.220 - 2014-01-21<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: remove unrequired openSUSE packages form install script
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=205">&nbsp;issue
+205&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE nagios-plugin from elma-nagios
+package (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=206">&nbsp;issue
+206&nbsp;</a>)</li>
+<li>update: replace ES cluster name from elasticsearch to elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=207">&nbsp;issue
+207&nbsp;</a>)</li>
+<li>update: new ElasticSearch settings for data directory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=208">&nbsp;issue
+208&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id56">
+<h3>elma (master) 0.0.220 - 2014-01-21<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: remove unrequired openSUSE packages form install script
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=205">&nbsp;issue
+205&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE nagios-plugin from elma-nagios
+package (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=206">&nbsp;issue
+206&nbsp;</a>)</li>
+<li>update: replace ES cluster name from elasticsearch to elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=207">&nbsp;issue
+207&nbsp;</a>)</li>
+<li>update: new ElasticSearch settings for data directory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=208">&nbsp;issue
+208&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id57">
+<h3>elma (master) 0.0.220 - 2014-01-21<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: remove unrequired openSUSE packages form install script
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=205">&nbsp;issue
+205&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE nagios-plugin from elma-nagios
+package (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=206">&nbsp;issue
+206&nbsp;</a>)</li>
+<li>update: replace ES cluster name from elasticsearch to elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=207">&nbsp;issue
+207&nbsp;</a>)</li>
+<li>update: new ElasticSearch settings for data directory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=208">&nbsp;issue
+208&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id58">
+<h3>elma (master) 0.0.220 - 2014-01-21<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: remove unrequired openSUSE packages form install script
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=205">&nbsp;issue
+205&nbsp;</a>)</li>
+<li>update: remove unrequired openSUSE nagios-plugin from elma-nagios
+package (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=206">&nbsp;issue
+206&nbsp;</a>)</li>
+<li>update: replace ES cluster name from elasticsearch to elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=207">&nbsp;issue
+207&nbsp;</a>)</li>
+<li>update: new ElasticSearch settings for data directory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=208">&nbsp;issue
+208&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-219-2014-01-21">
+<h3>elma (master) 0.0.219 - 2014-01-21<a class="headerlink" href="#elma-master-0-0-219-2014-01-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-218-2014-01-20">
+<h3>elma (master) 0.0.218 - 2014-01-20<a class="headerlink" href="#elma-master-0-0-218-2014-01-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id59">
+<h3>elma (master) 0.0.218 - 2014-01-20<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id60">
+<h3>elma (master) 0.0.218 - 2014-01-20<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id61">
+<h3>elma (master) 0.0.218 - 2014-01-20<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-217-2014-01-19">
+<h3>elma (master) 0.0.217 - 2014-01-19<a class="headerlink" href="#elma-master-0-0-217-2014-01-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id62">
+<h3>elma (master) 0.0.217 - 2014-01-19<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id63">
+<h3>elma (master) 0.0.217 - 2014-01-19<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="id64">
+<h3>elma (master) 0.0.217 - 2014-01-19<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+<li>update: openSUSE package management for ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=203">&nbsp;issue
+203&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-216-2014-01-18">
+<h3>elma (master) 0.0.216 - 2014-01-18<a class="headerlink" href="#elma-master-0-0-216-2014-01-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for elasticsearch (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=192">&nbsp;issue
+192&nbsp;</a>)</li>
+<li>bugfix: wrong dependencies for elasticsearch nagios plugins (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=199">&nbsp;issue
+199&nbsp;</a>)</li>
+<li>bugfix: reconfiguring loops during elma-install and elma-update
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=200">&nbsp;issue
+200&nbsp;</a>)</li>
+<li>update: Upgrade to ElasticSearch 0.90.10 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=201">&nbsp;issue
+201&nbsp;</a>)</li>
+<li>bugfix: Update Recommendations during elma-install (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=202">&nbsp;issue
+202&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-215-2014-01-13">
+<h3>elma (master) 0.0.215 - 2014-01-13<a class="headerlink" href="#elma-master-0-0-215-2014-01-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for nagios extensions (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=196">&nbsp;issue
+196&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-214-2014-01-12">
+<h3>elma (master) 0.0.214 - 2014-01-12<a class="headerlink" href="#elma-master-0-0-214-2014-01-12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for nagios extensions (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=196">&nbsp;issue
+196&nbsp;</a>)</li>
+<li>update: replace old Kibana2 search against new Kibana3 search
+frontend (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=198">&nbsp;issue
+198&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-212-2014-01-11">
+<h3>elma (master) 0.0.212 - 2014-01-11<a class="headerlink" href="#elma-master-0-0-212-2014-01-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for nagios extensions (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=196">&nbsp;issue
+196&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-211-2014-01-11">
+<h3>elma (master) 0.0.211 - 2014-01-11<a class="headerlink" href="#elma-master-0-0-211-2014-01-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for nagios extensions (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=196">&nbsp;issue
+196&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-210-2014-01-07">
+<h3>elma (master) 0.0.210 - 2014-01-07<a class="headerlink" href="#elma-master-0-0-210-2014-01-07" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for nagios extensions (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=196">&nbsp;issue
+196&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-209-2014-01-06">
+<h3>elma (master) 0.0.209 - 2014-01-06<a class="headerlink" href="#elma-master-0-0-209-2014-01-06" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+<li>update: openSUSE package management for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=190">&nbsp;issue
+190&nbsp;</a>)</li>
+<li>update: openSUSE package management for kibana (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=191">&nbsp;issue
+191&nbsp;</a>)</li>
+<li>bugfix: wrong version and path variables for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=193">&nbsp;issue
+193&nbsp;</a>)</li>
+<li>update: openSUSE package management for nagios extensions (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=196">&nbsp;issue
+196&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-208-2014-01-05">
+<h3>elma (master) 0.0.208 - 2014-01-05<a class="headerlink" href="#elma-master-0-0-208-2014-01-05" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+<li>update: openSUSE package management for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=190">&nbsp;issue
+190&nbsp;</a>)</li>
+<li>update: openSUSE package management for kibana (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=191">&nbsp;issue
+191&nbsp;</a>)</li>
+<li>bugfix: wrong version and path variables for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=193">&nbsp;issue
+193&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-207-2014-01-04">
+<h3>elma (master) 0.0.207 - 2014-01-04<a class="headerlink" href="#elma-master-0-0-207-2014-01-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+<li>update: openSUSE package management for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=190">&nbsp;issue
+190&nbsp;</a>)</li>
+<li>update: openSUSE package management for kibana (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=191">&nbsp;issue
+191&nbsp;</a>)</li>
+<li>bugfix: wrong version and path variables for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=193">&nbsp;issue
+193&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-206-2014-01-02">
+<h3>elma (master) 0.0.206 - 2014-01-02<a class="headerlink" href="#elma-master-0-0-206-2014-01-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+<li>update: openSUSE package management for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=190">&nbsp;issue
+190&nbsp;</a>)</li>
+<li>update: openSUSE package management for kibana (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=191">&nbsp;issue
+191&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-205-2013-12-31">
+<h3>elma (master) 0.0.205 - 2013-12-31<a class="headerlink" href="#elma-master-0-0-205-2013-12-31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+<li>update: openSUSE package management for elma (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=190">&nbsp;issue
+190&nbsp;</a>)</li>
+<li>update: openSUSE package management for kibana (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=191">&nbsp;issue
+191&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-204-2013-12-26">
+<h3>elma (master) 0.0.204 - 2013-12-26<a class="headerlink" href="#elma-master-0-0-204-2013-12-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+<li>update: openSUSE package management for kibana (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=191">&nbsp;issue
+191&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-203-2013-12-26">
+<h3>elma (master) 0.0.203 - 2013-12-26<a class="headerlink" href="#elma-master-0-0-203-2013-12-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: wrong nagios-plugins-common dependencies (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=188">&nbsp;issue
+188&nbsp;</a>)</li>
+<li>update: openSUSE package management for rsyslog-testtools (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=189">&nbsp;issue
+189&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-202-2013-11-14">
+<h3>elma (master) 0.0.202 - 2013-11-14<a class="headerlink" href="#elma-master-0-0-202-2013-11-14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: ElasticSearch update to 0.90.7 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=187">&nbsp;issue
+187&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-201-2013-11-08">
+<h3>elma (master) 0.0.201 - 2013-11-08<a class="headerlink" href="#elma-master-0-0-201-2013-11-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: apache IP bindings on dual-stack machines (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=186">&nbsp;issue
+186&nbsp;</a>)</li>
+<li>update: ElasticSearch update to 0.90.6 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=187">&nbsp;issue
+187&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="rsyslog-testtools-v7-stable-7-4-4-2013-10-18">
+<h3>rsyslog-testtools (v7-stable) 7.4.4 - 2013-10-18<a class="headerlink" href="#rsyslog-testtools-v7-stable-7-4-4-2013-10-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: rsyslog-testtools (v7-stable)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-200-2013-10-17">
+<h3>elma (master) 0.0.200 - 2013-10-17<a class="headerlink" href="#elma-master-0-0-200-2013-10-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: systemd elasticsearch.service unknown mlockall error 0
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=184">&nbsp;issue
+184&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-199-2013-10-17">
+<h3>elma appliance 0.0.199 - 2013-10-17<a class="headerlink" href="#elma-appliance-0-0-199-2013-10-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.199</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-199-2013-10-17">
+<h3>elma (master) 0.0.199 - 2013-10-17<a class="headerlink" href="#elma-master-0-0-199-2013-10-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: rsyslog upgrade to 7.4.4 - OutofMemoryError (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=181">&nbsp;issue
+181&nbsp;</a>)</li>
+<li>bugfix: elma-diag.sh cannot remove /var/spool/rsyslog: Directory not
+empty (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=183">&nbsp;issue
+183&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-198-2013-10-11">
+<h3>elma (master) 0.0.198 - 2013-10-11<a class="headerlink" href="#elma-master-0-0-198-2013-10-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: configuration error after kibana3 update (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=175">&nbsp;issue
+175&nbsp;</a>)</li>
+<li>bugfix: elma-diag.sh causes apache/passenger errors (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=182">&nbsp;issue
+182&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-197-2013-10-04">
+<h3>elma (master) 0.0.197 - 2013-10-04<a class="headerlink" href="#elma-master-0-0-197-2013-10-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: out of ES heap memory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=179">&nbsp;issue
+179&nbsp;</a>)</li>
+<li>bugfix: Java heap space (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=181">&nbsp;issue
+181&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-196-2013-10-03">
+<h3>elma (master) 0.0.196 - 2013-10-03<a class="headerlink" href="#elma-master-0-0-196-2013-10-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: integration of loadbalancing and redanduncy concepts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=152">issue
+152</a>)</li>
+<li>update: clarify browser related issues during ELMA webfrontend
+upgrades in release notes and changelog (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=178">&nbsp;issue
+178&nbsp;</a>)</li>
+<li>update: add ES heap space changes into ELMA reconfigure procedure
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=179">&nbsp;issue
+179&nbsp;</a>)</li>
+<li>bugfix: documentation changelog in webfrontend is one version after
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=180">&nbsp;issue
+180&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-194-2013-10-02">
+<h3>elma appliance 0.0.194 - 2013-10-02<a class="headerlink" href="#elma-appliance-0-0-194-2013-10-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.194</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-194-2013-10-02">
+<h3>elma (master) 0.0.194 - 2013-10-02<a class="headerlink" href="#elma-master-0-0-194-2013-10-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: integration of loadbalancing and redanduncy concepts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=152">issue
+152</a>)</li>
+<li>bugfix: mistyping the new Nagios password causes install script to
+crash (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=176">&nbsp;issue
+176&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-193-2013-09-27">
+<h3>elma appliance 0.0.193 - 2013-09-27<a class="headerlink" href="#elma-appliance-0-0-193-2013-09-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.193</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-193-2013-09-27">
+<h3>elma (master) 0.0.193 - 2013-09-27<a class="headerlink" href="#elma-master-0-0-193-2013-09-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: integration of loadbalancing and redanduncy concepts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=152">issue
+152</a>)</li>
+<li>bugfix: adaptation of new Kibana upgrade method (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=169">&nbsp;issue
+169&nbsp;</a>)</li>
+<li>bugfix: invalid initial Elasticsearch Java heap space (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=170">&nbsp;issue
+170&nbsp;</a>)</li>
+<li>bugfix: adaptation of new Kibana customization method (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=172">&nbsp;issue
+172&nbsp;</a>)</li>
+<li>bugfix: error in elma_elasticsearch_daily.sh while deleting expired
+indexes (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=174">&nbsp;issue
+174&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-192-2013-09-16">
+<h3>elma (master) 0.0.192 - 2013-09-16<a class="headerlink" href="#elma-master-0-0-192-2013-09-16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: integration of loadbalancing and redanduncy concepts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=152">issue
+152</a>)</li>
+<li>update: customization of Elasticsearch Java heap space (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=167">&nbsp;issue
+167&nbsp;</a>)</li>
+<li>update: adaptation of new Kibana upgrade method (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=169">&nbsp;issue
+169&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-191-2013-08-27">
+<h3>elma appliance 0.0.191 - 2013-08-27<a class="headerlink" href="#elma-appliance-0-0-191-2013-08-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.191</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-191-2013-08-27">
+<h3>elma (master) 0.0.191 - 2013-08-27<a class="headerlink" href="#elma-master-0-0-191-2013-08-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: configuration issues in LDAP authentication (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=161">&nbsp;issue
+161&nbsp;</a>)</li>
+<li>bugfix: password change over web gui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=163">&nbsp;issue
+163&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-190-2013-08-26">
+<h3>elma (master) 0.0.190 - 2013-08-26<a class="headerlink" href="#elma-master-0-0-190-2013-08-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: changes in kibana3 configuration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=162">&nbsp;issue
+162&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-189-2013-08-26">
+<h3>elma (master) 0.0.189 - 2013-08-26<a class="headerlink" href="#elma-master-0-0-189-2013-08-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: update to ElasticSearch 90.3 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=150">&nbsp;issue
+150&nbsp;</a>)</li>
+<li>update: changes in kibana3 configuration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=162">&nbsp;issue
+162&nbsp;</a>)</li>
+<li>update: integration of loadbalancing and redanduncy concepts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=152">issue
+152</a>)</li>
+<li>update: clarify installation procedures (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=136">&nbsp;issue
+136&nbsp;</a>)</li>
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: function to verify hostname and network configuration
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=160">&nbsp;issue
+160&nbsp;</a>)</li>
+<li>bugfix: configuration issues in LDAP authentication (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=161">&nbsp;issue
+161&nbsp;</a>)</li>
+<li>bugfix: ElasticSearch install - paramedic plugin ZipException
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=164">&nbsp;issue
+164&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-188-2013-07-17">
+<h3>elma appliance 0.0.188 - 2013-07-17<a class="headerlink" href="#elma-appliance-0-0-188-2013-07-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.188</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-188-2013-07-17">
+<h3>elma (master) 0.0.188 - 2013-07-17<a class="headerlink" href="#elma-master-0-0-188-2013-07-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: some updates on ELMA wiki pages</li>
+<li>new: support script for cleaning rsyslog spool and tmp directory
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=147">&nbsp;issue
+147&nbsp;</a>)</li>
+<li>bugfix: install problems in 0.0.187 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=156">&nbsp;issue
+156&nbsp;</a>)</li>
+<li>update: changes in kibana3 configuration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=156">&nbsp;issue
+156&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-187-2013-07-13">
+<h3>elma appliance 0.0.187 - 2013-07-13<a class="headerlink" href="#elma-appliance-0-0-187-2013-07-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.187</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-187-2013-07-13">
+<h3>elma (master) 0.0.187 - 2013-07-13<a class="headerlink" href="#elma-master-0-0-187-2013-07-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: clarify installation procedures (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=136">&nbsp;issue
+136&nbsp;</a>)</li>
+<li>update: migration from jetty to apache reverse proxy for
+elasticsearch http listener (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=151">&nbsp;issue
+151&nbsp;</a>)</li>
+<li>new: integration of loadbalancing and redanduncy concepts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=152">issue
+152</a>)</li>
+<li>bugfix: remove logstash installation procedure from the install and
+reconfigure scripts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=153">&nbsp;issue
+153&nbsp;</a>)</li>
+<li>bugfix: when using custom logo image file with apache image directory
+path all update and install procedures fails (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=155">&nbsp;issue
+155&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-186-2013-07-04">
+<h3>elma appliance 0.0.186 - 2013-07-04<a class="headerlink" href="#elma-appliance-0-0-186-2013-07-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.186</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-186-2013-07-04">
+<h3>elma (master) 0.0.186 - 2013-07-04<a class="headerlink" href="#elma-master-0-0-186-2013-07-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>update: adding more asks for configuration settings (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=134">&nbsp;issue
+134&nbsp;</a>)</li>
+<li>new: reset and uninstall function in elma-install.sh (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=140">&nbsp;issue
+140&nbsp;</a>)</li>
+<li>update: separate rsyslog conf files (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=141">&nbsp;issue
+141&nbsp;</a>)</li>
+<li>update: rsyslog listening udp and tcp ports in ELMA configuration
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=142">&nbsp;issue
+142&nbsp;</a>)</li>
+<li>update: implementation of logrotate for installation log files
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=144">&nbsp;issue
+144&nbsp;</a>)</li>
+<li>bugfix: user definable organization logo for ELMA web-gui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=145">&nbsp;issue
+145&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-185-2013-06-30">
+<h3>elma (master) 0.0.185 - 2013-06-30<a class="headerlink" href="#elma-master-0-0-185-2013-06-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugbix: pwchange for ELMA und nagios htaccess users (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=124">&nbsp;issue
+124&nbsp;</a>)</li>
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: adding NOT installed hints on ELMA about.html page (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=135">&nbsp;issue
+135&nbsp;</a>)</li>
+<li>update: prompt users to reboot the appliance after an update to the
+system (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=139">&nbsp;issue
+139&nbsp;</a>)</li>
+<li>bugfix: exits into failed update procedures and more warnings for
+better troubleshuting (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=86">&nbsp;issue
+86&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-184-2013-06-28">
+<h3>elma (master) 0.0.184 - 2013-06-28<a class="headerlink" href="#elma-master-0-0-184-2013-06-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: changelog issues during deployment (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=133">&nbsp;issue
+133&nbsp;</a>)</li>
+<li>new: add installation log file (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=137">&nbsp;issue
+137&nbsp;</a>)</li>
+<li>new: remove debug output from terminal output (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=138">&nbsp;issue
+138&nbsp;</a>)</li>
+<li>update: prompt users to reboot the appliance after an update to the
+system (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=139">&nbsp;issue
+139&nbsp;</a>)</li>
+<li>bugfix: exits into failed update procedures and more warnings for
+better troubleshuting (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=86">&nbsp;issue
+86&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-183-2013-06-21">
+<h3>elma (master) 0.0.183 - 2013-06-21<a class="headerlink" href="#elma-master-0-0-183-2013-06-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-182-2013-06-20">
+<h3>elma (master) 0.0.182 - 2013-06-20<a class="headerlink" href="#elma-master-0-0-182-2013-06-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-181-2013-06-19">
+<h3>elma (master) 0.0.181 - 2013-06-19<a class="headerlink" href="#elma-master-0-0-181-2013-06-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-180-2013-06-19">
+<h3>elma appliance 0.0.180 - 2013-06-19<a class="headerlink" href="#elma-appliance-0-0-180-2013-06-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.180</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-180-2013-06-19">
+<h3>elma (master) 0.0.180 - 2013-06-19<a class="headerlink" href="#elma-master-0-0-180-2013-06-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+<li>bugfix: path errors during elma-install.sh (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=132">&nbsp;issue
+132&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-179-2013-06-19">
+<h3>elma (master) 0.0.179 - 2013-06-19<a class="headerlink" href="#elma-master-0-0-179-2013-06-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: refreshing of all openSUSE repositories during suse-update.sh
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=130">&nbsp;issue
+130&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-178-2013-06-18">
+<h3>elma (master) 0.0.178 - 2013-06-18<a class="headerlink" href="#elma-master-0-0-178-2013-06-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: installation scripts for distributed systems (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=129">issue
+129</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-177-2013-06-09">
+<h3>elma (master) 0.0.177 - 2013-06-09<a class="headerlink" href="#elma-master-0-0-177-2013-06-09" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: pwchange for ELMA und nagios htaccess users (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=124">&nbsp;issue
+124&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-176-2013-06-09">
+<h3>elma (master) 0.0.176 - 2013-06-09<a class="headerlink" href="#elma-master-0-0-176-2013-06-09" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: pwchange for ELMA und nagios htaccess users (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=124">&nbsp;issue
+124&nbsp;</a>)</li>
+<li>bugfix: change admin password for ElasticSearch admin during
+elma-install procedure (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=125">&nbsp;issue
+125&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-175-2013-06-08">
+<h3>elma (master) 0.0.175 - 2013-06-08<a class="headerlink" href="#elma-master-0-0-175-2013-06-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: add ELMA appliance version infos (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=128">&nbsp;issue
+128&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-174-2013-06-08">
+<h3>elma (master) 0.0.174 - 2013-06-08<a class="headerlink" href="#elma-master-0-0-174-2013-06-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: add ELMA appliance version infos (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=128">&nbsp;issue
+128&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-173-2013-06-08">
+<h3>elma (master) 0.0.173 - 2013-06-08<a class="headerlink" href="#elma-master-0-0-173-2013-06-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: add ELMA appliance version infos (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=128">&nbsp;issue
+128&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-172-2013-06-08">
+<h3>elma (master) 0.0.172 - 2013-06-08<a class="headerlink" href="#elma-master-0-0-172-2013-06-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: add ELMA appliance version infos (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=128">&nbsp;issue
+128&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-171-2013-06-08">
+<h3>elma (master) 0.0.171 - 2013-06-08<a class="headerlink" href="#elma-master-0-0-171-2013-06-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: crontab script and crontab entry for create and delete ELMA
+config file backups (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=49">&nbsp;issue
+49&nbsp;</a>)</li>
+<li>bugfix: dashboard and backup URL not found on server (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=113">&nbsp;issue
+113&nbsp;</a>)</li>
+<li>update: add ELMA appliance version infos (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=128">&nbsp;issue
+128&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-170-2013-06-04">
+<h3>elma (master) 0.0.170 - 2013-06-04<a class="headerlink" href="#elma-master-0-0-170-2013-06-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: missing ElasticSearch template directory (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=118">&nbsp;issue
+118&nbsp;</a>)</li>
+<li>update: change initial root password during elma-install procedure
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=119">&nbsp;issue
+119&nbsp;</a>)</li>
+<li>update: change initial admin password for web-gui during elma-install
+procedure (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=120">&nbsp;issue
+120&nbsp;</a>)</li>
+<li>update: change initial change initial nagiosadmin password for nagios
+web-gui during elma-install procedure (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=121">&nbsp;issue
+121&nbsp;</a>)</li>
+<li>update: change initial admin password for elasticsearch web-gui
+during during elma-install procedure (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=122">&nbsp;issue
+122&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-169-2013-06-04">
+<h3>elma appliance 0.0.169 - 2013-06-04<a class="headerlink" href="#elma-appliance-0-0-169-2013-06-04" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.169</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-169-2013-06-02">
+<h3>elma (master) 0.0.169 - 2013-06-02<a class="headerlink" href="#elma-master-0-0-169-2013-06-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: add status check for Apache at the end of update scripts
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=117">&nbsp;issue
+117&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-168-2013-06-02">
+<h3>elma (master) 0.0.168 - 2013-06-02<a class="headerlink" href="#elma-master-0-0-168-2013-06-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: add status check for Apache at the end of update scripts
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=117">&nbsp;issue
+117&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-167-2013-06-02">
+<h3>elma (master) 0.0.167 - 2013-06-02<a class="headerlink" href="#elma-master-0-0-167-2013-06-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: handle entries with multiple answers on elma-install prompts
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=116">&nbsp;issue
+116&nbsp;</a>)</li>
+<li>bugfix: ElasticSearch - migration of startup script from SysV to
+systemd ( <a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=64">&nbsp;issue
+64&nbsp;</a> )</li>
+<li>update: implementation of apache mod_xradius (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=48">&nbsp;issue
+48&nbsp;</a>)</li>
+<li>update: implementation of apache mod_ldap (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=75">&nbsp;issue
+75&nbsp;</a>)</li>
+<li>update: check differences between distribution and customer config
+fragments (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=94">&nbsp;issue
+94&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-166-2013-05-28">
+<h3>elma (master) 0.0.166 - 2013-05-28<a class="headerlink" href="#elma-master-0-0-166-2013-05-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: ElasticSearch - migration of startup script from SysV to
+systemd (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=64">&nbsp;issue
+64&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-165-2013-05-28">
+<h3>elma (master) 0.0.165 - 2013-05-28<a class="headerlink" href="#elma-master-0-0-165-2013-05-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: elasticsearch - Could not resolve placeholder &#8216;HOST&#8217; (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=107">&nbsp;issue
+107&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-164-2013-05-28">
+<h3>elma (master) 0.0.164 - 2013-05-28<a class="headerlink" href="#elma-master-0-0-164-2013-05-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: implementation of nagiosgraph (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=100">&nbsp;issue
+100&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-163-2013-05-27">
+<h3>elma (master) 0.0.163 - 2013-05-27<a class="headerlink" href="#elma-master-0-0-163-2013-05-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: backup crontab job - Error opening terminal: unknown (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=111">&nbsp;issue
+111&nbsp;</a>)</li>
+<li>bugfix: Installed Versions shows errors and not finding running
+processes (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=112">&nbsp;issue
+112&nbsp;</a>)</li>
+<li>bugfix: dashboard and backup URL not found on server (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=113">&nbsp;issue
+113&nbsp;</a>)</li>
+<li>bugfix: add new respository (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=114">&nbsp;issue
+114&nbsp;</a>)</li>
+<li>bugfix: changes in elasticsearch-kibana templates (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=115">&nbsp;issue
+115&nbsp;</a>)</li>
+<li>new: implementation of nagiosgraph (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=100">&nbsp;issue
+100&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-162-2013-05-23">
+<h3>elma (master) 0.0.162 - 2013-05-23<a class="headerlink" href="#elma-master-0-0-162-2013-05-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: dashboard and backup URL not found on server (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=113">&nbsp;issue
+113&nbsp;</a>)</li>
+<li>bugfix: new kibana3 packuage name has to be adapted in all install
+and update scripts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=110">&nbsp;issue
+110&nbsp;</a>)</li>
+<li>update: check differences between distribution and customer config
+fragments (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=94">&nbsp;issue
+94&nbsp;</a>)</li>
+<li>bugfix: backup directory in ELMA webgui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=49">&nbsp;issue
+49&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-161-2013-05-22">
+<h3>elma (master) 0.0.161 - 2013-05-22<a class="headerlink" href="#elma-master-0-0-161-2013-05-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: new kibana3 packuage name has to be adapted in all install
+and update scripts (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=110">&nbsp;issue
+110&nbsp;</a>)</li>
+<li>update: check differences between distribution and customer config
+fragments (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=94">&nbsp;issue
+94&nbsp;</a>)</li>
+<li>bugfix: backup directory in ELMA webgui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=49">&nbsp;issue
+49&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-160-2013-05-22">
+<h3>elma (master) 0.0.160 - 2013-05-22<a class="headerlink" href="#elma-master-0-0-160-2013-05-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: check differences between distribution and customer config
+fragments (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=94">&nbsp;issue
+94&nbsp;</a>)</li>
+<li>bugfix: backup directory in ELMA webgui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=49">&nbsp;issue
+49&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-159-2013-05-20">
+<h3>elma appliance 0.0.159 - 2013-05-20<a class="headerlink" href="#elma-appliance-0-0-159-2013-05-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.159</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-159-2013-05-20">
+<h3>elma (master) 0.0.159 - 2013-05-20<a class="headerlink" href="#elma-master-0-0-159-2013-05-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: backup directory in ELMA webgui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=49">&nbsp;issue
+49&nbsp;</a>)</li>
+<li>new: crontab script and crontab entry for create and delete ELMA
+config file backups (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=49">&nbsp;issue
+49&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-158-2013-05-16">
+<h3>elma (master) 0.0.158 - 2013-05-16<a class="headerlink" href="#elma-master-0-0-158-2013-05-16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: error during reconfigure named and ntp service (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=91">&nbsp;issue
+91&nbsp;</a>)</li>
+<li>bugfix: error during diff check of elma.conf (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=109">&nbsp;issue
+109&nbsp;</a>)</li>
+<li>new: integration of smnp trap receiver (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=46">&nbsp;issue
+46&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-157-2013-05-14">
+<h3>elma (master) 0.0.157 - 2013-05-14<a class="headerlink" href="#elma-master-0-0-157-2013-05-14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: check if elasticsearch service has been installed on this
+node (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=106">&nbsp;issue
+106&nbsp;</a>)</li>
+<li>bugfix: check if webfrontend has been installed on this node (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=104">&nbsp;issue
+104&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-156-2013-05-13">
+<h3>elma (master) 0.0.156 - 2013-05-13<a class="headerlink" href="#elma-master-0-0-156-2013-05-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: initialisation of some elma.conf variables (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=103">&nbsp;issue
+103&nbsp;</a>)</li>
+<li>bugfix: some changes in elma-reconfigure.sh (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=105">&nbsp;issue
+105&nbsp;</a>)</li>
+<li>bugfix: elasticsearch - Could not resolve placeholder &#8216;HOST&#8217; (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=107">&nbsp;issue
+107&nbsp;</a>)</li>
+<li>bugfix: migration of ElasticSearch startup script from SysV to
+systemd (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=64">&nbsp;issue
+64&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>bugfix: obsolete nagios-nsca rpms (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=108">&nbsp;issue
+108&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-155-2013-05-12">
+<h3>elma (master) 0.0.155 - 2013-05-12<a class="headerlink" href="#elma-master-0-0-155-2013-05-12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: add log output for unused ElasticSearch data directory
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=16">&nbsp;issue
+16&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>new: Implementation of nagiosgraph (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=100">&nbsp;issue
+100&nbsp;</a>)</li>
+<li>bugfix: during ES upgrade process old ES deamon has to be stopped
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=98">&nbsp;issue
+98&nbsp;</a>)</li>
+<li>update: migration of ElasticSearch startup script from SysV to
+systemd (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=64">&nbsp;issue
+64&nbsp;</a>)</li>
+<li>update: migration of logstash startup script from SysV to systemd
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=66">issue
+66</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-154-2013-05-09">
+<h3>elma (master) 0.0.154 - 2013-05-09<a class="headerlink" href="#elma-master-0-0-154-2013-05-09" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>new: Implementation of nagiosgraph (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=100">&nbsp;issue
+100&nbsp;</a>)</li>
+<li>bugfix: development script errors on git synchronization (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=53">&nbsp;issue
+53&nbsp;</a>)</li>
+<li>bugfix: missing return values in some global deployment functions
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=101">&nbsp;issue
+101&nbsp;</a>)</li>
+<li>update: build rsyslog-testtools 7.2.7 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=97">&nbsp;issue
+97&nbsp;</a>)</li>
+<li>bugfix: during ES upgrade process old ES deamon has to be stopped
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=98">&nbsp;issue
+98&nbsp;</a>)</li>
+<li>bugfix: typo on Dashboard.html (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=99">&nbsp;issue
+99&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="rsyslog-testtools-v7-stable-7-2-7-2013-05-09">
+<h3>rsyslog-testtools (v7-stable) 7.2.7 - 2013-05-09<a class="headerlink" href="#rsyslog-testtools-v7-stable-7-2-7-2013-05-09" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="elma-master-0-0-149-2013-05-08">
+<h3>elma (master) 0.0.149 - 2013-05-08<a class="headerlink" href="#elma-master-0-0-149-2013-05-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>update: migration to ElasticSearch 0.90.0 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=95">&nbsp;issue
+95&nbsp;</a>)</li>
+<li>bugfix: minor error in elma-update.sh - missing update recommendation
+for rsyslog</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-148-2013-05-08">
+<h3>elma appliance 0.0.148 - 2013-05-08<a class="headerlink" href="#elma-appliance-0-0-148-2013-05-08" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.148</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-148-2013-05-07">
+<h3>elma (master) 0.0.148 - 2013-05-07<a class="headerlink" href="#elma-master-0-0-148-2013-05-07" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: minor error in elma.conf patch function (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=89">&nbsp;issue
+89&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>update: implemenatation of nagios rsyslog queue probe (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=87">&nbsp;issue
+87&nbsp;</a>)</li>
+<li>new: Integration of smnpd and snmptrapd (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=46">&nbsp;issue
+46&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-147-2013-05-03">
+<h3>elma (master) 0.0.147 - 2013-05-03<a class="headerlink" href="#elma-master-0-0-147-2013-05-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: minor error in elma.conf patch function (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=89">&nbsp;issue
+89&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>update: implemenatation of nagios rsyslog queue probe (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=87">&nbsp;issue
+87&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-146-2013-05-02">
+<h3>elma (master) 0.0.146 - 2013-05-02<a class="headerlink" href="#elma-master-0-0-146-2013-05-02" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: Change rsyslog to not aggregate repeated log entries (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=88">&nbsp;issue
+88&nbsp;</a>)</li>
+<li>new: implementation of nagios rsyslog probe (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=73">&nbsp;issue
+73&nbsp;</a>)</li>
+<li>update: some changes for nagios core system monitoring (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>update: redesign of rsyslog test scripts</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-145-2013-04-25">
+<h3>elma (master) 0.0.145 - 2013-04-25<a class="headerlink" href="#elma-master-0-0-145-2013-04-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: exits into failed update procedures and more warnings for
+better troubleshuting (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=86">&nbsp;issue
+86&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-144-2013-04-23">
+<h3>elma (master) 0.0.144 - 2013-04-23<a class="headerlink" href="#elma-master-0-0-144-2013-04-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: css and html adaptations for IE8 and IE9 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=85">&nbsp;issue
+85&nbsp;</a>)</li>
+<li>cleanup: pure bootstrap css styles on ELMA html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=85">&nbsp;issue
+85&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-143-2013-04-22">
+<h3>elma (master) 0.0.143 - 2013-04-22<a class="headerlink" href="#elma-master-0-0-143-2013-04-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: errors during copy of documentation html pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=81">&nbsp;issue
+81&nbsp;</a>)</li>
+<li>update: css and html adaptations for IE8 and IE9 (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=85">&nbsp;issue
+85&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-142-2013-04-22">
+<h3>elma (master) 0.0.142 - 2013-04-22<a class="headerlink" href="#elma-master-0-0-142-2013-04-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix; missing nagios version info (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=79">&nbsp;issue
+79&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-141-2013-04-21">
+<h3>elma appliance 0.0.141 - 2013-04-21<a class="headerlink" href="#elma-appliance-0-0-141-2013-04-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.141</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-141-2013-04-21">
+<h3>elma (master) 0.0.141 - 2013-04-21<a class="headerlink" href="#elma-master-0-0-141-2013-04-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfig: missing cfg_dir=/etc/nagios/elma in /etc/nagios/nagios.cfg
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=80">&nbsp;issue
+80&nbsp;</a>)</li>
+<li>bugfix: missing port directive for kibana2 in apache listener
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=61">&nbsp;issue
+61&nbsp;</a>)</li>
+<li>bugfix: Missing installation notes for Nagios in elma-install.sh
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>bugfix: bind working directory is not writable (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=82">&nbsp;issue
+82&nbsp;</a>)</li>
+<li>bugfix: /etc/apache2/vhosts.d/elma-ssl.conf - Useless use of
+AllowOverride (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=83">&nbsp;issue
+83&nbsp;</a>)</li>
+<li>bugfix: incorrect initial version variables in elma.conf (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=84">&nbsp;issue
+84&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-140-2013-04-21">
+<h3>elma (master) 0.0.140 - 2013-04-21<a class="headerlink" href="#elma-master-0-0-140-2013-04-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfig: elma.conf patch function</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-139-2013-04-21">
+<h3>elma (master) 0.0.139 - 2013-04-21<a class="headerlink" href="#elma-master-0-0-139-2013-04-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: NTP integration and configuration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=78">&nbsp;issue
+78&nbsp;</a>)</li>
+<li>new: bind integration and configuration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=77">&nbsp;issue
+77&nbsp;</a>)</li>
+<li>new: Mail forwarding to SMTP mailrelay (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=76">&nbsp;issue
+76&nbsp;</a>)</li>
+<li>update: Nagios customizing</li>
+<li>update: Nagios integration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-138-2013-04-19">
+<h3>elma (master) 0.0.138 - 2013-04-19<a class="headerlink" href="#elma-master-0-0-138-2013-04-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: modify kibana3 dashboard default template</li>
+<li>bugfix: add apache passenger module into kibana-update (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=61">&nbsp;issue
+61&nbsp;</a>)</li>
+<li>update: Nagios customizing</li>
+<li>update: Nagios integration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>update: Nagios elasticsearch probes (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=74">&nbsp;issue
+74&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-136-2013-04-18">
+<h3>elma (master) 0.0.136 - 2013-04-18<a class="headerlink" href="#elma-master-0-0-136-2013-04-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: Nagios customizing</li>
+<li>update: Nagios integration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>new: Nagios elasticsearch probes (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=74">&nbsp;issue
+74&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-135-2013-04-17">
+<h3>elma (master) 0.0.135 - 2013-04-17<a class="headerlink" href="#elma-master-0-0-135-2013-04-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: Nagios integration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+<li>new: Nagios elasticsearch probes (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=74">&nbsp;issue
+74&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-134-2013-04-15">
+<h3>elma (master) 0.0.134 - 2013-04-15<a class="headerlink" href="#elma-master-0-0-134-2013-04-15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: Nagios integration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-133-2013-04-14">
+<h3>elma (master) 0.0.133 - 2013-04-14<a class="headerlink" href="#elma-master-0-0-133-2013-04-14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>update: css styles to pure bootstrap</li>
+<li>new: Nagios integration (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=72">&nbsp;issue
+72&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-132-2013-04-11">
+<h3>elma (master) 0.0.132 - 2013-04-11<a class="headerlink" href="#elma-master-0-0-132-2013-04-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: apache2 mod_auth_xradius (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=48">&nbsp;issue
+48&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-131-2013-04-10">
+<h3>elma (master) 0.0.131 - 2013-04-10<a class="headerlink" href="#elma-master-0-0-131-2013-04-10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: enhanced ELMA config file control</li>
+<li>new: possibility for automatic patching ELMA config file</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-130-2013-04-09">
+<h3>elma (master) 0.0.130 - 2013-04-09<a class="headerlink" href="#elma-master-0-0-130-2013-04-09" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: extend changelog version numbers with build date (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=70">&nbsp;issue
+70&nbsp;</a>)</li>
+<li>bugfix: reorder installation steps for ELMA web gui (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=69">&nbsp;issue
+69&nbsp;</a>)</li>
+<li>bugfix: fix for create-new-elma-package.sh (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=40">&nbsp;issue
+40&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-127-2013-04-06">
+<h3>elma (master) 0.0.127 - 2013-04-06<a class="headerlink" href="#elma-master-0-0-127-2013-04-06" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: extend changelog version numbers with build date (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=70">&nbsp;issue
+70&nbsp;</a>)</li>
+<li>update: enhanced changelog version control</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-116-2013-04-05">
+<h3>elma (master) 0.0.116 - 2013-04-05<a class="headerlink" href="#elma-master-0-0-116-2013-04-05" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: enable systemd apache2.service (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=63">&nbsp;issue
+63&nbsp;</a>)</li>
+<li>update: migration of startup scripts/commands from SysV to systemd
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=65">&nbsp;issue
+65&nbsp;</a>)</li>
+<li>bugfix: add apache passenger module into suse-update (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=61">&nbsp;issue
+61&nbsp;</a>)</li>
+<li>update: tuning of kibana default dashboard</li>
+</ul>
+</div>
+<div class="section" id="elma-appliance-0-0-115-2013-04-03">
+<h3>elma appliance 0.0.115 - 2013-04-03<a class="headerlink" href="#elma-appliance-0-0-115-2013-04-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>migration to openSUSE 12.3</li>
+<li>update: <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4">Enterprise Log Management Appliance
+0.0.115</a></li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-115-2013-04-03">
+<h3>elma (master) 0.0.115 - 2013-04-03<a class="headerlink" href="#elma-master-0-0-115-2013-04-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: KIBANA_PROTOCOL should be initially set to https</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-114-2013-04-03">
+<h3>elma (master) 0.0.114 - 2013-04-03<a class="headerlink" href="#elma-master-0-0-114-2013-04-03" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: installing Kibana under Passenger for Apache (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=61">&nbsp;issue
+61&nbsp;</a>)</li>
+<li>cleanup: remove kibana deamon (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=61">&nbsp;issue
+61&nbsp;</a>)</li>
+<li>new: apache2 vhosts configuration</li>
+<li>new: KIBANA_FQDN should be initially set to hostname (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=58">&nbsp;issue
+58&nbsp;</a>)</li>
+<li>cleanup: apache2 configuration</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-113-2013-04-01">
+<h3>elma (master) 0.0.113 - 2013-04-01<a class="headerlink" href="#elma-master-0-0-113-2013-04-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: enable journald ForwardToSyslog (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=59">&nbsp;issue
+59&nbsp;</a>)</li>
+<li>update: customize html/css of ELMA web gui</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-112-2013-03-28">
+<h3>elma (master) 0.0.112 - 2013-03-28<a class="headerlink" href="#elma-master-0-0-112-2013-03-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: Implementation of webYAST (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=15">&nbsp;issue
+15&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-111-2013-03-28">
+<h3>elma (master) 0.0.111 - 2013-03-28<a class="headerlink" href="#elma-master-0-0-111-2013-03-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: openSUSE release version in changelog (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=54">&nbsp;issue
+54&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-110-2013-03-28">
+<h3>elma (master) 0.0.110 - 2013-03-28<a class="headerlink" href="#elma-master-0-0-110-2013-03-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: broken elasticsearch-kibana3 changelog (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=56">&nbsp;issue
+56&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-108-2013-03-27">
+<h3>elma (master) 0.0.108 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-108-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: broken elasticsearch-kibana3 changelog (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=56">&nbsp;issue
+56&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-107-2013-03-27">
+<h3>elma (master) 0.0.107 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-107-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: devel scripts</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-106-2013-03-27">
+<h3>elma (master) 0.0.106 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-106-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: devel scripts</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-105-2013-03-27">
+<h3>elma (master) 0.0.105 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-105-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: devel scripts</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-104-2013-03-27">
+<h3>elma (master) 0.0.104 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-104-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: incomplete elma.conf deployment in developement scripts</li>
+<li>bugfix: devel scripts</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-103-2013-03-27">
+<h3>elma (master) 0.0.103 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-103-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: incomplete elma.conf deployment in developement scripts</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-102-2013-03-27">
+<h3>elma (master) 0.0.102 - 2013-03-27<a class="headerlink" href="#elma-master-0-0-102-2013-03-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: better version control in install and upgrade scripts
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=40">&nbsp;issue
+40&nbsp;</a>)</li>
+<li>new: apache2 reverse proxy instance before kibana webfrontend
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=44">&nbsp;issue
+44&nbsp;</a>)</li>
+<li>cleanup: close Kibana Port in SUSEFirewall (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=45">&nbsp;issue
+45&nbsp;</a>)</li>
+<li>new: snmptrapd deamon as snmp trap reveiver (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=46">&nbsp;issue
+46&nbsp;</a>)</li>
+<li>new: html framesets for ELMA header and footer pages (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=6">&nbsp;issue
+6&nbsp;</a>)</li>
+<li>new: Integration of ELMA favicon (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=51">&nbsp;issue
+51&nbsp;</a>)</li>
+<li>Integration of Kibana dashboard (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=50">&nbsp;issue
+50&nbsp;</a>)</li>
+<li>update: elasticsearch update to 20.6</li>
+<li>update: rsyslog tools update to 7.2.6</li>
+</ul>
+</div>
+<div class="section" id="rsyslog-testtools-v7-stable-7-2-6-2013-03-27">
+<h3>rsyslog-testtools (v7-stable) 7.2.6 - 2013-03-27<a class="headerlink" href="#rsyslog-testtools-v7-stable-7-2-6-2013-03-27" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="elma-master-0-0-101-2013-03-05">
+<h3>elma (master) 0.0.101 - 2013-03-05<a class="headerlink" href="#elma-master-0-0-101-2013-03-05" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: devel scripts - clone git repository if .git folder is
+missing</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-100-2013-03-05">
+<h3>elma (master) 0.0.100 - 2013-03-05<a class="headerlink" href="#elma-master-0-0-100-2013-03-05" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: devel scripts - clone git repository if .git folder is
+missing</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-99-2013-03-05">
+<h3>elma (master) 0.0.99 - 2013-03-05<a class="headerlink" href="#elma-master-0-0-99-2013-03-05" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: devel scripts - clone git repository if .git folder is
+missing</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-94-2013-03-01">
+<h3>elma (master) 0.0.94 - 2013-03-01<a class="headerlink" href="#elma-master-0-0-94-2013-03-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: more precise pgrep filter in check_packages_status (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=39">&nbsp;issue
+39&nbsp;</a>)</li>
+<li>bugfix: add checks if packages are installed (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=38">&nbsp;issue
+38&nbsp;</a>)</li>
+<li>bugfix: add exit in development scripts if git UID has to be
+configured</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-93-2013-03-01">
+<h3>elma (master) 0.0.93 - 2013-03-01<a class="headerlink" href="#elma-master-0-0-93-2013-03-01" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: more precise pgrep filter in check_packages_status (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=39">&nbsp;issue
+39&nbsp;</a>)</li>
+<li>bugfix: add checks if packages are installed (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=38">&nbsp;issue
+38&nbsp;</a>)</li>
+<li>bugfix: add exit in development scripts if git UID has to be
+configured</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-92-2013-02-25">
+<h3>elma (master) 0.0.92 - 2013-02-25<a class="headerlink" href="#elma-master-0-0-92-2013-02-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>remove .git dir in elma packuage zip file (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=36">&nbsp;issue
+36&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-91-2013-02-25">
+<h3>elma (master) 0.0.91 - 2013-02-25<a class="headerlink" href="#elma-master-0-0-91-2013-02-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: wrong symbolic link in kibana-update script (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=31">&nbsp;issue
+31&nbsp;</a>)</li>
+<li>update: status of installed packages</li>
+<li>new: available new packages and update recommendations</li>
+<li>update: cleanup redundant code</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-90-2013-02-23">
+<h3>elma (master) 0.0.90 - 2013-02-23<a class="headerlink" href="#elma-master-0-0-90-2013-02-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: enhanced download error handling (curl refusing to overwrite
+file - <a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=27">&nbsp;issue
+27&nbsp;</a>)</li>
+<li>bugfix: further systemctl &#8211;system daemon-reload in kibana and
+logstash daemons(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=30">&nbsp;issue
+30&nbsp;</a>)</li>
+<li>bugfix: incorrect definition of KIBANA_PID_DIR config variable
+(<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=30">&nbsp;issue
+30&nbsp;</a>)</li>
+<li>bugfix: wrong symbolic link in kibana-update script (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=31">&nbsp;issue
+31&nbsp;</a>)</li>
+<li>bugfix: delete old elasticserach plugin zip archives after
+installation (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=33">&nbsp;issue
+33&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-89-2013-02-23">
+<h3>elma (master) 0.0.89 - 2013-02-23<a class="headerlink" href="#elma-master-0-0-89-2013-02-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>enhance: add force-reload startup parameter to kibana daemon</li>
+<li>bugfix: kibana daemon checks if new kibana pid dir exists (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=30">&nbsp;issue
+30&nbsp;</a>)</li>
+<li>bugfix: new KIBANA_PID_DIR config variable (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=30">&nbsp;issue
+30&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-88-2013-02-22">
+<h3>elma (master) 0.0.88 - 2013-02-22<a class="headerlink" href="#elma-master-0-0-88-2013-02-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: add PIDs into elma-reconfigure.sh (<a class="reference external" href="/p/enterprise-log-management-appliance/issues/detail?id=22">&nbsp;issue
+22&nbsp;</a>)</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-87-2013-02-22">
+<h3>elma (master) 0.0.87 - 2013-02-22<a class="headerlink" href="#elma-master-0-0-87-2013-02-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>bugfix: automatic update function</li>
+<li>cleanup: remove version and date from file header</li>
+</ul>
+</div>
+<div class="section" id="elma-master-0-0-86-2013-02-22">
+<h3>elma (master) 0.0.86 - 2013-02-22<a class="headerlink" href="#elma-master-0-0-86-2013-02-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>new: automatic uploads of new versions to download site</li>
+<li>new: automatic wiki and git changelog updates</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Changelog, current releases and notes</a><ul>
+<li><a class="reference internal" href="#current-tested-appliance">Current tested appliance</a></li>
+<li><a class="reference internal" href="#current-tested-releases">Current tested releases</a></li>
+<li><a class="reference internal" href="#changelog">Changelog</a><ul>
+<li><a class="reference internal" href="#elma-master-0-2-6-2014-08-30">elma (master) 0.2.6 - 2014-08-30</a></li>
+<li><a class="reference internal" href="#id1">elma (master) 0.2.6 - 2014-08-30</a></li>
+<li><a class="reference internal" href="#id2">elma (master) 0.2.6 - 2014-08-30</a></li>
+<li><a class="reference internal" href="#id3">elma (master) 0.2.6 - 2014-08-30</a></li>
+<li><a class="reference internal" href="#id4">elma (master) 0.2.6 - 2014-08-30</a></li>
+<li><a class="reference internal" href="#id5">elma (master) 0.2.6 - 2014-08-30</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-6-2014-08-29">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id6">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id7">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id8">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id9">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id10">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id11">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id12">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id13">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id14">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id15">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id16">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id17">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id18">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id19">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id20">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id21">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#id22">elma (master) 0.2.6 - 2014-08-29</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-6-2014-08-28">elma (master) 0.2.6 - 2014-08-28</a></li>
+<li><a class="reference internal" href="#id23">elma (master) 0.2.6 - 2014-08-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-6-2014-08-24">elma (master) 0.2.6 - 2014-08-24</a></li>
+<li><a class="reference internal" href="#id24">elma (master) 0.2.6 - 2014-08-24</a></li>
+<li><a class="reference internal" href="#id25">elma (master) 0.2.6 - 2014-08-24</a></li>
+<li><a class="reference internal" href="#id26">elma (master) 0.2.6 - 2014-08-24</a></li>
+<li><a class="reference internal" href="#id27">elma (master) 0.2.6 - 2014-08-24</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-6-2014-07-26">elma (master) 0.2.6 - 2014-07-26</a></li>
+<li><a class="reference internal" href="#id28">elma (master) 0.2.6 - 2014-07-26</a></li>
+<li><a class="reference internal" href="#id29">elma (master) 0.2.6 - 2014-07-26</a></li>
+<li><a class="reference internal" href="#id30">elma (master) 0.2.6 - 2014-07-26</a></li>
+<li><a class="reference internal" href="#id31">elma (master) 0.2.6 - 2014-07-26</a></li>
+<li><a class="reference internal" href="#id32">elma (master) 0.2.6 - 2014-07-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-5-2014-07-15">elma (master) 0.2.5 - 2014-07-15</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-4-2014-07-06">elma (master) 0.2.4 - 2014-07-06</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-3-2014-07-02">elma (master) 0.2.3 - 2014-07-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-2-2014-06-28">elma (master) 0.2.2 - 2014-06-28</a></li>
+<li><a class="reference internal" href="#id33">elma (master) 0.2.2 - 2014-06-28</a></li>
+<li><a class="reference internal" href="#id34">elma (master) 0.2.2 - 2014-06-28</a></li>
+<li><a class="reference internal" href="#id35">elma (master) 0.2.2 - 2014-06-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-1-2014-06-23">elma (master) 0.2.1 - 2014-06-23</a></li>
+<li><a class="reference internal" href="#elma-master-0-2-0-2014-06-22">elma (master) 0.2.0 - 2014-06-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-23-2014-06-21">elma (master) 0.1.23 - 2014-06-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-22-2014-06-20">elma (master) 0.1.22 - 2014-06-20</a></li>
+<li><a class="reference internal" href="#id36">elma (master) 0.1.22 - 2014-06-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-22-2014-06-19">elma (master) 0.1.22 - 2014-06-19</a></li>
+<li><a class="reference internal" href="#id37">elma (master) 0.1.22 - 2014-06-19</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-22-2014-06-18">elma (master) 0.1.22 - 2014-06-18</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-21-2014-05-12">elma (master) 0.1.21 - 2014-05-12</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-20-2014-05-07">elma (master) 0.1.20 - 2014-05-07</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-19-2014-05-04">elma (master) 0.1.19 - 2014-05-04</a></li>
+<li><a class="reference internal" href="#id38">elma (master) 0.1.19 - 2014-05-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-18-2014-05-04">elma (master) 0.1.18 - 2014-05-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-17-2014-05-03">elma (master) 0.1.17 - 2014-05-03</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-16-2014-05-02">elma (master) 0.1.16 - 2014-05-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-15-2014-04-30">elma (master) 0.1.15 - 2014-04-30</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-14-2014-04-27">elma (master) 0.1.14 - 2014-04-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-13-2014-04-25">elma (master) 0.1.13 - 2014-04-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-12-2014-04-25">elma (master) 0.1.12 - 2014-04-25</a></li>
+<li><a class="reference internal" href="#id39">elma (master) 0.1.12 - 2014-04-25</a></li>
+<li><a class="reference internal" href="#id40">elma (master) 0.1.12 - 2014-04-25</a></li>
+<li><a class="reference internal" href="#id41">elma (master) 0.1.12 - 2014-04-25</a></li>
+<li><a class="reference internal" href="#id42">elma (master) 0.1.12 - 2014-04-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-11-2014-04-20">elma (master) 0.1.11 - 2014-04-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-10-2014-04-20">elma (master) 0.1.10 - 2014-04-20</a></li>
+<li><a class="reference internal" href="#id43">elma (master) 0.1.10 - 2014-04-20</a></li>
+<li><a class="reference internal" href="#id44">elma (master) 0.1.10 - 2014-04-20</a></li>
+<li><a class="reference internal" href="#id45">elma (master) 0.1.10 - 2014-04-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-10-2014-04-18">elma (master) 0.1.10 - 2014-04-18</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-9-2014-04-13">elma (master) 0.1.9 - 2014-04-13</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-8-2014-04-06">elma (master) 0.1.8 - 2014-04-06</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-7-2014-04-06">elma (master) 0.1.7 - 2014-04-06</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-6-2014-04-05">elma (master) 0.1.6 - 2014-04-05</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-5-2014-04-01">elma (master) 0.1.5 - 2014-04-01</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-4-2014-04-01">elma (master) 0.1.4 - 2014-04-01</a></li>
+<li><a class="reference internal" href="#id46">elma (master) 0.1.4 - 2014-04-01</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-4-2014-03-26">elma (master) 0.1.4 - 2014-03-26</a></li>
+<li><a class="reference internal" href="#id47">elma (master) 0.1.4 - 2014-03-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-3-2014-03-25">elma (master) 0.1.3 - 2014-03-25</a></li>
+<li><a class="reference internal" href="#elma-master-1-2014-03-25">elma (master) ..1 - 2014-03-25</a></li>
+<li><a class="reference internal" href="#id48">elma (master) ..1 - 2014-03-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-2-2014-03-24">elma (master) 0.1.2 - 2014-03-24</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-1-2014-03-24">elma (master) 0.1.1 - 2014-03-24</a></li>
+<li><a class="reference internal" href="#id49">elma (master) 0.1.1 - 2014-03-24</a></li>
+<li><a class="reference internal" href="#elma-master-1-2014-03-24">elma (master) ..1 - 2014-03-24</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-0-2014-03-24">elma (master) 0.1.0 - 2014-03-24</a></li>
+<li><a class="reference internal" href="#elma-master-0-1-0-2014-03-22">elma (master) 0.1.0 - 2014-03-22</a></li>
+<li><a class="reference internal" href="#id50">elma (master) 0.1.0 - 2014-03-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-237-2014-02-07">elma (master) 0.0.237 - 2014-02-07</a></li>
+<li><a class="reference internal" href="#id51">elma (master) 0.0.237 - 2014-02-07</a></li>
+<li><a class="reference internal" href="#id52">elma (master) 0.0.237 - 2014-02-07</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-236-2014-02-07">elma (master) 0.0.236 - 2014-02-07</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-235-2014-02-04">elma (master) 0.0.235 - 2014-02-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-234-2014-02-03">elma (master) 0.0.234 - 2014-02-03</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-233-2014-02-02">elma (master) 0.0.233 - 2014-02-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-232-2014-02-02">elma (master) 0.0.232 - 2014-02-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-232-2014-02-01">elma (master) 0.0.232 - 2014-02-01</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-231-2014-01-30">elma (master) 0.0.231 - 2014-01-30</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-230-2014-01-30">elma (master) 0.0.230 - 2014-01-30</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-230-2014-01-29">elma (master) 0.0.230 - 2014-01-29</a></li>
+<li><a class="reference internal" href="#id53">elma (master) 0.0.230 - 2014-01-29</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-229-2014-01-28">elma (master) 0.0.229 - 2014-01-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-228-2014-01-26">elma (master) 0.0.228 - 2014-01-26</a></li>
+<li><a class="reference internal" href="#id54">elma (master) 0.0.228 - 2014-01-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-227-2014-01-26">elma (master) 0.0.227 - 2014-01-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-226-2014-01-26">elma (master) 0.0.226 - 2014-01-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-225-2014-01-25">elma (master) 0.0.225 - 2014-01-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-224-2014-01-25">elma (master) 0.0.224 - 2014-01-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-223-2014-01-24">elma (master) 0.0.223 - 2014-01-24</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-222-2014-01-24">elma (master) 0.0.222 - 2014-01-24</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-221-2014-01-22">elma (master) 0.0.221 - 2014-01-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-220-2014-01-21">elma (master) 0.0.220 - 2014-01-21</a></li>
+<li><a class="reference internal" href="#id55">elma (master) 0.0.220 - 2014-01-21</a></li>
+<li><a class="reference internal" href="#id56">elma (master) 0.0.220 - 2014-01-21</a></li>
+<li><a class="reference internal" href="#id57">elma (master) 0.0.220 - 2014-01-21</a></li>
+<li><a class="reference internal" href="#id58">elma (master) 0.0.220 - 2014-01-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-219-2014-01-21">elma (master) 0.0.219 - 2014-01-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-218-2014-01-20">elma (master) 0.0.218 - 2014-01-20</a></li>
+<li><a class="reference internal" href="#id59">elma (master) 0.0.218 - 2014-01-20</a></li>
+<li><a class="reference internal" href="#id60">elma (master) 0.0.218 - 2014-01-20</a></li>
+<li><a class="reference internal" href="#id61">elma (master) 0.0.218 - 2014-01-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-217-2014-01-19">elma (master) 0.0.217 - 2014-01-19</a></li>
+<li><a class="reference internal" href="#id62">elma (master) 0.0.217 - 2014-01-19</a></li>
+<li><a class="reference internal" href="#id63">elma (master) 0.0.217 - 2014-01-19</a></li>
+<li><a class="reference internal" href="#id64">elma (master) 0.0.217 - 2014-01-19</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-216-2014-01-18">elma (master) 0.0.216 - 2014-01-18</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-215-2014-01-13">elma (master) 0.0.215 - 2014-01-13</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-214-2014-01-12">elma (master) 0.0.214 - 2014-01-12</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-212-2014-01-11">elma (master) 0.0.212 - 2014-01-11</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-211-2014-01-11">elma (master) 0.0.211 - 2014-01-11</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-210-2014-01-07">elma (master) 0.0.210 - 2014-01-07</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-209-2014-01-06">elma (master) 0.0.209 - 2014-01-06</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-208-2014-01-05">elma (master) 0.0.208 - 2014-01-05</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-207-2014-01-04">elma (master) 0.0.207 - 2014-01-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-206-2014-01-02">elma (master) 0.0.206 - 2014-01-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-205-2013-12-31">elma (master) 0.0.205 - 2013-12-31</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-204-2013-12-26">elma (master) 0.0.204 - 2013-12-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-203-2013-12-26">elma (master) 0.0.203 - 2013-12-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-202-2013-11-14">elma (master) 0.0.202 - 2013-11-14</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-201-2013-11-08">elma (master) 0.0.201 - 2013-11-08</a></li>
+<li><a class="reference internal" href="#rsyslog-testtools-v7-stable-7-4-4-2013-10-18">rsyslog-testtools (v7-stable) 7.4.4 - 2013-10-18</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-200-2013-10-17">elma (master) 0.0.200 - 2013-10-17</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-199-2013-10-17">elma appliance 0.0.199 - 2013-10-17</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-199-2013-10-17">elma (master) 0.0.199 - 2013-10-17</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-198-2013-10-11">elma (master) 0.0.198 - 2013-10-11</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-197-2013-10-04">elma (master) 0.0.197 - 2013-10-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-196-2013-10-03">elma (master) 0.0.196 - 2013-10-03</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-194-2013-10-02">elma appliance 0.0.194 - 2013-10-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-194-2013-10-02">elma (master) 0.0.194 - 2013-10-02</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-193-2013-09-27">elma appliance 0.0.193 - 2013-09-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-193-2013-09-27">elma (master) 0.0.193 - 2013-09-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-192-2013-09-16">elma (master) 0.0.192 - 2013-09-16</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-191-2013-08-27">elma appliance 0.0.191 - 2013-08-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-191-2013-08-27">elma (master) 0.0.191 - 2013-08-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-190-2013-08-26">elma (master) 0.0.190 - 2013-08-26</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-189-2013-08-26">elma (master) 0.0.189 - 2013-08-26</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-188-2013-07-17">elma appliance 0.0.188 - 2013-07-17</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-188-2013-07-17">elma (master) 0.0.188 - 2013-07-17</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-187-2013-07-13">elma appliance 0.0.187 - 2013-07-13</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-187-2013-07-13">elma (master) 0.0.187 - 2013-07-13</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-186-2013-07-04">elma appliance 0.0.186 - 2013-07-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-186-2013-07-04">elma (master) 0.0.186 - 2013-07-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-185-2013-06-30">elma (master) 0.0.185 - 2013-06-30</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-184-2013-06-28">elma (master) 0.0.184 - 2013-06-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-183-2013-06-21">elma (master) 0.0.183 - 2013-06-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-182-2013-06-20">elma (master) 0.0.182 - 2013-06-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-181-2013-06-19">elma (master) 0.0.181 - 2013-06-19</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-180-2013-06-19">elma appliance 0.0.180 - 2013-06-19</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-180-2013-06-19">elma (master) 0.0.180 - 2013-06-19</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-179-2013-06-19">elma (master) 0.0.179 - 2013-06-19</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-178-2013-06-18">elma (master) 0.0.178 - 2013-06-18</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-177-2013-06-09">elma (master) 0.0.177 - 2013-06-09</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-176-2013-06-09">elma (master) 0.0.176 - 2013-06-09</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-175-2013-06-08">elma (master) 0.0.175 - 2013-06-08</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-174-2013-06-08">elma (master) 0.0.174 - 2013-06-08</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-173-2013-06-08">elma (master) 0.0.173 - 2013-06-08</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-172-2013-06-08">elma (master) 0.0.172 - 2013-06-08</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-171-2013-06-08">elma (master) 0.0.171 - 2013-06-08</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-170-2013-06-04">elma (master) 0.0.170 - 2013-06-04</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-169-2013-06-04">elma appliance 0.0.169 - 2013-06-04</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-169-2013-06-02">elma (master) 0.0.169 - 2013-06-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-168-2013-06-02">elma (master) 0.0.168 - 2013-06-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-167-2013-06-02">elma (master) 0.0.167 - 2013-06-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-166-2013-05-28">elma (master) 0.0.166 - 2013-05-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-165-2013-05-28">elma (master) 0.0.165 - 2013-05-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-164-2013-05-28">elma (master) 0.0.164 - 2013-05-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-163-2013-05-27">elma (master) 0.0.163 - 2013-05-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-162-2013-05-23">elma (master) 0.0.162 - 2013-05-23</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-161-2013-05-22">elma (master) 0.0.161 - 2013-05-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-160-2013-05-22">elma (master) 0.0.160 - 2013-05-22</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-159-2013-05-20">elma appliance 0.0.159 - 2013-05-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-159-2013-05-20">elma (master) 0.0.159 - 2013-05-20</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-158-2013-05-16">elma (master) 0.0.158 - 2013-05-16</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-157-2013-05-14">elma (master) 0.0.157 - 2013-05-14</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-156-2013-05-13">elma (master) 0.0.156 - 2013-05-13</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-155-2013-05-12">elma (master) 0.0.155 - 2013-05-12</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-154-2013-05-09">elma (master) 0.0.154 - 2013-05-09</a></li>
+<li><a class="reference internal" href="#rsyslog-testtools-v7-stable-7-2-7-2013-05-09">rsyslog-testtools (v7-stable) 7.2.7 - 2013-05-09</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-149-2013-05-08">elma (master) 0.0.149 - 2013-05-08</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-148-2013-05-08">elma appliance 0.0.148 - 2013-05-08</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-148-2013-05-07">elma (master) 0.0.148 - 2013-05-07</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-147-2013-05-03">elma (master) 0.0.147 - 2013-05-03</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-146-2013-05-02">elma (master) 0.0.146 - 2013-05-02</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-145-2013-04-25">elma (master) 0.0.145 - 2013-04-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-144-2013-04-23">elma (master) 0.0.144 - 2013-04-23</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-143-2013-04-22">elma (master) 0.0.143 - 2013-04-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-142-2013-04-22">elma (master) 0.0.142 - 2013-04-22</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-141-2013-04-21">elma appliance 0.0.141 - 2013-04-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-141-2013-04-21">elma (master) 0.0.141 - 2013-04-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-140-2013-04-21">elma (master) 0.0.140 - 2013-04-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-139-2013-04-21">elma (master) 0.0.139 - 2013-04-21</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-138-2013-04-19">elma (master) 0.0.138 - 2013-04-19</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-136-2013-04-18">elma (master) 0.0.136 - 2013-04-18</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-135-2013-04-17">elma (master) 0.0.135 - 2013-04-17</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-134-2013-04-15">elma (master) 0.0.134 - 2013-04-15</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-133-2013-04-14">elma (master) 0.0.133 - 2013-04-14</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-132-2013-04-11">elma (master) 0.0.132 - 2013-04-11</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-131-2013-04-10">elma (master) 0.0.131 - 2013-04-10</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-130-2013-04-09">elma (master) 0.0.130 - 2013-04-09</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-127-2013-04-06">elma (master) 0.0.127 - 2013-04-06</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-116-2013-04-05">elma (master) 0.0.116 - 2013-04-05</a></li>
+<li><a class="reference internal" href="#elma-appliance-0-0-115-2013-04-03">elma appliance 0.0.115 - 2013-04-03</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-115-2013-04-03">elma (master) 0.0.115 - 2013-04-03</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-114-2013-04-03">elma (master) 0.0.114 - 2013-04-03</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-113-2013-04-01">elma (master) 0.0.113 - 2013-04-01</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-112-2013-03-28">elma (master) 0.0.112 - 2013-03-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-111-2013-03-28">elma (master) 0.0.111 - 2013-03-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-110-2013-03-28">elma (master) 0.0.110 - 2013-03-28</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-108-2013-03-27">elma (master) 0.0.108 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-107-2013-03-27">elma (master) 0.0.107 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-106-2013-03-27">elma (master) 0.0.106 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-105-2013-03-27">elma (master) 0.0.105 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-104-2013-03-27">elma (master) 0.0.104 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-103-2013-03-27">elma (master) 0.0.103 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-102-2013-03-27">elma (master) 0.0.102 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#rsyslog-testtools-v7-stable-7-2-6-2013-03-27">rsyslog-testtools (v7-stable) 7.2.6 - 2013-03-27</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-101-2013-03-05">elma (master) 0.0.101 - 2013-03-05</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-100-2013-03-05">elma (master) 0.0.100 - 2013-03-05</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-99-2013-03-05">elma (master) 0.0.99 - 2013-03-05</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-94-2013-03-01">elma (master) 0.0.94 - 2013-03-01</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-93-2013-03-01">elma (master) 0.0.93 - 2013-03-01</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-92-2013-02-25">elma (master) 0.0.92 - 2013-02-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-91-2013-02-25">elma (master) 0.0.91 - 2013-02-25</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-90-2013-02-23">elma (master) 0.0.90 - 2013-02-23</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-89-2013-02-23">elma (master) 0.0.89 - 2013-02-23</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-88-2013-02-22">elma (master) 0.0.88 - 2013-02-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-87-2013-02-22">elma (master) 0.0.87 - 2013-02-22</a></li>
+<li><a class="reference internal" href="#elma-master-0-0-86-2013-02-22">elma (master) 0.0.86 - 2013-02-22</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="about.html"
+                        title="previous chapter">About</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="2do.html"
+                        title="next chapter">2do</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/changelog.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="2do.html" title="2do"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="about.html" title="About"
+             >previous</a> |</li>
+        <li><a href="index.html">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

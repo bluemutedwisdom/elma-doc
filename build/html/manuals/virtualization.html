@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Virtualization Guide &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Manuals" href="index.html" />
+    <link rel="next" title="Loadbalancing and redundancy Guide" href="loadbalancing.html" />
+    <link rel="prev" title="Requirements" href="requirements.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="loadbalancing.html" title="Loadbalancing and redundancy Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="requirements.html" title="Requirements"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Manuals</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="virtualization-guide">
+<h1>Virtualization Guide<a class="headerlink" href="#virtualization-guide" title="Permalink to this headline">¶</a></h1>
+<p>SUSE Studio helps you to build your appliance in a variety of formats.</p>
+<p>Logical Volume Manager (LVM) applies to the <a class="reference external" href="http://susestudio.com/help/create/appliance-formats.html">Disk image, VMware, OVF and
+Preload ISO
+formats</a>
+only!</p>
+<div class="section" id="virtual-formats">
+<h2>Virtual formats<a class="headerlink" href="#virtual-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vmware-virtualbox-kvm-vmdk">
+<h3>VMware / VirtualBox / KVM (.vmdk)<a class="headerlink" href="#vmware-virtualbox-kvm-vmdk" title="Permalink to this headline">¶</a></h3>
+<p>Use this format if you want to start your appliance as a virtual machine
+on VMware, VirtualBox, or KVM-based hypervisors. This is also an easy
+method to test an appliance without formatting any hard disk.</p>
+<ul class="simple">
+<li>VirtualBox and VMware virtualization applications are available for
+most host operating systems.</li>
+<li>KVM virtualization is for Linux only - See also: <a class="reference external" href="http://doc.opensuse.org/documentation/html/openSUSE/opensuse-kvm/book.kvm.html">openSUSE -
+Virtualization with
+KVM</a></li>
+</ul>
+</div>
+<div class="section" id="ovf-virtual-machine-ovf">
+<h3>OVF virtual machine (.ovf)<a class="headerlink" href="#ovf-virtual-machine-ovf" title="Permalink to this headline">¶</a></h3>
+<p>Open Virtualization Format (OVF) is an open, standards-based format for
+virtual machines. A variety of hypervisors, including SUSE Cloud,
+VirtualBox, VMware ESX, IBM SmartCloud, and Oracle VM, support creating
+virtual machines by importing an .ovf file.</p>
+<p>In order to use an OVF image, you may require the ovftool from VMware.
+Due to licensing issues we cannot distribute the tools with SUSE Studio
+at the moment. Download links, installation instructions, and
+documentation are available at
+<a class="reference external" href="http://communities.vmware.com/community/vmtn/server/vsphere/automationtools/ovf">http://communities.vmware.com/community/vmtn/server/vsphere/automationtools/ovf</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Virtualization Guide</a><ul>
+<li><a class="reference internal" href="#virtual-formats">Virtual formats</a><ul>
+<li><a class="reference internal" href="#vmware-virtualbox-kvm-vmdk">VMware / VirtualBox / KVM (.vmdk)</a></li>
+<li><a class="reference internal" href="#ovf-virtual-machine-ovf">OVF virtual machine (.ovf)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="requirements.html"
+                        title="previous chapter">Requirements</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="loadbalancing.html"
+                        title="next chapter">Loadbalancing and redundancy Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/manuals/virtualization.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="loadbalancing.html" title="Loadbalancing and redundancy Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="requirements.html" title="Requirements"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Manuals</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

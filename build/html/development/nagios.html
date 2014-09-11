@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Nagios &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Development" href="index.html" />
+    <link rel="next" title="Webdesign" href="webdesign.html" />
+    <link rel="prev" title="curl" href="curl.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="webdesign.html" title="Webdesign"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="curl.html" title="curl"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Development</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="nagios">
+<h1>Nagios<a class="headerlink" href="#nagios" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nagios-plugins">
+<h2>Nagios plugins<a class="headerlink" href="#nagios-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Once you get used to writing plug-ins in Nagios and the complexity of
+the plug-ins you write grows, you may encounter this error, service
+check timed out.</p>
+<p>If some of your service checks have this problem, you can isolate the
+problem in these 3 values:</p>
+<ol class="arabic">
+<li><p class="first">how slow is the plugin</p>
+<blockquote>
+<div><p>This is the first thing you should do. Check if how much time does
+your plugin needs before it can finish checking and provide an exit
+status. Log-on to the server you’re monitoring and run the plugin
+locally. Use the time command to measure.</p>
+<p>$ time /usr/lib/nagios/plugins/check_service</p>
+</div></blockquote>
+</li>
+<li><p class="first">how short is NRPE&#8217;s patience</p>
+<blockquote>
+<div><p>Once you have the value (in seconds) in step #1, check your NRPE
+configuration in that same server . The default location of NRPE’s
+configuration is /etc/nagios/nrpe.cfg</p>
+<p>Find this parameter, command_timeout. The value of this parameter,
+in seconds, must be greater than the value that you’ve got in step
+#1.</p>
+<p>Once the parameters been set, restart the NRPE service (service
+nrpe restart).</p>
+</div></blockquote>
+</li>
+<li><p class="first">how short is Nagios patience</p>
+<blockquote>
+<div><p>Nagios executes a command, check_nrpe, to connect to a NRPE
+service. check_nrpe has a timeout paramer, -t. This parameter must
+have a bigger value than the one you set in step #2.</p>
+<p>Log-on to your Nagios server and you can set this by opening the
+commands configuration file, /etc/nagios/objects/commands.cfg</p>
+<p>Find check_nrpe, and edit its command_line and set the -t
+parameter. For instance, if you want the timeout value to be 500
+seconds, it will look like this: command_line $USER1$/check_nrpe
+-H $HOSTADDRESS$ -c $ARG1$ -t 500</p>
+<p>Restart the Nagios service afterwards (service nagios restart).</p>
+</div></blockquote>
+</li>
+</ol>
+<p>In most cases these 3 steps should do :)</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Nagios</a><ul>
+<li><a class="reference internal" href="#nagios-plugins">Nagios plugins</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="curl.html"
+                        title="previous chapter">curl</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="webdesign.html"
+                        title="next chapter">Webdesign</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/development/nagios.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="webdesign.html" title="Webdesign"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="curl.html" title="curl"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Development</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

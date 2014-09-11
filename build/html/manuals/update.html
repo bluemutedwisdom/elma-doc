@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Patch, Update and Upgrade Guide &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Manuals" href="index.html" />
+    <link rel="next" title="Configuration Guide" href="configuration/index.html" />
+    <link rel="prev" title="First Boot" href="installation/firstboot.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="configuration/index.html" title="Configuration Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation/firstboot.html" title="First Boot"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Manuals</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="patch-update-and-upgrade-guide">
+<h1>Patch, Update and Upgrade Guide<a class="headerlink" href="#patch-update-and-upgrade-guide" title="Permalink to this headline">¶</a></h1>
+<p>All openSUSE and ELMA related RPM packages are provided by the <a class="reference external" href="https://build.opensuse.org/">openSUSE
+Build Service</a> a public instance of the
+Open Build Service (OBS) used for development of the openSUSE and ELMA
+distribution:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://build.opensuse.org/project/show/security:logging:elma">ELMA main
+repository</a></li>
+<li><a class="reference external" href="https://build.opensuse.org/project/show/security:logging:elma:devel">ELMA devel
+repository</a></li>
+<li><a class="reference external" href="../changelog.html">Current releases</a></li>
+</ul>
+<p>This HOWTO explains the steps for patching, updating and upgrading ELMA
+and openSUSE distribution.</p>
+<p>It&#8217;s really simple - just run:</p>
+<div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --patch --update</pre>
+</div>
+<div class="section" id="requirements-and-recommendations">
+<h2>Requirements and recommendations<a class="headerlink" href="#requirements-and-recommendations" title="Permalink to this headline">¶</a></h2>
+<p>For all patch, update and upgrade procedures outbound internet access to
+official SUSE repositories</p>
+<ul class="simple">
+<li>download.opensuse.org</li>
+</ul>
+<p>is mandatory. Regarding to security reasons the use of your corporate
+internet proxy infrastructure is highly recommended.</p>
+<p>In case of connectivity problems please check ELMA</p>
+<ul class="simple">
+<li>Network settings</li>
+<li>DNS settings</li>
+<li>Proxy settings</li>
+</ul>
+<p>For all <strong>patching und upgrading</strong> tasks the usage of ELMA <strong>CLI is more
+secure</strong> then the usage of ELMA webgui because of possible apache and
+php reloads during patches and upgrades of underlying operation system.</p>
+<p>After every install, upgrade or update process please</p>
+<ul class="simple">
+<li>Read carefully and follow all warnings and recommendations</li>
+<li>Consider to reboot the system after major patches, updates or
+upgrades</li>
+</ul>
+</div>
+<div class="section" id="patches">
+<h2>Patches<a class="headerlink" href="#patches" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Run the patch script</p>
+<div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --patch</pre>
+</div>
+</li>
+<li><p class="first">Interactive patch from CLI (optional)</p>
+<div class="highlight-python"><pre>zypper --no-gpg-checks --gpg-auto-import-keys patch</pre>
+</div>
+</li>
+<li><p class="first">Check the differences between your and distribution config files</p>
+</li>
+</ul>
+</div>
+<div class="section" id="updates">
+<h2>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Run the update script</p>
+<div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --update</pre>
+</div>
+</li>
+<li><p class="first">Interactive patch from CLI (optional)</p>
+<div class="highlight-python"><pre>zypper --no-gpg-checks --gpg-auto-import-keys update</pre>
+</div>
+</li>
+<li><p class="first">Check the differences between your and distribution config files</p>
+</li>
+</ul>
+</div>
+<div class="section" id="upgrades">
+<h2>Upgrades<a class="headerlink" href="#upgrades" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Upgrade howtos can be found on <a class="reference external" href="http://en.opensuse.org/SDB:System_upgrade">openSUSE support
+site</a>.</li>
+</ul>
+</div>
+<div class="section" id="reconfigure-elma">
+<h2>Reconfigure ELMA<a class="headerlink" href="#reconfigure-elma" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Reconfigure ELMA after every configuration change, patch, update or
+upgrade process</p>
+<div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="final-tests">
+<h2>Final Tests<a class="headerlink" href="#final-tests" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Test rsyslog and ElasticSearch installation</p>
+<div class="highlight-python"><pre>cd /usr/share/elma-test/bin; /usr/share/elma-test/bin/elma_diag_all_after_update.sh</pre>
+</div>
+</li>
+<li><p class="first">Check if all <a class="reference external" href="../tests">performance and compression tests</a> are
+successful</p>
+</li>
+<li><p class="first">Test ElasticSearch admin frontend interfaces (Use the static IP or
+FQDN you have configured during first boot)</p>
+<div class="highlight-python"><pre>https://192.168.178.25:9443/_plugin/head/
+https://192.168.178.25:9443/_plugin/paramedic/
+https://192.168.178.25:9443/_plugin/bigdesk/</pre>
+</div>
+</li>
+<li><p class="first">Test ELMA user frontend interfaces (Use the static IP or FQDN you
+have configured during first boot)</p>
+<div class="highlight-python"><pre>https://192.168.178.25</pre>
+</div>
+</li>
+<li><p class="first">If you can see actual events in the web GUI everthing is working
+fine.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="reset-elma-configuration-parameter-to-factory-defaults">
+<h2>Reset ELMA configuration parameter to factory defaults<a class="headerlink" href="#reset-elma-configuration-parameter-to-factory-defaults" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Run the reset script</p>
+<div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --reset</pre>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Patch, Update and Upgrade Guide</a><ul>
+<li><a class="reference internal" href="#requirements-and-recommendations">Requirements and recommendations</a></li>
+<li><a class="reference internal" href="#patches">Patches</a></li>
+<li><a class="reference internal" href="#updates">Updates</a></li>
+<li><a class="reference internal" href="#upgrades">Upgrades</a></li>
+<li><a class="reference internal" href="#reconfigure-elma">Reconfigure ELMA</a></li>
+<li><a class="reference internal" href="#final-tests">Final Tests</a></li>
+<li><a class="reference internal" href="#reset-elma-configuration-parameter-to-factory-defaults">Reset ELMA configuration parameter to factory defaults</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="installation/firstboot.html"
+                        title="previous chapter">First Boot</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="configuration/index.html"
+                        title="next chapter">Configuration Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/manuals/update.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="configuration/index.html" title="Configuration Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installation/firstboot.html" title="First Boot"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Manuals</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

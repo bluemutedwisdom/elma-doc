@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration Files &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../../index.html" />
+    <link rel="up" title="Configuration Guide" href="index.html" />
+    <link rel="next" title="Administration Guide" href="../administration.html" />
+    <link rel="prev" title="Configuration Guide" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../administration.html" title="Administration Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Configuration Guide"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Manuals</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Configuration Guide</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuration-files">
+<h1>Configuration Files<a class="headerlink" href="#configuration-files" title="Permalink to this headline">¶</a></h1>
+<p>This HOWTO explains the configuration files for ELMA and openSUSE
+distribution.</p>
+<div class="section" id="apache2">
+<h2>Apache2<a class="headerlink" href="#apache2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="79%" />
+<col width="21%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/apache2/conf.d/htpasswd</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="82%" />
+<col width="18%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/apache2/vhosts.d/elma-ssl.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/apache2/vhosts.d/kibana-ssl.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/apache2/vhosts.d/redirect-http.conf</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup></p>
+</div>
+<div class="section" id="elasticsearch">
+<h2>ElasticSearch<a class="headerlink" href="#elasticsearch" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="40%" />
+<col width="12%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elasticsearch/config/elasticsearch.yml</td>
+<td>/etc/elasticsearch/elasticsearch.yml</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elasticsearch/config/logging.yml</td>
+<td>/etc/elasticsearch/logging.yml</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> ElasticSearch distribution config files - copied and modified
+during /opt/elma/bin/install/elasticsearch-update.sh</p>
+<div class="section" id="systemd">
+<h3>systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="44%" />
+<col width="11%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/sysconfig/elasticsearch</td>
+<td>/etc/sysconfig/elasticsearch</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/systemd/elasticsearch.service</td>
+<td>/usr/lib/systemd/system/elasticsearch.service</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied and modified during
+/opt/elma/bin/install/elasticsearch-update.sh</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="37%" />
+<col width="15%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>openSUSE distribution config files</td>
+<td>/etc/security/limits.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>openSUSE distribution config files</td>
+<td>/etc/permissions.local</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>openSUSE distribution config files</td>
+<td>/etc/init.d/boot.local</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Modified during /opt/elma/bin/install/elasticsearch-update.sh</p>
+</div>
+<div class="section" id="logrotate">
+<h3>logrotate<a class="headerlink" href="#logrotate" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="37%" />
+<col width="13%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/logrotate.d/elasticsearch</td>
+<td>/etc/logrotate.d/elasticsearch</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Linked to logrotate configurations</p>
+</div>
+<div class="section" id="jetty">
+<h3>jetty<a class="headerlink" href="#jetty" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="41%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/elasticsearch/jetty-adons-elasticsearch.yml</td>
+<td>/etc/elasticsearch/jetty-adons-elasticsearch.yml</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/elasticsearch/jetty-local-server.xml</td>
+<td>/etc/elasticsearch/jetty-local-server.xml</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/elasticsearch/jetty-no-http.xml</td>
+<td>/etc/elasticsearch/jetty-no-http.xml</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/elasticsearch/keystore</td>
+<td>/etc/elasticsearch/keystore</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/elasticsearch/realm.properties</td>
+<td>/etc/elasticsearch/realm.properties</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied during /opt/elma/bin/install/elasticsearch-update.sh</p>
+</div>
+<div class="section" id="templates">
+<h3>templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="43%" />
+<col width="7%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/elasticsearch/templates/template_diag-no-compression.json</td>
+<td>/etc/elasticsearch/templates/template_diag-no-compression.json</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/elasticsearch/templates/template_diag.json</td>
+<td>/etc/elasticsearch/templates/template_diag.json</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/elasticsearch/templates/template_kibana3-configuration.json</td>
+<td>/etc/elasticsearch/templates/template_kibana3-configuration.json</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/elasticsearch/templates/template_logstash-daily.json</td>
+<td>/etc/elasticsearch/templates/template_logstash-daily.json</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/elasticsearch/templates/template_rsyslog-daily.json</td>
+<td>/etc/elasticsearch/templates/template_rsyslog-daily.json</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied during /opt/elma/bin/install/elasticsearch-update.sh</p>
+</div>
+</div>
+<div class="section" id="elma">
+<h2>ELMA<a class="headerlink" href="#elma" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="32%" />
+<col width="21%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/elma/elma.conf</td>
+<td>/etc/elma/elma.conf</td>
+<td><sup>1, 2</sup></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><sup>1</sup> Copied during /opt/elma/bin/install/elma-install.sh</div>
+<div class="line"><sup>2</sup> Reconfigured during /opt/elma/bin/install/elma-update.sh</div>
+</div>
+</div>
+<div class="section" id="git">
+<h2>git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="72%" />
+<col width="28%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/git/.netrc</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup></p>
+</div>
+<div class="section" id="kibana">
+<h2>Kibana<a class="headerlink" href="#kibana" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="42%" />
+<col width="16%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/kibana/KibanaConfig.rb</td>
+<td>/etc/kibana/KibanaConfig.rb</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="44%" />
+<col width="11%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/kibana-dashboard/default.elma</td>
+<td>/opt/elasticsearch-kibana3/dashboards/default</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied during /opt/elma/bin/install/kibana-update.sh</p>
+</div>
+<div class="section" id="logstash">
+<h2>Logstash<a class="headerlink" href="#logstash" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="40%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/logstash/logstash-json-tcp-input.conf</td>
+<td>/etc/logstash/logstash-json-tcp-input.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/logstash/logstash-json-udp-input.conf</td>
+<td>/etc/logstash/logstash-json-udp-input.conf</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied during /opt/elma/bin/install/logstash-update.sh</p>
+<div class="section" id="id1">
+<h3>systemd<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="44%" />
+<col width="12%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/systemd/logstash.service</td>
+<td>/usr/lib/systemd/system/logstash.service</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied during /opt/elma/bin/install/logstash-update.sh</p>
+</div>
+</div>
+<div class="section" id="nagios">
+<h2>Nagios<a class="headerlink" href="#nagios" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="34%" />
+<col width="16%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>openSUSE distribution config files</td>
+<td>/etc/nagios/nagios.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>openSUSE distribution config files</td>
+<td>/etc/nagios/cgi.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Modified during /opt/elma/bin/install/nagios-update.sh</p>
+<div class="section" id="elma-system-monitoring">
+<h3>ELMA system monitoring<a class="headerlink" href="#elma-system-monitoring" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="40%" />
+<col width="12%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/nagios/commands.cfg</td>
+<td>/etc/nagios/elma/commands.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/nagios/contacts.cfg</td>
+<td>/etc/nagios/elma/contacts.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/nagios/hostgroups.cfg</td>
+<td>/etc/nagios/elma/hostgroups.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/nagios/hosts.cfg</td>
+<td>/etc/nagios/elma/hosts.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/nagios/network.cfg.example</td>
+<td>/etc/nagios/elma/network.cfg.example</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/nagios/network.cfg_sample</td>
+<td>/etc/nagios/elma/network.cfg_sample</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/nagios/servicegroups.cfg</td>
+<td>/etc/nagios/elma/servicegroups.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/nagios/services.cfg</td>
+<td>/etc/nagios/elma/services.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/nagios/templates.cfg</td>
+<td>/etc/nagios/elma/templates.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/nagios/timeperiods.cfg</td>
+<td>/etc/nagios/elma/timeperiods.cfg</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> Copied and modified during
+/opt/elma/bin/install/nagios-update.sh</p>
+</div>
+</div>
+<div class="section" id="rsyslog">
+<h2>rsyslog<a class="headerlink" href="#rsyslog" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="88%" />
+<col width="13%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/rsyslog.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/rsyslog.d/diag-common.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/rsyslog.d/elma_diag_elasticsearch.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/rsyslog.d/elma_diag_imptcp_elasticsearch-no-compression.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/rsyslog.d/elma_diag_imptcp_elasticsearch.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-even"><td>/opt/elma/config/rsyslog.d/elma_diag_imptcp_gzipwr.conf</td>
+<td><sup>1</sup></td>
+</tr>
+<tr class="row-odd"><td>/opt/elma/config/rsyslog.d/remote.conf</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup></p>
+</div>
+<div class="section" id="snmp-trap-receiver">
+<h2>SNMP trap receiver<a class="headerlink" href="#snmp-trap-receiver" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="77%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>/opt/elma/config/snmp/snmptrapd.conf</td>
+<td><sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration Files</a><ul>
+<li><a class="reference internal" href="#apache2">Apache2</a></li>
+<li><a class="reference internal" href="#elasticsearch">ElasticSearch</a><ul>
+<li><a class="reference internal" href="#systemd">systemd</a></li>
+<li><a class="reference internal" href="#logrotate">logrotate</a></li>
+<li><a class="reference internal" href="#jetty">jetty</a></li>
+<li><a class="reference internal" href="#templates">templates</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#elma">ELMA</a></li>
+<li><a class="reference internal" href="#git">git</a></li>
+<li><a class="reference internal" href="#kibana">Kibana</a></li>
+<li><a class="reference internal" href="#logstash">Logstash</a><ul>
+<li><a class="reference internal" href="#id1">systemd</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nagios">Nagios</a><ul>
+<li><a class="reference internal" href="#elma-system-monitoring">ELMA system monitoring</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rsyslog">rsyslog</a></li>
+<li><a class="reference internal" href="#snmp-trap-receiver">SNMP trap receiver</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Configuration Guide</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../administration.html"
+                        title="next chapter">Administration Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/manuals/configuration/configurationfiles.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../administration.html" title="Administration Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Configuration Guide"
+             >previous</a> |</li>
+        <li><a href="../../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Manuals</a> &raquo;</li>
+          <li><a href="index.html" >Configuration Guide</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>First Boot &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../../index.html" />
+    <link rel="up" title="Installation Guide" href="index.html" />
+    <link rel="next" title="Patch, Update and Upgrade Guide" href="../update.html" />
+    <link rel="prev" title="Hardware (CMOS/BIOS) Clock and System Time" href="time.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../update.html" title="Patch, Update and Upgrade Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="time.html" title="Hardware (CMOS/BIOS) Clock and System Time"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Manuals</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Installation Guide</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="first-boot">
+<h1>First Boot<a class="headerlink" href="#first-boot" title="Permalink to this headline">¶</a></h1>
+<p>Before first boot it is strongly recommend that the <a class="reference external" href="time.html">Hardware
+(CMOS/BIOS) clock is set to UTC/GMT</a>!</p>
+<ul class="simple">
+<li><a class="reference external" href="time.html">Clock and time adjusting</a></li>
+</ul>
+<p>On the first boot, you will be asked to configure several items:</p>
+<ul class="simple">
+<li>Hard Disk Preparation (Preload ISO image only)</li>
+<li>Language</li>
+<li>Keyboard Layout</li>
+<li>Hostname and Domain Name</li>
+<li>Network Configuration</li>
+<li>Clock and Time Zone</li>
+<li>Set the ROOT password</li>
+</ul>
+<div class="section" id="installation-settings">
+<h2>Installation settings<a class="headerlink" href="#installation-settings" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">All images boots into a simple graphical environment.</p>
+<p><img alt="image0" src="../../_images/First-Boot-0-Boot-Manager.png" /></p>
+</li>
+<li><p class="first">The Preload ISO image prompts for confirmation before writing the
+image onto your hard disk. Select &#8220;Yes&#8221; to continue with
+automatically format and partition your hard disk.</p>
+<p><img alt="image1" src="../../_images/First-Boot-0-i-Preload-ISO-Disk-Preparation.png" /></p>
+</li>
+<li><p class="first">After several screens of partitioning we are ready for the initial
+setup.</p>
+<p><img alt="image2" src="../../_images/First-Boot-0-ii-Load-Appliance-Image.png" /></p>
+</li>
+<li><p class="first">Select your preferred language</p>
+<p><img alt="image3" src="../../_images/First-Boot-1-Language-Configuration.png" /></p>
+</li>
+<li><p class="first">Select your keyboard layout</p>
+<p><img alt="image4" src="../../_images/First-Boot-2-Keyboard-Configuration.png" /></p>
+</li>
+<li><p class="first">Enter your hostname and domain name</p>
+<p><img alt="image5" src="../../_images/First-Boot-3-Hostname-Configuration.png" /></p>
+</li>
+<li><p class="first">Select &#8220;Change&#8221; to edit networking</p>
+<p><img alt="image6" src="../../_images/First-Boot-4-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Select &#8220;Network Interfaces...&#8221;</p>
+<p><img alt="image7" src="../../_images/First-Boot-5-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Select &#8220;Edit&#8221;</p>
+<p><img alt="image8" src="../../_images/First-Boot-6-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Select &#8220;Statically assigned IP Address&#8221;. Enter your static IP
+address, subnet mask, and hostname. Then select &#8220;Next&#8221;.</p>
+<p><img alt="image9" src="../../_images/First-Boot-7-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Select &#8220;Hostname/DNS&#8221;. Enter your DNS servers, and select &#8220;OK&#8221;</p>
+<p><img alt="image10" src="../../_images/First-Boot-8-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Select &#8220;Routing&#8221;. Enter your default gateway, and select &#8220;OK&#8221;</p>
+<p><img alt="image11" src="../../_images/First-Boot-9-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Confirm your settings and select &#8220;Next&#8221;</p>
+<p><img alt="image12" src="../../_images/First-Boot-10-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">Wait for the next prompt</p>
+<p><img alt="image13" src="../../_images/First-Boot-11-Network-Configuration.png" /></p>
+</li>
+<li><p class="first">It is strongly recommend that the <a class="reference external" href="time.html">Hardware (CMOS/BIOS) clock, system
+and local time is set to UTC/GMT</a>!</p>
+</li>
+<li><p class="first">Select your time-zone and select &#8220;Next&#8221;</p>
+<p><img alt="image14" src="../../_images/First-Boot-12-Clock-Timezone.png" /></p>
+</li>
+<li><p class="first">Your appliance is now ready for ELMA applications to be installed!</p>
+<p><img alt="image15" src="../../_images/First-Boot-13-Login.png" /></p>
+</li>
+<li><p class="first">For good measure login and reboot your appliance.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="next-installation-steps">
+<h2>Next installation steps<a class="headerlink" href="#next-installation-steps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Read ELMA <a class="reference external" href="../installation">installation guide</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">First Boot</a><ul>
+<li><a class="reference internal" href="#installation-settings">Installation settings</a></li>
+<li><a class="reference internal" href="#next-installation-steps">Next installation steps</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="time.html"
+                        title="previous chapter">Hardware (CMOS/BIOS) Clock and System Time</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../update.html"
+                        title="next chapter">Patch, Update and Upgrade Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/manuals/installation/firstboot.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../update.html" title="Patch, Update and Upgrade Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="time.html" title="Hardware (CMOS/BIOS) Clock and System Time"
+             >previous</a> |</li>
+        <li><a href="../../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Manuals</a> &raquo;</li>
+          <li><a href="index.html" >Installation Guide</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

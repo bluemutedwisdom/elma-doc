@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Frequently Asked Questions &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="next" title="Whitepapers" href="../whitepapers/index.html" />
+    <link rel="prev" title="rsyslog omelasticsearch bechmark report" href="../tests/omelasticsearch.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../whitepapers/index.html" title="Whitepapers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../tests/omelasticsearch.html" title="rsyslog omelasticsearch bechmark report"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<p><strong>Some things are simply often asked. Here we provide the answers!</strong></p>
+<p>If you have questions that should be explained here, please let us know.</p>
+<p>Issues, problems, enhancements and feature requests are managed with our
+<a class="reference external" href="http://code.google.com/p/enterprise-log-management-appliance/issues/list">project
+workflow</a>.
+For extended communication visit <a class="reference external" href="https://groups.google.com/forum/?fromgroups#!forum/enterprise-log-management-appliance">ELMA discussion
+group</a>.</p>
+<p>For syslog specific questions please also have a look at
+<a class="reference external" href="http://www.rsyslog.com/faq/">rsyslog</a> and
+<a class="reference external" href="http://www.balabit.com/wiki/syslog-ng-faq-table-contents">syslog-ng</a>
+FAQs. Further informations and tips arround log management you can find
+in <a class="reference external" href="http://www.elasticsearch.org/tutorials/">ElasticSearch
+tutorials</a>.</p>
+<div class="section" id="which-web-browsers-are-supported">
+<h2>Which web browsers are supported?<a class="headerlink" href="#which-web-browsers-are-supported" title="Permalink to this headline">¶</a></h2>
+<p>ELMA user and admin interfaces should work in all modern web
+browsers as long as they support SVG.</p>
+<ul class="simple">
+<li>Tested with <strong>Firefox &gt; 19.x</strong>.</li>
+<li>Tested with Google Chrome &gt; 26</li>
+<li><strong>IE8 &amp; IE9 don&#8217;t work correctly!</strong></li>
+</ul>
+<p>You may need to <strong>clear your browsers cache after upgrading</strong> to see
+all of the new features.</p>
+<p>If you are <strong>running into ssl browser errors</strong> you may need to
+<strong>delete your ELMA certificate inside your browsers server
+certificate store</strong>.</p>
+</div>
+<div class="section" id="file-system-sizing-immediately-after-deployment">
+<h2>File System Sizing immediately after deployment<a class="headerlink" href="#file-system-sizing-immediately-after-deployment" title="Permalink to this headline">¶</a></h2>
+<p>A busy system will blow up <a class="reference external" href="../manuals/requirements.html">ElasticSearch or rsyslog working
+space</a> with data relatively quickly.</p>
+<p>It is strongly recommended to separate or to extend these LVM
+Volumes with a sizing depending on your specific requirements using
+integrated Logical Volume Manager (LVM) inside ELMA CLI.</p>
+<p>A good procedure for File System Sizing immediately after deployment:</p>
+<ul class="simple">
+<li>Stop services</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>service rsyslog stop
+service elasticsearch stop</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Rename ElasticSearch data directory from /var/lib/elasticsearch to /var/lib/elasticsearch-old</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">elasticsearch</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">elasticsearch</span><span class="o">-</span><span class="n">old</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>SUSE does not auto mount non-root LVM volume groups on boot, so be
+sure to run</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>chkconfig boot.lvm on</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Add another virtual disk, reasonably sized (I make it 100GB to
+start). Create a new volume group, and a new logical volume (using
+file system type EXT3 or better EXT4) and mount it at
+/var/lib/elasticsearch</li>
+<li>Move the files from /var/lib/elasticsearch-old to the new
+/var/lib/elasticsearch</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>cp -Rp /var/lib/elasticsearch-old/* /var/lib/elasticsearch</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Set the owners and groupname back, just in case</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>chown -R elasticsearch:root /var/lib/elasticsearch
+chgrp -R elasticsearch:root /var/lib/elasticsearch</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Check path to ElasticSearch data directory</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>grep "ES_DATA_DIR=" /etc/elma/elma.conf
+ES_DATA_DIR="/var/lib/elasticsearch"</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>System reboot</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">reboot</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="increase-disk-space-using-the-yast-partitioner">
+<h2>Increase disk space using the YAST partitioner<a class="headerlink" href="#increase-disk-space-using-the-yast-partitioner" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Using the VMware vSphere Client (or similar tool), increase the
+virtual disk to the size you want it to be.</li>
+<li>Reboot ELMA to detect the new disk size</li>
+<li>From the command prompt of ELMA, run &#8220;yast&#8221;.</li>
+<li>Select &#8220;System&#8221; &#8211;&gt; &#8220;Partitioner&#8221;</li>
+<li>Click &#8220;Yes&#8221; to continue after viewing the warning.</li>
+<li>Verify that the &#8220;/dev/sda/&#8221; virtual disk is the new larger size.</li>
+<li>Select &#8220;Hard Disks&#8221; &#8211;&gt; &#8220;Add Partition&#8221; &#8211;&gt; &#8220;Primary Partition&#8221; &#8211;&gt;
+&#8220;Maximum Size&#8221;</li>
+<li>Select &#8220;Do not format partition&#8221; &#8211;&gt; File system ID = &#8220;0x8e Linux
+LVM&#8221;</li>
+<li>Select &#8220;Volume Management&#8221; &#8211;&gt; Resize &#8220;/dev/systemVG&#8221; &#8211;&gt; Select the
+newly create partition and select &#8220;Add&#8221;</li>
+<li>Resize each volume to your desired size. The volumes that will use
+the most storage are LVRoot (ElasticSearch database) and &#8220;LVvar_log&#8221;
+(compressed syslog archive).</li>
+</ul>
+<p>Final changes should look similar to this:</p>
+<div class="highlight-python"><pre>Changes to partitioning:
+ *  Create volume /dev/sda3 (786 GB)
+ *  Extend volume group systemVG with /dev/sda4
+ *  Extend logical volume /dev/systemVG/LVRoot to 759.80.79 GB
+ *  Extend logical volume /dev/systemVG/LVopt_ to 10.00 GB
+ *  Extend logical volume /dev/systemVG/LVvar_log_ to 29.98 GB
+ *  Extend logical volume /dev/systemVG/LVvar_spool_ to 10.00 GB</pre>
+</div>
+</div>
+<div class="section" id="how-do-i-limit-how-much-storage-space-is-used">
+<h2>How do I limit how much storage space is used?<a class="headerlink" href="#how-do-i-limit-how-much-storage-space-is-used" title="Permalink to this headline">¶</a></h2>
+<p>ELMA search frontend get the logging events from ElasticSearch
+database which stores the indexed data per default in
+/var/lib/elasticsearch.</p>
+<ul class="simple">
+<li>Watch how much your logs grow in a day. For example, if
+/var/lib/elasticsearch grows from 10 GB to 15 GB in a day, this is 5
+GB/day.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>df -h
+
+Filesystem                         Size  Used Avail Use% Mounted on
+devtmpfs                           1.9G   32K  1.9G   1% /dev
+tmpfs                              1.9G     0  1.9G   0% /dev/shm
+tmpfs                              1.9G  3.0M  1.9G   1% /run
+/dev/mapper/systemVG-LVRoot         60G   42G   17G  72% /
+tmpfs                              1.9G     0  1.9G   0% /sys/fs/cgroup
+tmpfs                              1.9G  3.0M  1.9G   1% /var/lock
+tmpfs                              1.9G  3.0M  1.9G   1% /var/run
+/dev/sda1                          183M   35M  139M  20% /boot
+/dev/mapper/systemVG-LVvar_log_     30G  3.2G   25G  12% /var/log
+/dev/mapper/systemVG-LVvar_spool_   29G   16G   13G  55% /var/spool</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Divide your available storage by the daily usage to determine the
+number of days of logs you can keep. For example, if you have 100 GB
+of available storage and you are using 5 GB/day, you can keep 20 days
+of logs.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="mi">100</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Edit &#8220;/etc/elma/elma.conf&#8221;</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="c">######### Set the number of days ElasticSearch indexes should be hold #########</span>
+<span class="n">ESARCHIVEPERIOD</span><span class="o">=</span><span class="s">&quot;20&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Reconfigure ELMA to use new setting:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --all</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="apache-failing-to-start-after-patching-and-upgrading">
+<h2>Apache failing to start after patching and upgrading<a class="headerlink" href="#apache-failing-to-start-after-patching-and-upgrading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>For all <strong>patching und upgrading</strong> tasks the usage of ELMA <strong>CLI is
+more secure</strong> then the usage of ELMA webgui because of possible
+apache and php reloads during patches and upgrades of underlying
+operation system</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>/usr/share/elma/bin/elma-reconfigure.sh --patch --update</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="warning-patch-opensuse-2014-493-1-is-interactive-skipping">
+<h2>Warning: Patch &#8216;openSUSE-2014-493-1&#8217; is interactive, skipping<a class="headerlink" href="#warning-patch-opensuse-2014-493-1-is-interactive-skipping" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Interactive update from ELMA CLI</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>zypper --no-gpg-checks --gpg-auto-import-keys patch</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>System reboot</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">reboot</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="searchphaseexecutionexception-failed-to-execute-phase-query-fetch">
+<h2>SearchPhaseExecutionException - Failed to execute phase query_fetch<a class="headerlink" href="#searchphaseexecutionexception-failed-to-execute-phase-query-fetch" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Filesystem is full (see above instructions for partitioning and log
+rotation)</li>
+<li>rsyslogd is not running (see rsyslog configuration pages)</li>
+<li>Issues in rsyslog configuration (see rsyslog configuration pages)</li>
+</ul>
+</div>
+<div class="section" id="elasticsearchexception-java-lang-outofmemoryerror-java-heap-space">
+<h2>ElasticsearchException - java.lang.OutOfMemoryError: Java heap space<a class="headerlink" href="#elasticsearchexception-java-lang-outofmemoryerror-java-heap-space" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Extend Elasticsearch heap space (see Elasticsearch configuration
+pages)</li>
+</ul>
+</div>
+<div class="section" id="are-older-opensuse-12-x-appliances-being-supported-in-future">
+<h2>Are older openSUSE 12.x appliances being supported in future?<a class="headerlink" href="#are-older-opensuse-12-x-appliances-being-supported-in-future" title="Permalink to this headline">¶</a></h2>
+<p>There are to much changes from openSUSE 12.2 to 13.1 especially with
+openSUSE startup scripts and logging features. <strong>It&#8217;s strongly
+recommended to upgrade all of your ELMA appliances</strong> (see below).</p>
+<p>There will be <strong>no further support for openSUSE 12.x</strong> appliances.</p>
+</div>
+<div class="section" id="howto-upgrade-elma-appliance-to-opensuse-13-1">
+<h2>Howto upgrade ELMA appliance to openSUSE 13.1?<a class="headerlink" href="#howto-upgrade-elma-appliance-to-opensuse-13-1" title="Permalink to this headline">¶</a></h2>
+<p>Upgrade howtos can be found on <a class="reference external" href="http://en.opensuse.org/SDB:System_upgrade">openSUSE support
+site</a>.</p>
+<p>There will be <strong>no further support for openSUSE 12.x</strong> appliances.
+Please upgrade to openSUSE 13.1!</p>
+</div>
+<div class="section" id="how-to-forward-syslog-events-from-syslog-ng-to-elma-rsyslogd">
+<h2>How to forward syslog events from syslog-ng to ELMA rsyslogd?<a class="headerlink" href="#how-to-forward-syslog-events-from-syslog-ng-to-elma-rsyslogd" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Edit your syslogd.conf file, usually found in
+/opt/syslog-ng/etc/syslogd-ng.conf and make sure you have a source
+called s_all:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>source s_all {
+  internal();
+  unix-stream("/dev/log");
+  file("/proc/kmsg" program_override("kernel: "));
+};</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Next configure the protocol and port, and put them in a destination
+entry, being sure to specify TCP. Replace the &#8220;192.168.0.1&#8221; with the
+address of your ELMA server.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>destination d_elma {
+  tcp("192.168.0.1" port(514));
+};</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Next tell syslog-ng to forward syslogs from &#8220;s_all&#8221; source to the
+&#8220;d_elma&#8221; destination. Note: This log statement must be before any
+&#8220;final&#8221; log statements, so make this the first log statement.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>log {
+  source(s_all); destination(d_elma);
+};</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Your configuration should now look as follows:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>source s_all {
+  internal();
+  unix-stream("/dev/log");
+  file("/proc/kmsg" program_override("kernel: "));
+};
+destination d_elma {
+  tcp("192.168.0.1" port(514));
+};
+log {
+  source(s_all); destination(d_elma);
+};</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Now, restart syslog-ng:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>/etc/init.d/syslog-ng restart</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Test sending events to ELMA by using the command line tool logger:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>logger "my little pony"</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Log into the ELMA search interface. Search for your events, starting
+with &#8220;my little pony&#8221;.</li>
+</ul>
+</div>
+<div class="section" id="how-to-forward-syslog-events-from-rsyslogd-to-elma-rsyslogd">
+<h2>How to forward syslog events from rsyslogd to ELMA rsyslogd?<a class="headerlink" href="#how-to-forward-syslog-events-from-rsyslogd-to-elma-rsyslogd" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>On sender site:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre># ######### Event forwarding to ELMA rsyslogd server ##########
+#
+# plain TCP event forwarding
+#
+*.* @@192.168.0.1:514</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>On receiver site: nothing to do</li>
+</ul>
+</div>
+<div class="section" id="how-to-enable-compressed-event-forwarding-between-rsyslogd-servers">
+<h2>How to enable compressed event forwarding between rsyslogd servers?<a class="headerlink" href="#how-to-enable-compressed-event-forwarding-between-rsyslogd-servers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>On sender site:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre># ######### Compressed event forwarding to ELMA rsyslog server ##########
+#
+# plain TCP event forwarding with experimental framing
+# maximum zlib compression rate (z1 - z9)
+#
+*.* @@(o,z9)192.168.0.1:514</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>On receiver site: nothing to do</li>
+</ul>
+</div>
+<div class="section" id="how-to-resolve-original-syslog-sender-ip-to-sender-hostname">
+<h2>How to resolve original syslog sender IP to sender hostname?<a class="headerlink" href="#how-to-resolve-original-syslog-sender-ip-to-sender-hostname" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>rsyslog &#64;source_host value is the original sender IP.</li>
+<li>rsyslog &#64;source value is the sender IP in front of your rsyslog
+server - could be the original sender IP or your syslog forwarding
+server.</li>
+</ul>
+<p>By default rsyslogd makes reverse DNS requests to resolve the
+hostname and stores it instead of sender IP. The is no further
+customization on ELMA appliance necessary.</p>
+<p>You have to <strong>make sure that your ELMA box has right local DNS
+server settings!</strong></p>
+<p>You could test reverse DNS resolving using dig on ELMA linux shell:</p>
+<div class="highlight-python"><pre>dig @localhost -x 204.152.184.167 +short</pre>
+</div>
+</div>
+<div class="section" id="wrong-timpstamp-in-elma-search-gui-is-your-system-time-synchronized-and-up-to-date">
+<h2>Wrong timpstamp in ELMA Search-Gui - Is your system time synchronized and up to date?<a class="headerlink" href="#wrong-timpstamp-in-elma-search-gui-is-your-system-time-synchronized-and-up-to-date" title="Permalink to this headline">¶</a></h2>
+<p>One of the quickest commands to verify that ntpd is still up and
+running as desired is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ntpq</span> <span class="o">-</span><span class="n">p</span>
+</pre></div>
+</div>
+<p>To compare time offsets between local system time and time taken
+from your ntp server:</p>
+<div class="highlight-python"><pre>ntpdate -d server</pre>
+</div>
+<p>To synchronize your system time manually:</p>
+<div class="highlight-python"><pre>systemctl stop ntp.service
+ntpdate server
+systemctl start ntp.service</pre>
+</div>
+</div>
+<div class="section" id="no-events-in-elma-search-gui-till-utc-xxx-have-you-set-system-clock-to-utc">
+<h2>No events in ELMA Search-Gui till UTC+XXX - Have you set system clock to UTC?<a class="headerlink" href="#no-events-in-elma-search-gui-till-utc-xxx-have-you-set-system-clock-to-utc" title="Permalink to this headline">¶</a></h2>
+<p>Reading the clock:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">hwclock</span> <span class="o">--</span><span class="n">show</span> <span class="p">;</span> <span class="n">date</span> <span class="p">;</span> <span class="n">date</span> <span class="o">-</span><span class="n">u</span>
+</pre></div>
+</div>
+<p>The commands above show, in succession:</p>
+<ul class="simple">
+<li><strong>CMOS time</strong> (should be <strong>UTC</strong>)</li>
+<li><strong>Local system time</strong> (should be <strong>UTC</strong>)</li>
+<li><strong>UTC system time</strong></li>
+</ul>
+<p>rsyslog and Kibana time stamped indices use your selected time range
+to create a list of indices that match a specified timestamp
+pattern.</p>
+<p>Please also note that <strong>rsyslog indices should rollover at midnight
+UTC</strong>. Therefore it is strongly recommended to <strong>set system clock to UTC</strong>.</p>
+</div>
+<div class="section" id="coordinated-universal-time">
+<h2>Coordinated Universal Time<a class="headerlink" href="#coordinated-universal-time" title="Permalink to this headline">¶</a></h2>
+<p>UTC (Coordinated Universal Time) is the international time standard.
+It is the current term for what was commonly referred to as
+Greenwich Meridian Time (GMT). Zero hours UTC is midnight in
+Greenwich, England, which lies on the zero longitudinal meridian.
+Coordinated Universal Time is based on a 24 hour clock; therefore,
+afternoon hours such as 4 pm UTC are expressed as 16:00 UTC.</p>
+</div>
+<div class="section" id="system-time">
+<h2>System time<a class="headerlink" href="#system-time" title="Permalink to this headline">¶</a></h2>
+<p>It is strongly recommend that the <strong>system clock (as well as the
+CMOS/BIOS clock) is set to UTC/GMT</strong>.</p>
+<p>System time and date:</p>
+<div class="highlight-python"><pre>timedatectl status</pre>
+</div>
+<p>This way Linux can keep the user space clock on the correct time
+when the change for Daylight Saving Time occurs. The safest way is
+to <strong>set the CMOS clock to UTC before beginning the installation
+process</strong>.</p>
+<ul class="simple">
+<li><a class="reference external" href="../manuals/installation/time.html">Clock and time adjusting</a></li>
+</ul>
+</div>
+<div class="section" id="rsyslog-timestamp-formatting-timestamp-parsing-problems">
+<h2>Rsyslog timestamp formatting - Timestamp parsing problems<a class="headerlink" href="#rsyslog-timestamp-formatting-timestamp-parsing-problems" title="Permalink to this headline">¶</a></h2>
+<p>Rsyslog timestamp formatting:</p>
+<div class="highlight-python"><pre>date-rfc3339 2010-12-05T02:21:41.889482+01:00
+date-rfc3164 Dec 5 02:21:13
+date-pgsql 2010-12-05 02:27:34
+date-mysql 20101205022845</pre>
+</div>
+</div>
+<div class="section" id="unresolvedaddressexception-have-you-setup-a-static-ip-address">
+<h2>UnresolvedAddressException - Have you setup a static IP address?<a class="headerlink" href="#unresolvedaddressexception-have-you-setup-a-static-ip-address" title="Permalink to this headline">¶</a></h2>
+<p>In some case if you are using DHCP (dynamic or static) there is no
+/etc/host entry for your ELMA host. You have to insert your hostname
+with correspondig IP address.</p>
+<p>Better you change your network configuration to static for server
+environment. <strong>Make sure you have also correct DNS resolving
+(especially reverse resolving)</strong> for your appliance.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Frequently Asked Questions</a><ul>
+<li><a class="reference internal" href="#which-web-browsers-are-supported">Which web browsers are supported?</a></li>
+<li><a class="reference internal" href="#file-system-sizing-immediately-after-deployment">File System Sizing immediately after deployment</a></li>
+<li><a class="reference internal" href="#increase-disk-space-using-the-yast-partitioner">Increase disk space using the YAST partitioner</a></li>
+<li><a class="reference internal" href="#how-do-i-limit-how-much-storage-space-is-used">How do I limit how much storage space is used?</a></li>
+<li><a class="reference internal" href="#apache-failing-to-start-after-patching-and-upgrading">Apache failing to start after patching and upgrading</a></li>
+<li><a class="reference internal" href="#warning-patch-opensuse-2014-493-1-is-interactive-skipping">Warning: Patch &#8216;openSUSE-2014-493-1&#8217; is interactive, skipping</a></li>
+<li><a class="reference internal" href="#searchphaseexecutionexception-failed-to-execute-phase-query-fetch">SearchPhaseExecutionException - Failed to execute phase query_fetch</a></li>
+<li><a class="reference internal" href="#elasticsearchexception-java-lang-outofmemoryerror-java-heap-space">ElasticsearchException - java.lang.OutOfMemoryError: Java heap space</a></li>
+<li><a class="reference internal" href="#are-older-opensuse-12-x-appliances-being-supported-in-future">Are older openSUSE 12.x appliances being supported in future?</a></li>
+<li><a class="reference internal" href="#howto-upgrade-elma-appliance-to-opensuse-13-1">Howto upgrade ELMA appliance to openSUSE 13.1?</a></li>
+<li><a class="reference internal" href="#how-to-forward-syslog-events-from-syslog-ng-to-elma-rsyslogd">How to forward syslog events from syslog-ng to ELMA rsyslogd?</a></li>
+<li><a class="reference internal" href="#how-to-forward-syslog-events-from-rsyslogd-to-elma-rsyslogd">How to forward syslog events from rsyslogd to ELMA rsyslogd?</a></li>
+<li><a class="reference internal" href="#how-to-enable-compressed-event-forwarding-between-rsyslogd-servers">How to enable compressed event forwarding between rsyslogd servers?</a></li>
+<li><a class="reference internal" href="#how-to-resolve-original-syslog-sender-ip-to-sender-hostname">How to resolve original syslog sender IP to sender hostname?</a></li>
+<li><a class="reference internal" href="#wrong-timpstamp-in-elma-search-gui-is-your-system-time-synchronized-and-up-to-date">Wrong timpstamp in ELMA Search-Gui - Is your system time synchronized and up to date?</a></li>
+<li><a class="reference internal" href="#no-events-in-elma-search-gui-till-utc-xxx-have-you-set-system-clock-to-utc">No events in ELMA Search-Gui till UTC+XXX - Have you set system clock to UTC?</a></li>
+<li><a class="reference internal" href="#coordinated-universal-time">Coordinated Universal Time</a></li>
+<li><a class="reference internal" href="#system-time">System time</a></li>
+<li><a class="reference internal" href="#rsyslog-timestamp-formatting-timestamp-parsing-problems">Rsyslog timestamp formatting - Timestamp parsing problems</a></li>
+<li><a class="reference internal" href="#unresolvedaddressexception-have-you-setup-a-static-ip-address">UnresolvedAddressException - Have you setup a static IP address?</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../tests/omelasticsearch.html"
+                        title="previous chapter">rsyslog omelasticsearch bechmark report</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../whitepapers/index.html"
+                        title="next chapter">Whitepapers</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/faq/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../whitepapers/index.html" title="Whitepapers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../tests/omelasticsearch.html" title="rsyslog omelasticsearch bechmark report"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

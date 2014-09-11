@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NoMachineNX &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Development" href="index.html" />
+    <link rel="prev" title="Webdesign" href="webdesign.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="webdesign.html" title="Webdesign"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Development</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="nomachinenx">
+<h1>NoMachineNX<a class="headerlink" href="#nomachinenx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation-on-opensuse">
+<h2>Installation on openSUSE<a class="headerlink" href="#installation-on-opensuse" title="Permalink to this headline">¶</a></h2>
+<p>Installation of <a class="reference external" href="http://www.nomachine.com">NoMachine NX</a> 3.5 on
+<a class="reference external" href="http://www.opensuse.org">openSUSE</a> 12.3.</p>
+<ul class="simple">
+<li>Log in as superuser (&#8220;root&#8221;)</li>
+<li><a class="reference external" href="http://www.nomachine.com/download-package.php?Prod_Id=3772">Download the
+RPMs</a></li>
+<li>Change your working directory to the location where you saved the
+package and install it by running from a console:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>rpm -i nxclient-3.5.0-7.x86_64.rpm
+rpm -i nxnode-3.5.0-9.x86_64.rpm
+rpm -i nxserver-3.5.0-11.x86_64.rpm</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Edit the SSH server configuration file:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">sshd_config</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Look for the line that starts with AuthorizedKeysFile. Edit the line
+to be:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">AuthorizedKeysFile</span> <span class="o">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys2</span>
+</pre></div>
+</div>
+<p>Note the &#8220;2&#8221; at the end.</p>
+</div></blockquote>
+<ul class="simple">
+<li>Save it.</li>
+<li>Find the ID of the /usr/sbin/sshd process.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>ps -ef | grep sshd</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Send it a signal to re-read this config file:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>kill -HUP processID</pre>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Start the nxserver.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-python"><pre>/usr/NX/bin/nxserver --start</pre>
+</div>
+</div></blockquote>
+<p>The NX service can be controlled by the command /usr/NX/bin/nxserver
+&#8211;status|&#8211;start|&#8211;stop|&#8211;restart. Additional commands are available
+to configure the server. Try /usr/NX/bin/nxserver &#8211;help for more
+information.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NoMachineNX</a><ul>
+<li><a class="reference internal" href="#installation-on-opensuse">Installation on openSUSE</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="webdesign.html"
+                        title="previous chapter">Webdesign</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/development/nomachinenx.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="webdesign.html" title="Webdesign"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Development</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

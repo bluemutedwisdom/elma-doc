@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Requirements &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="../index.html" />
+    <link rel="up" title="Manuals" href="index.html" />
+    <link rel="next" title="Virtualization Guide" href="virtualization.html" />
+    <link rel="prev" title="Manuals" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="virtualization.html" title="Virtualization Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Manuals"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Manuals</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="requirements">
+<h1>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-knowledge">
+<h2>Basic Knowledge<a class="headerlink" href="#basic-knowledge" title="Permalink to this headline">¶</a></h2>
+<p>ELMA appliance comes out of the box without any Linux graphical user
+interface. Therefore it is useful to have some basic knowledge of
+working with a Linux shell because some operation and administration
+tasks only can be done with shell commands.</p>
+<p>The default shell in openSUSE is Bash (GNU Bourne-Again Shell).</p>
+<p>For more detailed installation instructions and deployment strategies,
+see the <a class="reference external" href="http://doc.opensuse.org/">openSUSE documentation</a>.</p>
+</div>
+<div class="section" id="system-and-hardware-requirements">
+<h2>System and Hardware Requirements<a class="headerlink" href="#system-and-hardware-requirements" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Pentium III 500 MHz or higher processor (Pentium 4 2.4 GHz or higher
+or any AMD64 or Intel EM64T processor recommended)</p>
+</li>
+<li><p class="first">4096 MB physical RAM (8 GB recommended)</p>
+</li>
+<li><p class="first">A minimum of 1 GB Elasticsearch heap space (50% of available system
+RAM for busy systems recommended)</p>
+</li>
+<li><p class="first">It is strongly recommend that the <a class="reference external" href="installation/time.html">Hardware (CMOS/BIOS) clock, system
+and local time is set to UTC/GMT</a>!</p>
+</li>
+<li><p class="first">40 GB available disk space for the base system with following volume
+mount paths:</p>
+<div class="highlight-python"><pre>/ (8192 MB)
+/srv/ (4096 MB)
+/var/lib/elasticsearch (16384 MB)
+/var/log/ (8192 MB)
+/var/spool/ (4096 MB)</pre>
+</div>
+</li>
+<li><p class="first">Separate or extended LVM Volumes with a sizing depending on your
+specific requirements:</p>
+<div class="highlight-python"><pre>/var/lib/elasticsearch (ElasticSearch default working space)
+/var/log/syslog (rsyslog flat file archive)</pre>
+</div>
+</li>
+</ul>
+<p>A busy system will blow up ElasticSearch or rsyslog working space with
+data relatively quickly. Assuming an average message lenght of 244 Byte
+per message and 10.000 events per second the following projection can
+give you an <a class="reference external" href="../tests">idea of difficulties for suitable filesystem
+sizing</a>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="16%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="7%" />
+<col width="8%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td><strong>Benchmark</strong></td>
+<td><strong>LVM Volume</strong></td>
+<td><strong>second</strong></td>
+<td><strong>minute</strong></td>
+<td><strong>hour</strong></td>
+<td><strong>day</strong></td>
+<td><strong>week</strong></td>
+<td><strong>month</strong></td>
+<td><strong>year</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Messages</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10 k</td>
+<td>600 k</td>
+<td>36 M</td>
+<td>864 M</td>
+<td>6.048 M</td>
+<td>181.440 M</td>
+<td>2.177.280 M</td>
+</tr>
+<tr class="row-odd"><td><strong>Compressed data size</strong></td>
+<td>omfile</td>
+<td>/var/log/syslog</td>
+<td>0.03 MB</td>
+<td>1.74 MB</td>
+<td>104.40 MB</td>
+<td>2.45 GB</td>
+<td>17.13 GB</td>
+<td>68.51 GB</td>
+<td>822.15 GB</td>
+</tr>
+<tr class="row-even"><td><strong>Compressed data size</strong></td>
+<td>omelasticsearch</td>
+<td>/var/lib/elasticsearch</td>
+<td>3.50 MB</td>
+<td>210.00 MB</td>
+<td>12.30 GB</td>
+<td>295.31 GB</td>
+<td>2.02 TB</td>
+<td>8.07 TB</td>
+<td>96.90 TB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>It is strongly recommended to use seperate hard disks</strong> both for your
+data and archive file systems using integrated Logical Volume Manager
+(LVM) inside ELMA CLI. Then ELMA appliance is completely independant
+from your application data and can easily upgraded.</p>
+<p>To clone ELMA appliance and make necessary adaptations inside SUSEstudio
+is also a suitable method.</p>
+<div class="section" id="partition-setup">
+<h3>Partition Setup<a class="headerlink" href="#partition-setup" title="Permalink to this headline">¶</a></h3>
+<p>The ELMA integrated <a class="reference external" href="https://activedoc.opensuse.org/book/opensuse-reference/chapter-3-advanced-disk-setup">Logical Volume Manager
+(LVM)</a>
+setup provides in most cases a reasonable partition scheme that can be
+accepted without change.</p>
+<p><strong>Logical Volume Manager (LVM) applies to the Disk image, VMware, OVF
+and Preload ISO formats only!</strong></p>
+<p>To make changes in the proposal (like changing the file system type or
+encrypt partitions), select Edit Partition Setup and adjust the
+settings. See <a class="reference external" href="https://activedoc.opensuse.org/book/opensuse-reference/chapter-3-advanced-disk-setup#fig.yast2.i_y2_disk_part">using the YaST
+Partitioner</a>
+for further instructions.</p>
+</div>
+<div class="section" id="file-system-sizing">
+<h3>File System Sizing<a class="headerlink" href="#file-system-sizing" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>df -h
+
+Filesystem                         Size  Used Avail Use% Mounted on
+devtmpfs                           2.0G   40K  2.0G   1% /dev
+tmpfs                              2.0G     0  2.0G   0% /dev/shm
+tmpfs                              2.0G  6.6M  2.0G   1% /run
+/dev/mapper/systemVG-LVRoot        7.5G  2.0G  5.2G  28% /
+tmpfs                              2.0G     0  2.0G   0% /sys/fs/cgroup
+tmpfs                              2.0G  6.6M  2.0G   1% /var/run
+tmpfs                              2.0G  6.6M  2.0G   1% /var/lock
+/dev/vda1                          199M   53M  136M  28% /boot
+/dev/mapper/systemVG-LVvar_log_    7.8G  159M  7.2G   3% /var/log
+/dev/mapper/systemVG-LVvar_spool_  3.9G  137M  3.6G   4% /var/spool
+/dev/mapper/systemVG-LVopt_        3.9G  219M  3.5G   6% /opt
+/dev/mapper/dataVG-LVdata           63G  266M   60G   1% /var/lib/elasticsearch
+/dev/mapper/syslogVG-LVsyslog       63G  201M   60G   1% /var/log/syslog</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Requirements</a><ul>
+<li><a class="reference internal" href="#basic-knowledge">Basic Knowledge</a></li>
+<li><a class="reference internal" href="#system-and-hardware-requirements">System and Hardware Requirements</a><ul>
+<li><a class="reference internal" href="#partition-setup">Partition Setup</a></li>
+<li><a class="reference internal" href="#file-system-sizing">File System Sizing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Manuals</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="virtualization.html"
+                        title="next chapter">Virtualization Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/manuals/requirements.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="virtualization.html" title="Virtualization Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Manuals"
+             >previous</a> |</li>
+        <li><a href="../index.html">ELMA 0.2.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Manuals</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>

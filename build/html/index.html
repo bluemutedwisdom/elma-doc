@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to ELMA &mdash; ELMA 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="ELMA 0.2.6 documentation" href="#" />
+    <link rel="next" title="About" href="about.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="about.html" title="About"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-elma">
+<h1>Welcome to ELMA<a class="headerlink" href="#welcome-to-elma" title="Permalink to this headline">¶</a></h1>
+<p>The Enterprise Log Management Appliance (ELMA) is a <strong>logging and syslog framework</strong> complemented by a range of free and open-source tools
+that can help you aggregate and deliver metrics, analytics and vital performance data.</p>
+<p><strong>Ship logs from any source</strong>, get the right timestamp, parse and normalize them into structured
+JSON format, index them:</p>
+<p><img alt="image0" src="_images/syslog-infrastructure-home.png" /></p>
+<p><strong>All your logs</strong> and other event data from all over your infrastructure <strong>in a central place</strong> -
+<a class="reference external" href="_images/kibana-search.png">Search, graph and analyse</a> them.</p>
+<p>Provided as an <a class="reference external" href="http://susestudio.com/a/TOYySW/enterprise-log-management-appliance--2">preinstalled openSUSE
+appliance</a> which can be
+<a class="reference external" href="manuals/installation">deployed and customized</a>
+in a few minutes ELMA comes out of the box with all necessary services, <a class="reference external" href="manuals/configuration">fine
+customization and performance tuning</a> and allows
+easy <a class="reference external" href="manuals/administration.html">adminstration</a> and <a class="reference external" href="manuals/operation.html">operations</a>.</p>
+<p>Issues, problems, enhancements and feature requests are managed with <a class="reference external" href="http://code.google.com/p/enterprise-log-management-appliance/issues/list">ELMA project workflow</a>.
+For extended communication please visit <a class="reference external" href="https://groups.google.com/forum/?fromgroups#!forum/enterprise-log-management-appliance">ELMA discussion group</a>.</p>
+<p>At the moment we review and completly rewrite our documentation.</p>
+<p><strong>Every feedback and every help is welcome</strong>.</p>
+<div class="section" id="about-project-overview">
+<h2>About - Project overview<a class="headerlink" href="#about-project-overview" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="about.html#ingredients">Ingredients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#cookbook">Cookbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#menue">Menue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#details">Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="about.html#syslog-evolution">Syslog evolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#next-generation-databases">Next generation databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#common-event-expression-cee-enhanced-syslog">Common Event Expression - CEE enhanced syslog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#our-goal">Our goal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#why-not-just-archive-everything-in-elasticsearch">Why not just archive everything in ElasticSearch?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#why-elma">Why ELMA?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about.html#howto-integrate-into-your-existing-logging-and-monitoring-infrasructure">Howto integrate into your existing logging and monitoring infrasructure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changelog-current-releases-and-notes">
+<h2>Changelog, current releases and notes<a class="headerlink" href="#changelog-current-releases-and-notes" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog, current releases and notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#current-tested-appliance">Current tested appliance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#current-tested-releases">Current tested releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#changelog">Changelog</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="do-issues-problems-feature-requests">
+<h2>2do - Issues, problems, feature requests<a class="headerlink" href="#do-issues-problems-feature-requests" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2do.html">2do</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2do.html#issues">Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2do.html#problems">Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2do.html#feature-requests">Feature requests</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="manuals">
+<h2>Manuals<a class="headerlink" href="#manuals" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manuals/index.html">Manuals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manuals/requirements.html">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/requirements.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/requirements.html#system-and-hardware-requirements">System and Hardware Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/requirements.html#partition-setup">Partition Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/requirements.html#file-system-sizing">File System Sizing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/virtualization.html">Virtualization Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/virtualization.html#virtual-formats">Virtual formats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/virtualization.html#vmware-virtualbox-kvm-vmdk">VMware / VirtualBox / KVM (.vmdk)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/virtualization.html#ovf-virtual-machine-ovf">OVF virtual machine (.ovf)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/loadbalancing.html">Loadbalancing and redundancy Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/loadbalancing.html#distributed-elasticsearch-cluster">Distributed elasticsearch cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/loadbalancing.html#to-be-reviewed">To be reviewed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/installation/index.html">Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/installation/time.html">Hardware (CMOS/BIOS) Clock and System Time</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/time.html#requirements-and-recommendations">Requirements and recommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/time.html#coordinated-universal-time">Coordinated Universal Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/time.html#system-time">System time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/time.html#reading-the-clock">Reading the clock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/time.html#is-your-system-time-synchronized-and-up-to-date">Is your system time synchronized and up to date?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/installation/firstboot.html">First Boot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/firstboot.html#installation-settings">Installation settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/installation/firstboot.html#next-installation-steps">Next installation steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/installation/index.html#elma-initial-installation">ELMA initial installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/installation/index.html#reset-elma-configuration-parameter-to-factory-defaults">Reset ELMA configuration parameter to factory defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/installation/index.html#next-installation-steps">Next installation steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/update.html">Patch, Update and Upgrade Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#requirements-and-recommendations">Requirements and recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#patches">Patches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#updates">Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#upgrades">Upgrades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#reconfigure-elma">Reconfigure ELMA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#final-tests">Final Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/update.html#reset-elma-configuration-parameter-to-factory-defaults">Reset ELMA configuration parameter to factory defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/configuration/index.html">Configuration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/configurationfiles.html">Configuration Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#apache2">Apache2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#elasticsearch">ElasticSearch</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="manuals/configuration/configurationfiles.html#systemd">systemd</a></li>
+<li class="toctree-l5"><a class="reference internal" href="manuals/configuration/configurationfiles.html#logrotate">logrotate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="manuals/configuration/configurationfiles.html#jetty">jetty</a></li>
+<li class="toctree-l5"><a class="reference internal" href="manuals/configuration/configurationfiles.html#templates">templates</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#elma">ELMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#git">git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#kibana">Kibana</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#logstash">Logstash</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="manuals/configuration/configurationfiles.html#id1">systemd</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#nagios">Nagios</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="manuals/configuration/configurationfiles.html#elma-system-monitoring">ELMA system monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#rsyslog">rsyslog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/configuration/configurationfiles.html#snmp-trap-receiver">SNMP trap receiver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#elma">ELMA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#snmptrap">snmptrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#rsyslog">rsyslog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#logstash">logstash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#elasticsearch">ElasticSearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#apache2">Apache2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#nagios">Nagios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/configuration/index.html#kibana">Kibana</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/administration.html">Administration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/administration.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/administration.html#supported-web-browsers">Supported web browsers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/administration.html#elma-admin-interfaces">ELMA admin interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/administration.html#elasticsearch-head">ElasticSearch Head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/administration.html#elasticsearch-paramedic">ElasticSearch Paramedic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/administration.html#elasticsearch-bigdesk">ElasticSearch BigDesk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/administration.html#elasticsearch-kibana">ElasticSearch Kibana</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/administration.html#nagois">Nagois</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/administration.html#webyast">WebYast</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/administration.html#elma-user-management">ELMA user management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/administration.html#elma-group-and-profile-management">ELMA group and profile management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/operation.html">Operation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/operation.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/operation.html#secure-network-operations">Secure Network Operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#secure-shell">Secure Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/operation.html#event-and-trap-generation-for-specific-testing">Event and trap generation for specific testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#snmp-trap">SNMP trap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#syslog-event">Syslog event</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/operation.html#basic-operations">Basic operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#elma-reconfigure-and-restart">ELMA reconfigure and restart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#time-synchronization">Time synchronization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#delete-and-optimize-of-time-based-indices">Delete and optimize of time-based indices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#backup-of-system-configurations">Backup of system configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#systemd-system-and-service-manager">systemd system and service manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#opensuse-firewall">openSUSE firewall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#process-table">Process table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#log-files">Log files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#storage-devices-and-disk-partitions">Storage devices and disk partitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#logical-volume-manager-lvm">Logical Volume Manager (LVM)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#filesystems">Filesystems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#check-and-repair-filesystems">Check and Repair Filesystems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#five-ways-to-boot-opensuse-when-grub-is-broken">Five ways to boot openSUSE when Grub is broken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manuals/operation.html#us-keyboard-layout">US Keyboard Layout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manuals/user.html">User Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manuals/user.html#supported-web-browsers">Supported web browsers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manuals/user.html#elma-user-interfaces">ELMA user interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manuals/user.html#kibana">Kibana</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="manuals/user.html#kibana-query-syntax">Kibana query syntax</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="manuals/user.html#terms">Terms</a></li>
+<li class="toctree-l6"><a class="reference internal" href="manuals/user.html#wildcard-searches">Wildcard Searches</a></li>
+<li class="toctree-l6"><a class="reference internal" href="manuals/user.html#boolean-operators">Boolean operators</a></li>
+<li class="toctree-l6"><a class="reference internal" href="manuals/user.html#grouping">Grouping</a></li>
+<li class="toctree-l6"><a class="reference internal" href="manuals/user.html#some-useful-query-examples">Some useful query examples:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="performance-and-compression-tests">
+<h2>Performance and compression tests<a class="headerlink" href="#performance-and-compression-tests" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tests/index.html">Performance and compression tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/index.html#generation-of-continious-tcp-logging">Generation of continious tcp logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/index.html#rsyslog-output-modules">rsyslog output modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests/index.html#omfile-file-output-module">omfile - File Output Module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests/omfile.html">rsyslog omfile bechmark report</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests/index.html#omelasticsearch-elasticsearch-output-module">omelasticsearch - ElasticSearch Output Module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests/omelasticsearch.html">rsyslog omelasticsearch bechmark report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests/index.html#comparison">Comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/index.html#log-space-sizing">Log space sizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/index.html#testbed">Testbed</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#which-web-browsers-are-supported">Which web browsers are supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#file-system-sizing-immediately-after-deployment">File System Sizing immediately after deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#increase-disk-space-using-the-yast-partitioner">Increase disk space using the YAST partitioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#how-do-i-limit-how-much-storage-space-is-used">How do I limit how much storage space is used?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#apache-failing-to-start-after-patching-and-upgrading">Apache failing to start after patching and upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#warning-patch-opensuse-2014-493-1-is-interactive-skipping">Warning: Patch &#8216;openSUSE-2014-493-1&#8217; is interactive, skipping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#searchphaseexecutionexception-failed-to-execute-phase-query-fetch">SearchPhaseExecutionException - Failed to execute phase query_fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#elasticsearchexception-java-lang-outofmemoryerror-java-heap-space">ElasticsearchException - java.lang.OutOfMemoryError: Java heap space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#are-older-opensuse-12-x-appliances-being-supported-in-future">Are older openSUSE 12.x appliances being supported in future?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#howto-upgrade-elma-appliance-to-opensuse-13-1">Howto upgrade ELMA appliance to openSUSE 13.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#how-to-forward-syslog-events-from-syslog-ng-to-elma-rsyslogd">How to forward syslog events from syslog-ng to ELMA rsyslogd?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#how-to-forward-syslog-events-from-rsyslogd-to-elma-rsyslogd">How to forward syslog events from rsyslogd to ELMA rsyslogd?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#how-to-enable-compressed-event-forwarding-between-rsyslogd-servers">How to enable compressed event forwarding between rsyslogd servers?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#how-to-resolve-original-syslog-sender-ip-to-sender-hostname">How to resolve original syslog sender IP to sender hostname?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#wrong-timpstamp-in-elma-search-gui-is-your-system-time-synchronized-and-up-to-date">Wrong timpstamp in ELMA Search-Gui - Is your system time synchronized and up to date?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#no-events-in-elma-search-gui-till-utc-xxx-have-you-set-system-clock-to-utc">No events in ELMA Search-Gui till UTC+XXX - Have you set system clock to UTC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#coordinated-universal-time">Coordinated Universal Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#system-time">System time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#rsyslog-timestamp-formatting-timestamp-parsing-problems">Rsyslog timestamp formatting - Timestamp parsing problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html#unresolvedaddressexception-have-you-setup-a-static-ip-address">UnresolvedAddressException - Have you setup a static IP address?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="whitepapers">
+<h2>Whitepapers<a class="headerlink" href="#whitepapers" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="whitepapers/index.html">Whitepapers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whitepapers/index.html#regulatory-frameworks">Regulatory frameworks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="whitepapers/index.html#german-publications">German publications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development/index.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/git.html">git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/git.html#git-repository">git repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/curl.html">curl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/curl.html#curl-exit-codes">curl exit codes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/nagios.html">Nagios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/nagios.html#nagios-plugins">Nagios plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/webdesign.html">Webdesign</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/webdesign.html#bootstrap">bootstrap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/nomachinenx.html">NoMachineNX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/nomachinenx.html#installation-on-opensuse">Installation on openSUSE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to ELMA</a><ul>
+<li><a class="reference internal" href="#about-project-overview">About - Project overview</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#changelog-current-releases-and-notes">Changelog, current releases and notes</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#do-issues-problems-feature-requests">2do - Issues, problems, feature requests</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#manuals">Manuals</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#performance-and-compression-tests">Performance and compression tests</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#frequently-asked-questions">Frequently Asked Questions</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#whitepapers">Whitepapers</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#development">Development</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="about.html"
+                        title="next chapter">About</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="about.html" title="About"
+             >next</a> |</li>
+        <li><a href="#">ELMA 0.2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Joerg Heinemann.
+    </div>
+  </body>
+</html>
