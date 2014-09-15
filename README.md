@@ -39,11 +39,11 @@ http://sphinx-doc.org/contents.html
 ## Generate HTML Documentation
 
 1. These assume default installs of all ELMA related packages:
-```
-zypper -qn --no-gpg-checks --gpg-auto-import-keys install elma-devel
-```
-2.  Download the pip installer from here: https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-```
-/usr/share/elma-devel/bin/elma-build.sh --elma-doc
-```
-3.  open /elma-doc/ in a browser
+   ```
+   zypper -qn --no-gpg-checks --gpg-auto-import-keys install elma-devel
+   ```
+2. Download the pip installer from here: https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+   ```
+  /usr/share/elma-devel/bin/elma-build.sh --elma-doc
+  ```
+3. open /elma-doc/ in a browser
