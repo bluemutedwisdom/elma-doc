@@ -1,6 +1,9 @@
 elma-doc (master)
 ===============================
 
+The documentation for the ELMA project is a work in progress.
+We are currently migrating over to a new document generation framework.
+
 Enterprise Log Management Appliance (ELMA)
 ------------------------------------------
 
@@ -25,11 +28,8 @@ All your logs and other event data from all over your infrastructure in a centra
 
 - Joerg Heinemann <heinemannj66@gmail.com>
 
-Documentation for the elma project
-----------------------------------
-
-This is a work in progress. We are currently migrating over to a new document
-generation framework.
+Documentation framework
+-----------------------
 
 ## Learning the doc tools
 
