@@ -28,8 +28,8 @@ All your logs and other event data from all over your infrastructure in a centra
 
 - Joerg Heinemann <heinemannj66@gmail.com>
 
-Documentation framework
------------------------
+Sphinx documentation framework
+------------------------------
 
 ## Learning the doc tools
 
