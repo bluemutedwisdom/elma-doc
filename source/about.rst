@@ -259,3 +259,4 @@ applications.
 .. |image0| image:: syslog-infrastructure.png
 .. |image1| image:: kibana-chart.png
 .. |image2| image:: kibana-search.png
+.. |image3| image:: syslog-overview-home.png
