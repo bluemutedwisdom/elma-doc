@@ -34,7 +34,7 @@ Sphinx documentation framework
 If you are new to rst and Sphinx, visit the Sphinx doc to get started:
 http://sphinx-doc.org/contents.html
 
-- Generation of HTML Documentation assumes the installation of all ELMA devel related packages:
+- Generation of ELMA HTML Documentation assumes the installation of all ELMA devel related packages:
 ```
 zypper -qn --no-gpg-checks --gpg-auto-import-keys install elma-devel
 ```
