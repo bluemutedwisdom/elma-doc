@@ -26,13 +26,13 @@ All your logs and other event data from all over your infrastructure in a centra
 
 ##Copyrights
 
-ELMA - <a href="https://build.opensuse.org/package/view_file/security:logging:elma/elma/elma.doc.COPYING">Copyright © 2012-2014 by Joerg Heinemann</a>"Copyright © 2012-2014 by Joerg Heinemann":https://build.opensuse.org/package/view_file/security:logging:elma/elma/elma.doc.COPYING.
-Licensed under "GNU GPL v3 or higher":http://www.gnu.org/licenses/gpl.html.
+ELMA - <a href="https://build.opensuse.org/package/view_file/security:logging:elma/elma/elma.doc.COPYING">Copyright © 2012-2014 by Joerg Heinemann</a>.
+Licensed under <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL v3 or higher</a>.
 
 ##Licenses
 
-All of the "source code to this project":https://build.opensuse.org/project/show/security:logging:elma is available under licenses which are both "free":http://www.gnu.org/philosophy/free-sw.html and "open source":http://www.opensource.org/docs/definition.php.
-Most of it is available under "GNU GPL":http://www.gnu.org/licenses/gpl.html and "Apache License, Version 2.0":http://www.apache.org/licenses/LICENSE-2.0.
+All of the <a href="https://build.opensuse.org/project/show/security:logging:elma">source code to this project</a> is available under licenses which are both <a href="http://www.gnu.org/philosophy/free-sw.html">free</a> and <a href="http://www.opensource.org/docs/definition.php">open source</a>.
+Most of it is available under <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a> and <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
 
 Sphinx documentation framework
 ------------------------------
