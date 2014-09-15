@@ -24,9 +24,15 @@ All your logs and other event data from all over your infrastructure in a centra
 - Distribution Build Service: https://build.opensuse.org/project/show/security:logging:elma
 - ReST Documentation Repository: https://github.com/enterprise-log-management-appliance/elma-doc
 
-##Authors
+##Copyrights
 
-- Joerg Heinemann <heinemannj66@gmail.com>
+ELMA - <a href="https://build.opensuse.org/package/view_file/security:logging:elma/elma/elma.doc.COPYING">Copyright © 2012-2014 by Joerg Heinemann</a>"Copyright © 2012-2014 by Joerg Heinemann":https://build.opensuse.org/package/view_file/security:logging:elma/elma/elma.doc.COPYING.
+Licensed under "GNU GPL v3 or higher":http://www.gnu.org/licenses/gpl.html.
+
+##Licenses
+
+All of the "source code to this project":https://build.opensuse.org/project/show/security:logging:elma is available under licenses which are both "free":http://www.gnu.org/philosophy/free-sw.html and "open source":http://www.opensource.org/docs/definition.php.
+Most of it is available under "GNU GPL":http://www.gnu.org/licenses/gpl.html and "Apache License, Version 2.0":http://www.apache.org/licenses/LICENSE-2.0.
 
 Sphinx documentation framework
 ------------------------------
