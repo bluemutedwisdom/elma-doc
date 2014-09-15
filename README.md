@@ -53,16 +53,16 @@ All your logs and other event data from all over your infrastructure in a centra
 
 ##Support:
 
-Website: http://enterprise-log-management-appliance.org
-Support: http://code.google.com/p/enterprise-log-management-appliance/issues/list
-Discussion group: http://groups.google.com/group/enterprise-log-management-appliance
+- Website: http://enterprise-log-management-appliance.org
+- Support: http://code.google.com/p/enterprise-log-management-appliance/issues/list
+- Discussion group: http://groups.google.com/group/enterprise-log-management-appliance
 
 ##Development:
 
-Appliance Build Service: https://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4
-Distribution Build Service: https://build.opensuse.org/project/show/security:logging:elma
-ReST Documentation Repository: https://github.com/enterprise-log-management-appliance/elma-doc
+- Appliance Build Service: https://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4
+- Distribution Build Service: https://build.opensuse.org/project/show/security:logging:elma
+- ReST Documentation Repository: https://github.com/enterprise-log-management-appliance/elma-doc
 
 ##Authors:
 
-Joerg Heinemann <heinemannj66@gmail.com>
+- Joerg Heinemann <heinemannj66@gmail.com>
