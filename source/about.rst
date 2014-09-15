@@ -260,3 +260,4 @@ applications.
 .. |image1| image:: kibana-chart.png
 .. |image2| image:: kibana-search.png
 .. |image3| image:: syslog-overview-home.png
+.. |image4| image:: syslog-components-home.png
