@@ -46,4 +46,3 @@ zypper -qn --no-gpg-checks --gpg-auto-import-keys install elma-devel
 ```
 /usr/share/elma-devel/bin/elma-build.sh --elma-doc
 ```
-- open /elma-doc/ in a browser
