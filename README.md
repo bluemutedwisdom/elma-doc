@@ -31,14 +31,10 @@ All your logs and other event data from all over your infrastructure in a centra
 Sphinx documentation framework
 ------------------------------
 
-## Learning the doc tools
-
 If you are new to rst and Sphinx, visit the Sphinx doc to get started:
 http://sphinx-doc.org/contents.html
 
-## Generate HTML Documentation
-
-- These assume the installation of all ELMA devel related packages:
+- Generation of HTML Documentation assumes the installation of all ELMA devel related packages:
 ```
 zypper -qn --no-gpg-checks --gpg-auto-import-keys install elma-devel
 ```
