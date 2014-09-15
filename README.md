@@ -38,11 +38,11 @@ http://sphinx-doc.org/contents.html
 
 ## Generate HTML Documentation
 
-- These assume default installs of all ELMA related packages:
+- These assume the installation of all ELMA devel related packages:
 ```
 zypper -qn --no-gpg-checks --gpg-auto-import-keys install elma-devel
 ```
-- Download the pip installer from here: https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+- Creation of a new ELMA documentation package:
 ```
 /usr/share/elma-devel/bin/elma-build.sh --elma-doc
 ```
