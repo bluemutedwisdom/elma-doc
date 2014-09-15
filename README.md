@@ -9,19 +9,19 @@ ELMA is a logging and syslog framework complemented by a range of free and open-
 Ship logs from any source, get the right timestamp, parse and normalize them into structured JSON format, index them.
 All your logs and other event data from all over your infrastructure in a central place – Search, graph and analyse them.
 
-##Support:
+##Support
 
 - Website: http://enterprise-log-management-appliance.org
 - Support: http://code.google.com/p/enterprise-log-management-appliance/issues/list
 - Discussion group: http://groups.google.com/group/enterprise-log-management-appliance
 
-##Development:
+##Development
 
 - Appliance Build Service: https://susestudio.com/a/TOYySW/enterprise-log-management-appliance--4
 - Distribution Build Service: https://build.opensuse.org/project/show/security:logging:elma
 - ReST Documentation Repository: https://github.com/enterprise-log-management-appliance/elma-doc
 
-##Authors:
+##Authors
 
 - Joerg Heinemann <heinemannj66@gmail.com>
 
