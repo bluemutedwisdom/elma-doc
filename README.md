@@ -15,7 +15,7 @@ All your logs and other event data from all over your infrastructure in a centra
 ##Support
 
 - Website: http://enterprise-log-management-appliance.org
-- Support: http://code.google.com/p/enterprise-log-management-appliance/issues/list
+- Support: https://github.com/enterprise-log-management-appliance/elma-doc/issues
 - Discussion group: http://groups.google.com/group/enterprise-log-management-appliance
 
 ##Development
