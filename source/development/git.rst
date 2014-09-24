@@ -16,14 +16,14 @@ git repository
 
     touch ~/.netrc
     vi ~/.netrc
-    machine code.google.com login your-google-code-member-UID@gmail.com password your-google-code-member-UID-password
+    machine github.com login your-github-member-UID password your-github-member-UID-password
 
 ::
 
     Global setup:
     Set the right GoogleCode.com project member UID and email address:
-    git config --global user.name "your-google-code-member-UID"
-    git config --global user.email your-google-code-member-UID@gmail.com
+    git config --global user.name "your-github-member-UID"
+    git config --global user.email "your-email-address"
     chmod 600 ~/.gitconfig
     git config --list
 
@@ -33,7 +33,7 @@ git repository
     #
     # rm -R /opt/elma-0.0.35/.git 
     # cd /opt/elma-0.0.35; git init
-    # cd /opt/elma-0.0.35; env GIT_SSL_NO_VERIFY=true git remote add origin https://code.google.com/p/enterprise-log-management-appliance.master/
+    # cd /opt/elma-0.0.35; env GIT_SSL_NO_VERIFY=true git remote add origin https://github.com/enterprise-log-management-appliance/elma-doc.master/
     # cd /opt/elma-0.0.35; git add .
     # cd /opt/elma-0.0.35; git commit -m 'initial commit'
     # ######### Push new revision to remote repository #########
