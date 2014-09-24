@@ -59,7 +59,7 @@ omfile - File Output Module
     -------------------------------------------------------------------------------------------
     Description: rsyslogd performance test with gzip output compression
     Author     : Joerg Heinemann
-    Website    : http://code.google.com/p/enterprise-log-management-appliance
+    Website    : http://enterprise-log-management-appliance.org
     ===========================================================================================
     PASS:
     -------------------------------------------------------------------------------------------
@@ -101,7 +101,7 @@ omelasticsearch - ElasticSearch Output Module
     -------------------------------------------------------------------------------------------
     Description: rsyslogd performance and elasticsearch compression test
     Author     : Joerg Heinemann
-    Website    : http://code.google.com/p/enterprise-log-management-appliance
+    Website    : http://enterprise-log-management-appliance.org
     ===========================================================================================
     PASS:
     -------------------------------------------------------------------------------------------
