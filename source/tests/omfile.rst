@@ -10,7 +10,7 @@
     -------------------------------------------------------------------------------------------
     Description: rsyslogd performance test with gzip output compression
     Author     : Joerg Heinemann
-    Website    : http://code.google.com/p/enterprise-log-management-appliance
+    Website    : http://enterprise-log-management-appliance.org
     ===========================================================================================
     --- 23:34:54.580 - init -------------------------------------------------------------------
     --- 23:34:54.647 - start rsyslogd ---------------------------------------------------------
