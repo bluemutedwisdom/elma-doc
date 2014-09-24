@@ -20,7 +20,7 @@ in a few minutes ELMA comes out of the box with all necessary services, `fine
 customization and performance tuning <manuals/configuration>`__ and allows
 easy `adminstration <manuals/administration.html>`__ and `operations <manuals/operation.html>`__.
 
-Issues, problems, enhancements and feature requests are managed with `ELMA project workflow <http://code.google.com/p/enterprise-log-management-appliance/issues/list>`__.
+Issues, problems, enhancements and feature requests are managed with `ELMA project workflow <https://github.com/enterprise-log-management-appliance/elma-doc/issues>`__.
 For extended communication please visit `ELMA discussion group <https://groups.google.com/forum/?fromgroups#!forum/enterprise-log-management-appliance>`__.
 
 At the moment we review and completly rewrite our documentation.
