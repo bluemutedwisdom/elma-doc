@@ -19,7 +19,7 @@
     {"ok":true,"acknowledged":true}
     --- 23:47:38.581 - start rsyslogd ---------------------------------------------------------
     # author: Joerg Heinemann
-    # website: http://code.google.com/p/enterprise-log-management-appliance/
+    # website: http://enterprise-log-management-appliance.org
     # license: GPL v3
     #
     # /opt/elma/config/rsyslog.d/elma_imptcp_elasticsearch-no-compression.conf
@@ -615,7 +615,7 @@
     {"ok":true,"acknowledged":true}
     --- 23:47:57.486 - start rsyslogd ---------------------------------------------------------
     # author: Joerg Heinemann
-    # website: http://code.google.com/p/enterprise-log-management-appliance/
+    # website: http://enterprise-log-management-appliance.org
     # license: GPL v3
     #
     # /opt/elma/config/rsyslog.d/elma_imptcp_elasticsearch.conf
