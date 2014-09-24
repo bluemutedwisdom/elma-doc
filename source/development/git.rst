@@ -21,7 +21,7 @@ git repository
 ::
 
     Global setup:
-    Set the right GoogleCode.com project member UID and email address:
+    Set the right github project member UID and email address:
     git config --global user.name "your-github-member-UID"
     git config --global user.email "your-email-address"
     chmod 600 ~/.gitconfig
