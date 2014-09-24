@@ -3,14 +3,14 @@
 =====
 
 Issues, problems, enhancements and feature requests are managed with our
-`project workflow <http://code.google.com/p/enterprise-log-management-appliance/issues/list>`__.
+`project workflow <https://github.com/enterprise-log-management-appliance/elma-doc/issues>`__.
 For extended communication visit
 `ELMA discussion group <https://groups.google.com/forum/?fromgroups#!forum/enterprise-log-management-appliance>`__.
 
 Issues
 ======
 
--  `Open issues <http://code.google.com/p/enterprise-log-management-appliance/issues/list>`__
+-  `Open issues <https://github.com/enterprise-log-management-appliance/elma-doc/issues>`__
 
 Problems
 ========
