@@ -10,7 +10,7 @@
     -------------------------------------------------------------------------------------------
     Description: rsyslogd performance and elasticsearch compression test
     Author     : Joerg Heinemann
-    Website    : http://code.google.com/p/enterprise-log-management-appliance
+    Website    : http://enterprise-log-management-appliance.org
     ===========================================================================================
     --- without compression
     ===========================================================================================
