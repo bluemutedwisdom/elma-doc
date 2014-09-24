@@ -15,7 +15,7 @@
     --- 23:34:54.580 - init -------------------------------------------------------------------
     --- 23:34:54.647 - start rsyslogd ---------------------------------------------------------
     # author: Joerg Heinemann
-    # website: http://code.google.com/p/enterprise-log-management-appliance/
+    # website: http://enterprise-log-management-appliance.org
     # license: GPL v3
     #
     # /opt/elma/config/rsyslog.d/elma_imptcp_gzipwr.conf
