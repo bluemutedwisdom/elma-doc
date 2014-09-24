@@ -8,7 +8,7 @@ If you have questions that should be explained here, please let us know.
 
 Issues, problems, enhancements and feature requests are managed with our
 `project
-workflow <http://code.google.com/p/enterprise-log-management-appliance/issues/list>`__.
+workflow <https://github.com/enterprise-log-management-appliance/elma-doc/issues>`__.
 For extended communication visit `ELMA discussion
 group <https://groups.google.com/forum/?fromgroups#!forum/enterprise-log-management-appliance>`__.
 
