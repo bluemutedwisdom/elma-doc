@@ -23,11 +23,11 @@ easy `adminstration <manuals/administration.html>`__ and
 
 Issues, problems, enhancements and feature requests are managed with
 `ELMA project
-workflow <http://code.google.com/p/enterprise-log-management-appliance/issues/list>`__.
+workflow <https://github.com/enterprise-log-management-appliance/elma-doc/issues>`__.
 For extended communication please visit `ELMA discussion
 group <https://groups.google.com/forum/?fromgroups#!forum/enterprise-log-management-appliance>`__.
 
-At the moment we review and completly rewrite our wiki - **Every help is
+At the moment we review and completly rewrite our documentation - **Every help is
 welcome**.
 
 Overview
