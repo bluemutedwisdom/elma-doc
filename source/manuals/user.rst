@@ -55,23 +55,23 @@ Terms
 Wildcard Searches
 ^^^^^^^^^^^^^^^^^
 
-To perform a **single character wildcard** search use the "**?**" symbol.
-To perform a multiple character wildcard search use the "*" symbol.
+| To perform a **single character wildcard** search use the "**?**" symbol.
+| To perform a multiple character wildcard search use the "*" symbol.
 
 Boolean operators
 ^^^^^^^^^^^^^^^^^
 
-Boolean operators allow terms to be combined through logic operators to form a more complex query.
-**AND**, "**+**", **OR**, **NOT** and "**-**" are supported.
+| Boolean operators allow terms to be combined through logic operators to form a more complex query.
+| **AND**, "**+**", **OR**, **NOT** and "**-**" are supported.
 
-"-" excludes documents that contain the term after. "+" requires that
+| "-" excludes documents that contain the term after.
+| "+" requires that
 the term after exist somewhere in a the field of a single document.
 
 Grouping
 ^^^^^^^^
 
-**Round brackets** let us group terms, **double quotes** group terms into whole
-phrases.
+**Round brackets** let us group terms, **double quotes** group terms into whole phrases.
 
 Some useful query examples:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
