@@ -39,8 +39,8 @@ cluster.
 
 |image0|
 
-Kibana a user friendly way to view, search and visualize your log data.
-Click on an event to expand a details pane with all of your fields laid out nicely.
+| Kibana a user friendly way to view, search and visualize your log data.
+| Click on an event to expand a details pane with all of your fields laid out nicely.
 
 Kibana query syntax
 ~~~~~~~~~~~~~~~~~~~
