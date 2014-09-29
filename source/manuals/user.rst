@@ -40,8 +40,7 @@ cluster.
 |image0|
 
 Kibana a user friendly way to view, search and visualize your log data.
-Click on an event to expand a details pane with all of your fields laid
-out nicely.
+Click on an event to expand a details pane with all of your fields laid out nicely.
 
 Kibana query syntax
 ~~~~~~~~~~~~~~~~~~~
@@ -49,22 +48,21 @@ Kibana query syntax
 Terms
 ^^^^^
 
-A query is broken up into terms and operators. There are two types of
-terms: Single Terms and Phrases. A Single Term is a single word such as
-"test" or "hello". A Phrase is a group of words surrounded by **double
-quotes** such as **"**\ hello dolly\ **"**.
+| A query is broken up into terms and operators. There are two types of terms: Single Terms and Phrases.
+| A Single Term is a single word such as "test" or "hello".
+| A Phrase is a group of words surrounded by **double quotes** such as "hello dolly".
 
 Wildcard Searches
 ^^^^^^^^^^^^^^^^^
 
-To perform a single character wildcard search use the "?" symbol. To
-perform a multiple character wildcard search use the "**" symbol.**
+To perform a **single character wildcard** search use the "**?**" symbol.
+To perform a multiple character wildcard search use the "*" symbol.
 
 Boolean operators
 ^^^^^^^^^^^^^^^^^
 
-Boolean operators allow terms to be combined through logic operators to
-form a more complex query. AND, "+", OR, NOT and "-" are supported.
+Boolean operators allow terms to be combined through logic operators to form a more complex query.
+**AND**, "**+**", **OR**, **NOT** and "**-**" are supported.
 
 "-" excludes documents that contain the term after. "+" requires that
 the term after exist somewhere in a the field of a single document.
@@ -72,7 +70,7 @@ the term after exist somewhere in a the field of a single document.
 Grouping
 ^^^^^^^^
 
-Round brackets let us group terms, double quotes group terms into whole
+**Round brackets** let us group terms, **double quotes** group terms into whole
 phrases.
 
 Some useful query examples:
@@ -91,12 +89,9 @@ Some useful query examples:
 
 **Important:**
 
--  **Boolean operators** such as AND and/or OR must be **ALL
-   CAPITALIZED**.
--  **Not** use a **``*``** or **``?``** symbol **as the first character
-   of a search**.
--  **Special characters ``+ - && || ! ( ) { } [ ] ^ " ~ * ? : \``** has
-   to be **escaped by \\** using the **\\**.
+-  **Boolean operators** such as AND and/or OR must be **ALL CAPITALIZED**.
+-  **Not** use a **``*``** or **``?``** symbol **as the first character of a search**.
+-  **Special characters ``+ - && || ! ( ) { } [ ] ^ " ~ * ? : \``** has to be **escaped by \\** using the **\\**.
 
 Learn lots more about `Lucene query
 syntax <https://lucene.apache.org/core/old_versioned_docs/versions/3_5_0/queryparsersyntax.html>`__
