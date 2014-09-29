@@ -34,13 +34,6 @@ About - Project overview
 
    about
 
-Changelog, current releases and notes
-=====================================
-.. toctree::
-   :maxdepth: 2
-
-   changelog
-
 2do - Issues, problems, feature requests
 ========================================
 .. toctree::
