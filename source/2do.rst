@@ -15,7 +15,7 @@ Issues
 Problems
 ========
 
--  Complete review of ELMA wiki
+-  Complete review of ELMA documentation
 -  ElasticSearch performance tuning
 -  rsyslog CEE template
 
