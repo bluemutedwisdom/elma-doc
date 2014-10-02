@@ -16,8 +16,10 @@ Problems
 ========
 
 -  System Hardening
-   `SUSE Security Lockdown - Hardening Your Linux System <http://tr.opensuse.org/SUSE_Security_Lockdown_-_Hardening_Your_Linux_System>`__
-   `openSUSE Security Guide <https://activedoc.opensuse.org/book/opensuse-security-guide>`__
+
+   -  `SUSE Security Lockdown - Hardening Your Linux System <http://tr.opensuse.org/SUSE_Security_Lockdown_-_Hardening_Your_Linux_System>`__
+   -  `openSUSE Security Guide <https://activedoc.opensuse.org/book/opensuse-security-guide>`__
+   
 -  Complete review of ELMA documentation
 -  ElasticSearch performance tuning
 -  rsyslog CEE template
