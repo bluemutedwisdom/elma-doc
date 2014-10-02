@@ -65,12 +65,12 @@ Head has a four major operations:
    made. This interface includes several options that can be combined to
    produce interesting results:
 
-  -  Select request method (get, put, post, delete), json query data, node, and path
-  -  JSON validator
-  -  Ability to repeat requests on a timer
-  -  Ability to transform the result using javascript expressions
-  -  Ability to collect results over time (using timer), or compare results
-  -  Ability to chart the transformed results in a simple bar graph (including time series)
+   -  Select request method (get, put, post, delete), json query data, node, and path
+   -  JSON validator
+   -  Ability to repeat requests on a timer
+   -  Ability to transform the result using javascript expressions
+   -  Ability to collect results over time (using timer), or compare results
+   -  Ability to chart the transformed results in a simple bar graph (including time series)
 
 ATTENTION: **You can destroy and corrupt data** from this interface if
 you are not careful.
