@@ -13,11 +13,11 @@ Installation of `NoMachine NX <http://www.nomachine.com>`__ 3.5 on
 -  Change your working directory to the location where you saved the
    package and install it by running from a console
 
-    ::
+   ::
 
-      rpm -i nxclient-3.5.0-7.x86_64.rpm
-      rpm -i nxnode-3.5.0-9.x86_64.rpm
-      rpm -i nxserver-3.5.0-11.x86_64.rpm
+     rpm -i nxclient-3.5.0-7.x86_64.rpm
+     rpm -i nxnode-3.5.0-9.x86_64.rpm
+     rpm -i nxserver-3.5.0-11.x86_64.rpm
 
 -  Edit the SSH server configuration file
 
