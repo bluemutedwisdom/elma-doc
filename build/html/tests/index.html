@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Performance and compression tests &mdash; ELMA 0.2.9 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="ELMA 0.2.9 documentation" href="../index.html" />
+    <link rel="next" title="rsyslog omfile bechmark report" href="omfile.html" />
+    <link rel="prev" title="User Guide" href="../manuals/user.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/logo_elma.png" alt="Logo" class="img-thumbnail navbar-logo">
+          ELMA documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="http://enterprise-log-management-appliance.org/">Project Home</a></li>
+                <li><a href="../genindex.html">Index</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Main Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#ingredients">Ingredients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#cookbook">Cookbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#menue">Menue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#details">Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#syslog-evolution">Syslog evolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#next-generation-databases">Next generation databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#common-event-expression-cee-enhanced-syslog">Common Event Expression - CEE enhanced syslog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#our-goal">Our goal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#why-not-just-archive-everything-in-elasticsearch">Why not just archive everything in ElasticSearch?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#why-elma">Why ELMA?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about.html#howto-integrate-into-your-existing-logging-and-monitoring-infrasructure">Howto integrate into your existing logging and monitoring infrasructure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2do.html">2do</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2do.html#issues">Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2do.html#problems">Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2do.html#feature-requests">Feature requests</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manuals/index.html">Manuals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/requirements.html">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/requirements.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/requirements.html#system-and-hardware-requirements">System and Hardware Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/virtualization.html">Virtualization Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/virtualization.html#virtual-formats">Virtual formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/loadbalancing.html">Loadbalancing and redundancy Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/loadbalancing.html#distributed-elasticsearch-cluster">Distributed elasticsearch cluster</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/installation/index.html">Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/installation/time.html">Hardware (CMOS/BIOS) Clock and System Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/installation/firstboot.html">First Boot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/installation/index.html#elma-initial-installation">ELMA initial installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/installation/index.html#reset-elma-configuration-parameter-to-factory-defaults">Reset ELMA configuration parameter to factory defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/installation/index.html#next-installation-steps">Next installation steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/update.html">Patch, Update and Upgrade Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#requirements-and-recommendations">Requirements and recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#patches">Patches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#updates">Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#upgrades">Upgrades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#reconfigure-elma">Reconfigure ELMA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#final-tests">Final Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/update.html#reset-elma-configuration-parameter-to-factory-defaults">Reset ELMA configuration parameter to factory defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/configuration/index.html">Configuration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/configurationfiles.html">Configuration Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#elma">ELMA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#snmptrap">snmptrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#rsyslog">rsyslog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#logstash">logstash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#elasticsearch">ElasticSearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#apache2">Apache2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#nagios">Nagios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/configuration/index.html#kibana">Kibana</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/administration.html">Administration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/administration.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/administration.html#supported-web-browsers">Supported web browsers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/administration.html#elma-admin-interfaces">ELMA admin interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/administration.html#elma-user-management">ELMA user management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/administration.html#elma-group-and-profile-management">ELMA group and profile management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/operation.html">Operation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/operation.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/operation.html#secure-network-operations">Secure Network Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/operation.html#event-and-trap-generation-for-specific-testing">Event and trap generation for specific testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/operation.html#basic-operations">Basic operations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manuals/user.html">User Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/user.html#supported-web-browsers">Supported web browsers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../manuals/user.html#elma-user-interfaces">ELMA user interfaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Performance and compression tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generation-of-continious-tcp-logging">Generation of continious tcp logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rsyslog-output-modules">rsyslog output modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#omfile-file-output-module">omfile - File Output Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#omelasticsearch-elasticsearch-output-module">omelasticsearch - ElasticSearch Output Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparison">Comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-space-sizing">Log space sizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testbed">Testbed</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#which-web-browsers-are-supported">Which web browsers are supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#file-system-sizing-immediately-after-deployment">File System Sizing immediately after deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#increase-disk-space-using-the-yast-partitioner">Increase disk space using the YAST partitioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-do-i-limit-how-much-storage-space-is-used">How do I limit how much storage space is used?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#apache-failing-to-start-after-patching-and-upgrading">Apache failing to start after patching and upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#warning-patch-opensuse-2014-493-1-is-interactive-skipping">Warning: Patch &#8216;openSUSE-2014-493-1&#8217; is interactive, skipping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#searchphaseexecutionexception-failed-to-execute-phase-query-fetch">SearchPhaseExecutionException - Failed to execute phase query_fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#elasticsearchexception-java-lang-outofmemoryerror-java-heap-space">ElasticsearchException - java.lang.OutOfMemoryError: Java heap space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#are-older-opensuse-12-x-appliances-being-supported-in-future">Are older openSUSE 12.x appliances being supported in future?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#howto-upgrade-elma-appliance-to-opensuse-13-1">Howto upgrade ELMA appliance to openSUSE 13.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-to-forward-syslog-events-from-syslog-ng-to-elma-rsyslogd">How to forward syslog events from syslog-ng to ELMA rsyslogd?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-to-forward-syslog-events-from-rsyslogd-to-elma-rsyslogd">How to forward syslog events from rsyslogd to ELMA rsyslogd?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-to-enable-compressed-event-forwarding-between-rsyslogd-servers">How to enable compressed event forwarding between rsyslogd servers?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-to-resolve-original-syslog-sender-ip-to-sender-hostname">How to resolve original syslog sender IP to sender hostname?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#wrong-timpstamp-in-elma-search-gui-is-your-system-time-synchronized-and-up-to-date">Wrong timpstamp in ELMA Search-Gui - Is your system time synchronized and up to date?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#no-events-in-elma-search-gui-till-utc-xxx-have-you-set-system-clock-to-utc">No events in ELMA Search-Gui till UTC+XXX - Have you set system clock to UTC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#coordinated-universal-time">Coordinated Universal Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#system-time">System time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#rsyslog-timestamp-formatting-timestamp-parsing-problems">Rsyslog timestamp formatting - Timestamp parsing problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#unresolvedaddressexception-have-you-setup-a-static-ip-address">UnresolvedAddressException - Have you setup a static IP address?</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../whitepapers/index.html">Whitepapers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../whitepapers/index.html#regulatory-frameworks">Regulatory frameworks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../whitepapers/index.html#german-publications">German publications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../development/git.html">git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../development/git.html#git-repository">git repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../development/curl.html">curl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../development/curl.html#curl-exit-codes">curl exit codes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../development/nagios.html">Nagios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../development/nagios.html#nagios-plugins">Nagios plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../development/webdesign.html">Webdesign</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../development/webdesign.html#bootstrap">bootstrap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../development/nomachinenx.html">NoMachineNX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../development/nomachinenx.html#installation-on-opensuse">Installation on openSUSE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../manuals/user.html" title="Previous Chapter: User Guide"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; User Guide</span>
+    </a>
+  </li>
+  <li>
+    <a href="omfile.html" title="Next Chapter: rsyslog omfile bechmark report"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">rsyslog omfile b... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><div id="sourcelink">
+  <h3>Table Of Contents</h3>
+  <ul>
+<li><a class="reference internal" href="#">Performance and compression tests</a><ul>
+<li><a class="reference internal" href="#generation-of-continious-tcp-logging">Generation of continious tcp logging</a></li>
+<li><a class="reference internal" href="#rsyslog-output-modules">rsyslog output modules</a><ul>
+<li><a class="reference internal" href="#omfile-file-output-module">omfile - File Output Module</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#omelasticsearch-elasticsearch-output-module">omelasticsearch - ElasticSearch Output Module</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparison">Comparison</a></li>
+<li><a class="reference internal" href="#log-space-sizing">Log space sizing</a></li>
+<li><a class="reference internal" href="#testbed">Testbed</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+  <div id="sourcelink">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tests/index.txt"
+        rel="nofollow">Show Source</a></li>
+        <li><a href="https://github.com/enterprise-log-management-appliance/elma-doc/edit/master/source/tests/index.rst"
+          rel="nofollow">Edit Source on GitHub</a></li>
+    </ul>
+  </div>
+        </div>
+      </div>
+    <div class="col-md-9">
+      <h1><a href="http://enterprise-log-management-appliance.org/" target="_blank"><img alt="Banner" src="../_static/banner_elma.png" ></a></h1>
+      &nbsp;
+      
+  <div class="section" id="performance-and-compression-tests">
+<h1>Performance and compression tests<a class="headerlink" href="#performance-and-compression-tests" title="Permalink to this headline">¶</a></h1>
+<p>Feeding generic log events with a constant logging rate to local or
+remote rsyslog server to determine the <strong>maximum receiving log rate</strong>
+(MPS - Messages Per Second) considering:</p>
+<ul class="simple">
+<li>no <a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_high_database_rate.html">rsyslog on-disk
+queueing</a>
+(Indication that import and indexing into ElasticSearch is fast
+enough)</li>
+<li><a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_high_database_rate.html">prevention of message
+loss</a></li>
+<li><strong>real time compression</strong> of stored events</li>
+<li><strong>ElasticSearch</strong> near <strong>real time inserting and indexing</strong> (indexing
+delay &lt; 30s)</li>
+</ul>
+<div class="section" id="generation-of-continious-tcp-logging">
+<h2>Generation of continious tcp logging<a class="headerlink" href="#generation-of-continious-tcp-logging" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="57%" />
+<col width="15%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Server</strong></td>
+<td><a class="reference external" href="http://www.rsyslog.com">rsyslog</a></td>
+<td>7.2.5 (v7-stable)</td>
+<td>localhost</td>
+</tr>
+<tr class="row-even"><td><strong>Benchmark tool</strong></td>
+<td><a class="reference external" href="http://www.rsyslog.com/how-to-use-tcpflood/">tcpflood</a></td>
+<td>7.2.5</td>
+<td>localhost</td>
+</tr>
+<tr class="row-odd"><td>Protocol</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>tcp/13514</td>
+</tr>
+<tr class="row-even"><td>Compression</td>
+<td><a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_conf_actions.html">zlib-compression</a></td>
+<td>&nbsp;</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>Encryption</td>
+<td><a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_secure_tls.html">TLS (SSL)</a></td>
+<td>&nbsp;</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>Message lenght (Byte)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>244</td>
+</tr>
+<tr class="row-odd"><td>Logging rate (MPS)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10.000</td>
+</tr>
+<tr class="row-even"><td>Runs</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>Total messages</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>100.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rsyslog-output-modules">
+<h2>rsyslog output modules<a class="headerlink" href="#rsyslog-output-modules" title="Permalink to this headline">¶</a></h2>
+<p>rsyslog <a class="reference external" href="http://www.rsyslog.com/doc/rsyslog_conf_modules.html/rsyslog_conf_modules.html">output
+modules</a>
+process messages. With them, message formats can be transformed and
+messages be transmitted to various different targets.</p>
+<div class="section" id="omfile-file-output-module">
+<h3>omfile - File Output Module<a class="headerlink" href="#omfile-file-output-module" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>/usr/share/elma-tests/bin/elma_imptcp_gzipwr.sh
+===========================================================================================
+Scriptname : elma_imptcp_gzipwr.sh
+-------------------------------------------------------------------------------------------
+Description: rsyslogd performance test with gzip output compression
+Author     : Joerg Heinemann
+Website    : http://enterprise-log-management-appliance.org
+===========================================================================================
+PASS:
+-------------------------------------------------------------------------------------------
+Raw message lenght (Byte):                              230
+Total message lenght (Byte):                            244
+Messages sent during one tcpflood test:                 10000
+Number of tcpflood tests:                               10
+Seconds to sleep between tcpflood runs:                 1
+Concurrent tcpflood connections:                        5
+tcpflood transport protocol:                            tcp
+tcpflood rsyslog target port:                           13514
+tcpflood rsyslog target address:                        127.0.0.1
+Total messages:                                         100000
+Total tcpflood runtime (milli seconds):                 10141
+Loging rate (MPS):                                      9860
+Transmission speed (MBit/s):                            18.35
+Compressed data size (MByte):                           .29
+Compressed data indexing runtime (milli seconds):
+Compression method:                                     $OMFileZipLevel 9
+Compression ratio (%):                                  98.71
+Decompression runtime (milli seconds):                  454
+Uncompressed data size (MByte):                         23.26
+Uncompressed data indexing runtime (milli seconds):
+===========================================================================================</pre>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="omfile.html">rsyslog omfile bechmark report</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="omelasticsearch-elasticsearch-output-module">
+<h3>omelasticsearch - ElasticSearch Output Module<a class="headerlink" href="#omelasticsearch-elasticsearch-output-module" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>/usr/share/elma-tests/bin/elma_elasticsearch_compression_rate.sh
+===========================================================================================
+Scriptname : elma_elasticsearch_compression_rate.sh
+-------------------------------------------------------------------------------------------
+Description: rsyslogd performance and elasticsearch compression test
+Author     : Joerg Heinemann
+Website    : http://enterprise-log-management-appliance.org
+===========================================================================================
+PASS:
+-------------------------------------------------------------------------------------------
+Raw message lenght (Byte):                              230
+Total message lenght (Byte):
+Messages sent during one tcpflood test:                 10000
+Number of tcpflood tests:                               10
+Seconds to sleep between tcpflood runs:                 1
+Concurrent tcpflood connections:                        5
+tcpflood transport protocol:                            tcp
+tcpflood rsyslog target port:                           13514
+tcpflood rsyslog target address:                        127.0.0.1
+Total messages:                                         100000
+Total tcpflood runtime (milli seconds):                 10190
+Loging rate (MPS):                                      9813
+Transmission speed (MBit/s):
+Compressed data size (MByte):                           23.44
+Compressed data indexing runtime (milli seconds):       11353
+Compression method:                                     index.store.compress.stored = true
+Compression ratio (%):                                  69.65
+Decompression runtime (milli seconds):
+Uncompressed data size (MByte):                         77.25
+Uncompressed data indexing runtime (milli seconds):     12113
+===========================================================================================</pre>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="omelasticsearch.html">rsyslog omelasticsearch bechmark report</a></li>
+</ul>
+</div>
+<p>JSON format:</p>
+<div class="highlight-python"><pre>{
+    _index: rsyslog-2012-03-01
+    _type: events
+    _id: Oq9TRThNRVyyEYWRtA3geA
+    _version: 1
+    _score: 1
+    _source: {
+        @timestamp: 2012-03-01T01:00:00+01:00
+        @source_host: 172.20.245.8
+        @source: syslog://127.0.0.1
+        @message: Mar 1 01:00:00 tag: msgnum:00000001:200:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        @fields: {
+            facility: 20
+            facility_label: local4
+            severity: 7
+            severity_label: debug
+            priority: 167
+            program: tag
+            processid: -
+        }
+        @customer: AIDB
+        @type: events
+    }
+}</pre>
+</div>
+</div>
+</div>
+<div class="section" id="comparison">
+<h2>Comparison<a class="headerlink" href="#comparison" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="6%" />
+<col width="9%" />
+<col width="7%" />
+<col width="48%" />
+<col width="11%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Benchmark</strong></td>
+<td><strong>Messages</strong></td>
+<td><strong>Message lenght</strong>
+(Byte)</td>
+<td><strong>Data size</strong>
+(MByte)</td>
+<td><strong>Compression method</strong></td>
+<td><strong>Compressed data size</strong>
+(MByte)</td>
+<td><strong>Compression ratio</strong>
+(%)</td>
+</tr>
+<tr class="row-even"><td><strong>omfile</strong></td>
+<td>100.000</td>
+<td>244</td>
+<td>23.26</td>
+<td><a class="reference external" href="http://www.rsyslog.com/doc/omfile.html">rsyslog gzip compression</a> - ZipLevel 9</td>
+<td>0.29</td>
+<td>98</td>
+</tr>
+<tr class="row-odd"><td><strong>omelasticsearch</strong></td>
+<td>100.000</td>
+<td>244</td>
+<td>77.25</td>
+<td>-<a class="reference external" href="http://www.elasticsearch.org/guide/reference/index-modules/store.html">Des.index.store.compress.stored</a>=true</td>
+<td>23.44</td>
+<td>69</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><pre>Compression ratio = 100 * ( Data size - Compressed data size ) / Data size</pre>
+</div>
+<p>Results of <a class="reference external" href="https://gist.github.com/2970009">comparable compression
+tests</a>.</p>
+</div>
+<div class="section" id="log-space-sizing">
+<h2>Log space sizing<a class="headerlink" href="#log-space-sizing" title="Permalink to this headline">¶</a></h2>
+<p>In real life ElasticSearch compression rates of 55% and flat file
+compression rates of over 90% are realistic.</p>
+<p>Assuming an average message lenght of 244 Byte per message and 10.000
+events per second the following projection can give you an idea of
+difficulties for suitable filesystem sizing:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="16%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="7%" />
+<col width="8%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td><strong>Benchmark</strong></td>
+<td><strong>LVM Volume</strong></td>
+<td><strong>second</strong></td>
+<td><strong>minute</strong></td>
+<td><strong>hour</strong></td>
+<td><strong>day</strong></td>
+<td><strong>week</strong></td>
+<td><strong>month</strong></td>
+<td><strong>year</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Messages</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10 k</td>
+<td>600 k</td>
+<td>36 M</td>
+<td>864 M</td>
+<td>6.048 M</td>
+<td>181.440 M</td>
+<td>2.177.280 M</td>
+</tr>
+<tr class="row-odd"><td><strong>Compressed data size</strong></td>
+<td>omfile</td>
+<td>/var/log/syslog</td>
+<td>0.03 MB</td>
+<td>1.74 MB</td>
+<td>104.40 MB</td>
+<td>2.45 GB</td>
+<td>17.13 GB</td>
+<td>68.51 GB</td>
+<td>822.15 GB</td>
+</tr>
+<tr class="row-even"><td><strong>Compressed data size</strong></td>
+<td>omelasticsearch</td>
+<td>/var/lib/elasticsearch</td>
+<td>3.50 MB</td>
+<td>210.00 MB</td>
+<td>12.30 GB</td>
+<td>295.31 GB</td>
+<td>2.02 TB</td>
+<td>8.07 TB</td>
+<td>96.90 TB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="testbed">
+<h2>Testbed<a class="headerlink" href="#testbed" title="Permalink to this headline">¶</a></h2>
+<p>Hardware for this testbed:</p>
+<ul class="simple">
+<li>Low performance desktop PC based on a ASUS mainboard with a dual core
+AMD Athlon(tm) II X2 240e Processor</li>
+<li>8 GB RAM</li>
+<li>3 older slow IDE hard disk drives, configured in a RAID-5 fashion
+using the linux (x86_64) built-in softRAID features</li>
+</ul>
+</div>
+</div>
+
+
+      &nbsp;
+    </div>
+      
+  </div>
+</div>
+<footer id="footer">
+  <div class="container">
+    <div class="text-muted footer">
+      &copy; Joerg Heinemann 2012-2014 - Provided by <a href="http://enterprise-log-management-appliance.org" target="_blank">http://enterprise-log-management-appliance.org</a>
+         - Last updated on Oct 02, 2014.
+      <span class="pull-right">
+        <a href="#">Back to top</a>
+      </span>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
