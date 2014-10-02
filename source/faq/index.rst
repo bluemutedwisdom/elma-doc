@@ -51,23 +51,23 @@ A good procedure for File System Sizing immediately after deployment:
 
 -  Stop services
 
-  ::
+   ::
 
-    service rsyslog stop
-    service elasticsearch stop
+     service rsyslog stop
+     service elasticsearch stop
 
 -  Rename ElasticSearch data directory from /var/lib/elasticsearch to /var/lib/elasticsearch-old
 
-  ::
+   ::
 
-    mv /var/lib/elasticsearch /var/lib/elasticsearch-old
+     mv /var/lib/elasticsearch /var/lib/elasticsearch-old
 
 -  SUSE does not auto mount non-root LVM volume groups on boot, so be
    sure to run
 
-  ::
+   ::
 
-    chkconfig boot.lvm on
+     chkconfig boot.lvm on
 
 -  Add another virtual disk, reasonably sized (I make it 100GB to
    start). Create a new volume group, and a new logical volume (using
@@ -77,29 +77,29 @@ A good procedure for File System Sizing immediately after deployment:
 -  Move the files from /var/lib/elasticsearch-old to the new
    /var/lib/elasticsearch
 
-  ::
+   ::
 
-    cp -Rp /var/lib/elasticsearch-old/* /var/lib/elasticsearch
+     cp -Rp /var/lib/elasticsearch-old/* /var/lib/elasticsearch
 
 -  Set the owners and groupname back, just in case
 
-  ::
+   ::
 
-    chown -R elasticsearch:root /var/lib/elasticsearch
-    chgrp -R elasticsearch:root /var/lib/elasticsearch
+     chown -R elasticsearch:root /var/lib/elasticsearch
+     chgrp -R elasticsearch:root /var/lib/elasticsearch
 
 -  Check path to ElasticSearch data directory
 
-  ::
+   ::
 
-    grep "ES_DATA_DIR=" /etc/elma/elma.conf
-    ES_DATA_DIR="/var/lib/elasticsearch"
+     grep "ES_DATA_DIR=" /etc/elma/elma.conf
+     ES_DATA_DIR="/var/lib/elasticsearch"
 
 -  System reboot
 
-  ::
+   ::
 
-    reboot
+     reboot
 
 Increase disk space using the YAST partitioner
 ==============================================
@@ -144,43 +144,43 @@ database which stores the indexed data per default in
    /var/lib/elasticsearch grows from 10 GB to 15 GB in a day, this is 5
    GB/day.
 
-  ::
+   ::
 
-    df -h
+     df -h
 
-    Filesystem                         Size  Used Avail Use% Mounted on
-    devtmpfs                           1.9G   32K  1.9G   1% /dev
-    tmpfs                              1.9G     0  1.9G   0% /dev/shm
-    tmpfs                              1.9G  3.0M  1.9G   1% /run
-    /dev/mapper/systemVG-LVRoot         60G   42G   17G  72% /
-    tmpfs                              1.9G     0  1.9G   0% /sys/fs/cgroup
-    tmpfs                              1.9G  3.0M  1.9G   1% /var/lock
-    tmpfs                              1.9G  3.0M  1.9G   1% /var/run
-    /dev/sda1                          183M   35M  139M  20% /boot
-    /dev/mapper/systemVG-LVvar_log_     30G  3.2G   25G  12% /var/log
-    /dev/mapper/systemVG-LVvar_spool_   29G   16G   13G  55% /var/spool
+     Filesystem                         Size  Used Avail Use% Mounted on
+     devtmpfs                           1.9G   32K  1.9G   1% /dev
+     tmpfs                              1.9G     0  1.9G   0% /dev/shm
+     tmpfs                              1.9G  3.0M  1.9G   1% /run
+     /dev/mapper/systemVG-LVRoot         60G   42G   17G  72% /
+     tmpfs                              1.9G     0  1.9G   0% /sys/fs/cgroup
+     tmpfs                              1.9G  3.0M  1.9G   1% /var/lock
+     tmpfs                              1.9G  3.0M  1.9G   1% /var/run
+     /dev/sda1                          183M   35M  139M  20% /boot
+     /dev/mapper/systemVG-LVvar_log_     30G  3.2G   25G  12% /var/log
+     /dev/mapper/systemVG-LVvar_spool_   29G   16G   13G  55% /var/spool
 
 -  Divide your available storage by the daily usage to determine the
    number of days of logs you can keep. For example, if you have 100 GB
    of available storage and you are using 5 GB/day, you can keep 20 days
    of logs.
 
-  ::
+   ::
 
-    100 / 5 = 20
+     100 / 5 = 20
 
 -  Edit "/etc/elma/elma.conf"
 
-  ::
+   ::
 
-    ######### Set the number of days ElasticSearch indexes should be hold #########
-    ESARCHIVEPERIOD="20"
+     ######### Set the number of days ElasticSearch indexes should be hold #########
+     ESARCHIVEPERIOD="20"
 
 -  Reconfigure ELMA to use new setting:
 
-  ::
+   ::
 
-    /usr/share/elma/bin/elma-reconfigure.sh --all
+     /usr/share/elma/bin/elma-reconfigure.sh --all
 
 Apache failing to start after patching and upgrading
 ====================================================
@@ -190,24 +190,24 @@ Apache failing to start after patching and upgrading
    apache and php reloads during patches and upgrades of underlying
    operation system
 
-  ::
+   ::
 
-    /usr/share/elma/bin/elma-reconfigure.sh --patch --update
+     /usr/share/elma/bin/elma-reconfigure.sh --patch --update
 
 Warning: Patch 'openSUSE-2014-493-1' is interactive, skipping
 =============================================================
 
 -  Interactive update from ELMA CLI
 
-  ::
+   ::
 
-    zypper --no-gpg-checks --gpg-auto-import-keys patch
+     zypper --no-gpg-checks --gpg-auto-import-keys patch
 
 -  System reboot
 
-  ::
+   ::
 
-    reboot
+     reboot
 
 SearchPhaseExecutionException - Failed to execute phase query\_fetch
 ====================================================================
@@ -248,61 +248,61 @@ How to forward syslog events from syslog-ng to ELMA rsyslogd?
    /opt/syslog-ng/etc/syslogd-ng.conf and make sure you have a source
    called s\_all:
 
-  ::
+   ::
 
-    source s_all {
-      internal();
-      unix-stream("/dev/log");
-      file("/proc/kmsg" program_override("kernel: "));
-    };
+     source s_all {
+       internal();
+       unix-stream("/dev/log");
+       file("/proc/kmsg" program_override("kernel: "));
+     };
 
 -  Next configure the protocol and port, and put them in a destination
    entry, being sure to specify TCP. Replace the "192.168.0.1" with the
    address of your ELMA server.
 
-  ::
+   ::
 
-    destination d_elma {
-      tcp("192.168.0.1" port(514));
-    };
+     destination d_elma {
+       tcp("192.168.0.1" port(514));
+     };
 
 -  Next tell syslog-ng to forward syslogs from "s\_all" source to the
    "d\_elma" destination. Note: This log statement must be before any
    "final" log statements, so make this the first log statement.
 
-  ::
+   ::
 
-    log { 
-      source(s_all); destination(d_elma); 
-    };
+     log { 
+       source(s_all); destination(d_elma); 
+     };
 
 -  Your configuration should now look as follows:
 
-  ::
+   ::
 
-    source s_all {  
-      internal();  
-      unix-stream("/dev/log");  
-      file("/proc/kmsg" program_override("kernel: "));  
-    };
-    destination d_elma {
-      tcp("192.168.0.1" port(514));
-    };  
-    log {
-      source(s_all); destination(d_elma); 
-    };
+     source s_all {  
+       internal();  
+       unix-stream("/dev/log");  
+       file("/proc/kmsg" program_override("kernel: "));  
+     };
+     destination d_elma {
+       tcp("192.168.0.1" port(514));
+     };  
+     log {
+       source(s_all); destination(d_elma); 
+     };
 
 -  Now, restart syslog-ng:
 
-  ::
+   ::
 
-    /etc/init.d/syslog-ng restart
+     /etc/init.d/syslog-ng restart
 
 -  Test sending events to ELMA by using the command line tool logger:
 
-  ::
+   ::
 
-    logger "my little pony"
+     logger "my little pony"
 
 -  Log into the ELMA search interface. Search for your events, starting
    with "my little pony".
@@ -312,13 +312,13 @@ How to forward syslog events from rsyslogd to ELMA rsyslogd?
 
 -  On sender site:
 
-  ::
+   ::
 
-    # ######### Event forwarding to ELMA rsyslogd server ##########
-    #
-    # plain TCP event forwarding
-    #
-    *.* @@192.168.0.1:514
+     # ######### Event forwarding to ELMA rsyslogd server ##########
+     #
+     # plain TCP event forwarding
+     #
+     *.* @@192.168.0.1:514
 
 -  On receiver site: nothing to do
 
@@ -327,14 +327,14 @@ How to enable compressed event forwarding between rsyslogd servers?
 
 -  On sender site:
 
-  ::
+   ::
 
-    # ######### Compressed event forwarding to ELMA rsyslog server ##########
-    #
-    # plain TCP event forwarding with experimental framing
-    # maximum zlib compression rate (z1 - z9)
-    #
-    *.* @@(o,z9)192.168.0.1:514
+     # ######### Compressed event forwarding to ELMA rsyslog server ##########
+     #
+     # plain TCP event forwarding with experimental framing
+     # maximum zlib compression rate (z1 - z9)
+     #
+     *.* @@(o,z9)192.168.0.1:514
 
 -  On receiver site: nothing to do
 
