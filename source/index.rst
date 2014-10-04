@@ -25,7 +25,7 @@ For extended communication please visit `ELMA discussion group <https://groups.g
 
 At the moment we review and completly rewrite our documentation.
 
-**Every feedback and every help is welcome**.
+`Every feedback and every help is welcome <http://enterprise-log-management-appliance.org/help/contribution>`__.
 
 About - Project overview
 ========================
