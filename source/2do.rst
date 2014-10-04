@@ -37,4 +37,4 @@ Feature requests
 
    -  `rsyslog LogTools <http://www.logtools.org/>`__ (logreader and logwriter)
  
- - `Simple Event Correlator (sec) <http://simple-evcorr.sourceforge.net/>`__
+- `Simple Event Correlator (sec) <http://simple-evcorr.sourceforge.net/>`__
