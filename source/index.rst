@@ -2,7 +2,7 @@
  Welcome to ELMA
 =================
 
-The Enterprise Log Management Appliance (ELMA) is a **logging and syslog framework** complemented by a range of free and open-source tools
+The Enterprise Log Management Appliance (ELMA) is a `logging and syslog framework <about.html>`__ complemented by a range of free and open-source tools
 that can help you aggregate and deliver metrics, analytics and vital performance data.
 
 **Ship logs from any source**, get the right timestamp, parse and normalize them into structured
