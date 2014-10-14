@@ -93,6 +93,9 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
+# Warn about all references where the target cannot be found. Default is False.
+nitpicky = True
+
 # Enable todo output
 todo_include_todos = True
 
